@@ -1,7 +1,7 @@
 <template>
-	<div class="w-full h-auto">
+	<div class="w-full h-auto flex">
 		<!--Server icons-->
-		<div class="hidescrollbar w-20 h-auto bg-gray-900 overflow-auto pt-3">
+		<div class="hidescrollbar w-20 h-auto bg-gray-900 overflow-hidden pt-3">
 			<div class="w-full flex flex-col">
 				<!--Direct message dm-->
 				<div class="w-full h-full">
@@ -38,7 +38,13 @@
 		</div>
 
 		<!--Server channels-->
-		<div></div>
+		<div class="w-60 h-full bg-gray-700">
+			<div class="w-60">
+				<div class="w-56 mx-4">haha</div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
 
 		<!--Main section-->
 		<div>
