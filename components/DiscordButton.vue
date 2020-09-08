@@ -1,6 +1,6 @@
 <template>
 	<div @mouseover="isHover = true" @mouseleave="isHover = false" class="w-14 flex justify-center rounded-larger overflow-hidden">
-		<a href="#">
+		<button>
 			<div :class="{'overflow-visible':isHover}" class="bg-transparent rounded-full overflow-hidden">
 				<img
 					class="w-14 h-14"
@@ -8,7 +8,7 @@
 					alt="" srcset=""
 				/>
 			</div>
-		</a>
+		</button>
 	</div>
 </template>
 
