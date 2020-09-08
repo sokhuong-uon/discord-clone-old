@@ -1,5 +1,5 @@
 <template>
-	<div class="w-screen h-auto">
+	<div class="w-full h-auto">
 		<!--Server icons-->
 		<div class="hidescrollbar w-20 h-auto bg-gray-900 overflow-auto pt-3">
 			<div class="w-full flex flex-col">
