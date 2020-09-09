@@ -39,7 +39,7 @@
 		<div class="w-60 h-full bg-black">
 			<div class="w-60">
 				<div>
-					<ServerHeader/>
+					<ServerHeader :server="servers[3]"/>
 				</div>
 				<div></div>
 				<div></div>
