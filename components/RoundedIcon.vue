@@ -3,8 +3,8 @@
 		<div class="absolute flex items-center w-3 h-12 left-0">
 			<span :class="{'h-8':isHover}" class="absolute w-6/12 h-3 bg-green-700 rounded-r-lg"></span>
 		</div>
-		<div @mouseover="isHover = true" @mouseleave="isHover = false" class="w-12 flex justify-center rounded-larger overflow-hidden">
-			<nuxt-link :class="{'overflow-visible':isHover}" class="rounded-full overflow-hidden" to="#">
+		<div @mouseover="isHover = true" @mouseleave="isHover = false" class="w-12 flex justify-center">
+			<nuxt-link :class="{'':isHover}" class="" to="#">
 				<img
 					class="w-12 h-12"
 					:src="server.gifUrl&&isHover ? server.gifUrl : server.imageUrl"
