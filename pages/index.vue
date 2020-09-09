@@ -88,71 +88,85 @@ export default {
 					name: "USK",
 					imageUrl: "https://cdn.discordapp.com/icons/722327836597289010/d08e34244669dbdc97b509d9bc33100b.png?size=256",
 					gifUrl: "",
+					hasUnReadMessage: 0
 				},
 				{
 					name: "WebGL & WebGPU",
 					imageUrl: "https://cdn.discordapp.com/icons/734147990985375826/a0088f3f110cc0fdd7a70282a7036cd5.png?size=256",
 					gifUrl: "",
+					hasUnReadMessage: 15
 				},
 				{
 					name: "Three.js",
 					imageUrl: "https://cdn.discordapp.com/icons/685241246557667386/674ab428e9fc76a7c0b4a454e2a1931c.png?size=256",
 					gifUrl: "",
+					hasUnReadMessage: 15
 				},
 				{
 					name: "Nuxt.js",
 					imageUrl: "https://cdn.discordapp.com/icons/473401852243869706/e5068d423a09dd5f7ff9af6376090d2d.png?size=256",
 					gifUrl: "",
+					hasUnReadMessage: 15
 				},
 				{
 					name: "Tailwind CSS",
 					imageUrl: "https://cdn.discordapp.com/icons/486935104384532500/3f7e1dec66678229883c63083467343b.png?size=256",
 					gifUrl: "",
+					hasUnReadMessage: 15
 				},
 				{
 					name: "Supermedium",
 					imageUrl: "https://cdn.discordapp.com/icons/479784974917042186/148a4016612e835feb171622571c445f.png?size=256",
 					gifUrl: "",
+					hasUnReadMessage: 15
 				},
 				{
 					name: "Vuetify",
 					imageUrl: "https://cdn.discordapp.com/icons/340160225338195969/ec3dd9554ece4add309c255dd74fb3fe.png?size=256",
 					gifUrl: "",
+					hasUnReadMessage: 15
 				},
 				{
 					name: "Vue Land",
 					imageUrl: "https://cdn.discordapp.com/icons/325477692906536972/75523e3c0f68b7e092c9ca6c7ee09ecc.png?size=256",
 					gifUrl: "",
+					hasUnReadMessage: 15
 				},
 				{
 					name: "Python",
 					imageUrl: "https://cdn.discordapp.com/icons/267624335836053506/a_0ec02fe5be9860e99232c2d2de38c077.png?size=256",
 					gifUrl: "",
+					hasUnReadMessage: 15
 				},
 				{
 					name: "Deno",
 					imageUrl: "https://cdn.discordapp.com/icons/684898665143206084/a_a5f8c917998d95e14dd3c48ea9cd0924.png?size=256",
 					gifUrl: "https://cdn.discordapp.com/icons/684898665143206084/a_a5f8c917998d95e14dd3c48ea9cd0924.gif?size=256",
+					hasUnReadMessage: 15
 				},
 				{
 					name: "cs50",
 					imageUrl: "https://cdn.discordapp.com/icons/393846237255696385/fbfd26f292fa0d095058eb715d7c6c40.png?size=256",
 					gifUrl: "",
+					hasUnReadMessage: 15
 				},
 				{
 					name: "Zeal-2 Server",
 					imageUrl: "",
 					gifUrl: "",
+					hasUnReadMessage: 0
 				},
 				{
 					name: "Starborne",
 					imageUrl: "https://cdn.discordapp.com/icons/149611192812437505/a_87636a5fadf040ec94820c348fd3e527.png?size=256",
 					gifUrl: "https://cdn.discordapp.com/icons/149611192812437505/a_87636a5fadf040ec94820c348fd3e527.gif?size=256",
+					hasUnReadMessage: 15
 				},
 				{
 					name: "Nick White",
 					imageUrl: "https://cdn.discordapp.com/icons/515033603743154177/cb13dbbaccfad09d04c511c51269859f.png?size=256",
 					gifUrl: "",
+					hasUnReadMessage: 15
 				}
 
 
