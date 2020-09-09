@@ -118,7 +118,7 @@ export default {
 					name: "Supermedium",
 					imageUrl: "https://cdn.discordapp.com/icons/479784974917042186/148a4016612e835feb171622571c445f.png?size=256",
 					gifUrl: "",
-					hasUnReadMessage: 15
+					hasUnReadMessage: 0
 				},
 				{
 					name: "Vuetify",
@@ -142,7 +142,7 @@ export default {
 					name: "Deno",
 					imageUrl: "https://cdn.discordapp.com/icons/684898665143206084/a_a5f8c917998d95e14dd3c48ea9cd0924.png?size=256",
 					gifUrl: "https://cdn.discordapp.com/icons/684898665143206084/a_a5f8c917998d95e14dd3c48ea9cd0924.gif?size=256",
-					hasUnReadMessage: 15
+					hasUnReadMessage: 0
 				},
 				{
 					name: "cs50",
