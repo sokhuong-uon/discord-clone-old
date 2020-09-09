@@ -1,13 +1,11 @@
 <template>
 	<div class="w-full h-auto flex overflow-hidden">
 		<!--Server icons-->
-		<div class="hidescrollbar w-20 h-auto bg-gray-900 overflow-auto pt-3">
-			<div class="w-full flex flex-col">
+		<div class="hidescrollbar w-18 h-auto bg-gray-900 overflow-auto">
+			<div class="w-full h-screen flex flex-col">
 				<!--Direct message dm-->
 				<div class="w-full h-full">
-					<div class="w-full flex justify-center h-14 mb-3">
-						<DiscordButton/>
-					</div>
+					<DiscordButton/>
 				</div>
 
 				<!--servers-->
@@ -17,22 +15,15 @@
 							<div v-for="(server, i) in servers" :key="i">
 								<RoundedIcon :server="server" />
 							</div>
-							<div class="w-full flex justify-center h-14 mb-3">
-								<DiscordButton/>
-							</div>
-							<div class="w-full flex justify-center h-14 mb-3">
-								<DiscordButton/>
-							</div>
 						</div>
-
 					</div>
 				</div>
 
 				<!--download app-->
 				<div class="h-auto">
-					<div class="w-full flex justify-center h-14 mb-3">
-						<DiscordButton/>
-					</div>
+					<DiscordButton/>
+					<DiscordButton/>
+					<DiscordButton/>
 				</div>
 			</div>
 		</div>
