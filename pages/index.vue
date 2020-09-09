@@ -36,13 +36,16 @@
     </div>
 
     <!--Server channels-->
-    <div class="w-60 h-full bg-gray-300">
+    <div class="w-60 h-auto bg-gray-300">
       <div class="w-60">
         <div>
           <ServerHeader :server="servers[3]"/>
         </div>
-        <div class="w-full h-auto">
-			Hahaha
+        <div class="w-full h-full">
+			<div class="w-full h-80"></div>
+			<div class="w-full h-60"></div>
+			<div class="w-full h-32"></div>
+			<div class="w-full h-2"></div>
 		</div>
         <div class="w-full h-full">
 			<ServerFooter :profile="users[0]"/>

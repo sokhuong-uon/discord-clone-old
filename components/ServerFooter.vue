@@ -39,7 +39,7 @@
 			</div>
 
 			<!--group headse mic setting-->
-			<div class="w-24 h-full flex items-center">
+			<div class="w-24 h-12 flex items-center justify-center">
 				<button class="w-4/12 h-full">
 					<div class="w-8 h-8 flex items-center justify-center">
 						<svg class="w-6 h-6 text-gray-500" fill="none" xmlns="http://www.w3.org/2000/svg">
