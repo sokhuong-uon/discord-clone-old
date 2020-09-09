@@ -1,11 +1,15 @@
 <template>
 	<div class="w-full h-auto flex overflow-hidden">
 		<!--Server icons-->
-		<div class="hidescrollbar w-18 h-auto bg-gray-900 overflow-auto">
+		<div class="hidescrollbar w-18 h-screen pt-3 bg-gray-900 overflow-auto">
 			<div class="w-full h-screen flex flex-col">
 				<!--Direct message dm-->
-				<div class="w-full h-full">
+				<div class="w-full h-12 mb-2">
 					<DiscordButton/>
+				</div>
+
+				<div class="relative flex-shrink-0 flex justify-center w-full h-1 mb-3">
+					<div class="absolute h-1 w-8 top-0 bg-gray-800 rounded-full"></div>
 				</div>
 
 				<!--servers-->
@@ -23,6 +27,9 @@
 				<div class="h-auto">
 					<DiscordButton/>
 					<DiscordButton/>
+					<div class="relative flex-shrink-0 flex justify-center w-full h-1 mb-3">
+						<div class="absolute h-1 w-8 top-0 bg-gray-800 rounded-full"></div>
+					</div>
 					<DiscordButton/>
 				</div>
 			</div>
