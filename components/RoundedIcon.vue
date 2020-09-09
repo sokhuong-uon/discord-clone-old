@@ -1,13 +1,13 @@
 <template>
 	<div class="relative w-full flex justify-center h-12 mb-2">
 		<div v-if="type==='server'" class="absolute flex items-center w-3 h-12 left-0">
-			<span :class="{'h-0':server.hasUnReadMessage === 0, 'h-2':server.hasUnReadMessage > 0, 'h-5':isHover}" class="absolute w-4/12 bg-green-700 rounded-r-lg"></span>
+			<span :class="{'h-0':server.hasUnReadMessage === 0, 'h-2':server.hasUnReadMessage > 0, 'h-5':isHover, 'h-full':getName=='Nuxt.js'}" class="absolute w-4/12 bg-green-700 rounded-r-lg"></span>
 		</div>
 		<div v-if="type==='button'" class="absolute flex items-center w-3 h-12 left-0">
 			<span :class="{'h-5':isHover}" class="absolute w-4/12 h-0 bg-green-700 rounded-r-lg"></span>
 		</div>
 		<div @mouseover="isHover = true" @mouseleave="isHover = false" class="w-12 h-12 flex justify-start">
-			<nuxt-link v-if="type==='server'" class="w-12 h-12" to="#">
+			<nuxt-link v-if="type==='server'" class="w-12 h-12" to="#haha">
 				<div :class="{'rounded-larger':isHover}" class="w-12 h-12 bg-gray-900 flex justify-center items-center rounded-full overflow-hidden">
 					<img
 						v-if="server.imageUrl"
@@ -46,7 +46,15 @@ export default {
 	props: ['type', 'server', 'button'],
 	data() {
 		return{
-			isHover: false
+			isHover: false,
+			active: false,
+			globalActive:false
+		}
+	},
+	methods: {
+		fireWhenClicked: function(buttonName){
+			this.active = true;
+			console.log(buttonName);
 		}
 	},
 	mounted() {
@@ -56,6 +64,11 @@ export default {
 			console.log(this.server.hasUnReadMessage);
 		}
 
+	},
+	computed: {
+		getName: function (){
+			return this.server ? this.server.name : this.button.name
+		}
 	}
 }
 </script>
