@@ -1,14 +1,14 @@
 <template>
-	<div @mouseover="isHover = true" @mouseleave="isHover = false" class="w-14 flex justify-center rounded-larger overflow-hidden">
-		<button>
-			<div :class="{'overflow-visible':isHover}" class="bg-transparent rounded-full overflow-hidden">
+	<div class="w-full flex justify-center h-12 mb-3">
+		<div @mouseover="isHover = true" @mouseleave="isHover = false" class="w-12 flex justify-center rounded-larger overflow-hidden">
+			<button :class="{'overflow-visible':isHover}" class="bg-transparent rounded-full overflow-hidden">
 				<img
-					class="w-14 h-14"
+					class="w-12 h-12"
 					src="https://discord.com/assets/0e291f67c9274a1abdddeb3fd919cbaa.png"
 					alt="" srcset=""
 				/>
-			</div>
-		</button>
+			</button>
+		</div>
 	</div>
 </template>
 
