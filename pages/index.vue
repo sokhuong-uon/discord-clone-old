@@ -160,7 +160,7 @@ export default {
 					name: "Starborne",
 					imageUrl: "https://cdn.discordapp.com/icons/149611192812437505/a_87636a5fadf040ec94820c348fd3e527.png?size=256",
 					gifUrl: "https://cdn.discordapp.com/icons/149611192812437505/a_87636a5fadf040ec94820c348fd3e527.gif?size=256",
-					hasUnReadMessage: 15
+					hasUnReadMessage: 0
 				},
 				{
 					name: "Nick White",
