@@ -27,8 +27,8 @@
 				<div class="h-auto">
 					<RoundedIcon type="button" :button="buttons[1]"/>
 					<RoundedIcon type="button" :button="buttons[2]"/>
-					<div class="relative flex-shrink-0 flex justify-center w-full h-1 mb-3">
-						<div class="absolute h-1 w-8 top-0 bg-gray-800 rounded-full"></div>
+					<div class="relative flex-shrink-0 flex justify-center h-2px w-full mb-2">
+						<div class="absolute h-2px w-8 bg-gray-800 rounded-full"></div>
 					</div>
 					<RoundedIcon type="button" :button="buttons[3]"/>
 				</div>
