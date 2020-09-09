@@ -1,7 +1,7 @@
 <template>
 	<div class="w-full h-auto flex overflow-hidden">
 		<!--Server icons-->
-		<div class="hidescrollbar w-18 h-screen pt-3 bg-gray-900 overflow-auto">
+		<div class="hidescrollbar w-18 h-screen pt-3 bg-black overflow-auto">
 			<div class="w-full h-screen flex flex-col">
 				<!--Direct message dm-->
 				<div class="w-full h-12 mb-2">
