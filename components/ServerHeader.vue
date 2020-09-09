@@ -1,5 +1,5 @@
 <template>
-	<button class="w-60 h-12 bg-gray-800 bg-opacity-75 mt-px">
+	<button class="w-60 h-12 bg-gray-800 mt-px">
 		<div class="w-full h-full flex items-center px-4">
 			<!--If server if boosted-->
 			<div>
