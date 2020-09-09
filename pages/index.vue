@@ -36,9 +36,11 @@
 		</div>
 
 		<!--Server channels-->
-		<div class="w-60 h-full bg-gray-700">
+		<div class="w-60 h-full bg-black">
 			<div class="w-60">
-				<div class="w-56 mx-4">haha</div>
+				<div>
+					<ServerHeader/>
+				</div>
 				<div></div>
 				<div></div>
 			</div>
