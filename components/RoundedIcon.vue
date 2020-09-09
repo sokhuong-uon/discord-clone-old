@@ -1,20 +1,16 @@
 <template>
-	<div class="w-full flex justify-center items-center h-14 mb-3">
-		<div class="absolute flex w-4 h-14 -ml-16">
-			<div :class="{'h-8':isHover}" class="w-2 h-2 rounded-r-full bg-gray-100 -ml-1 my-auto transform"></div>
+	<div class="relative w-full flex justify-center h-12 mb-3">
+		<div class="absolute flex items-center w-3 h-12 left-0">
+			<span :class="{'h-8':isHover}" class="absolute w-6/12 h-3 bg-green-700 rounded-r-lg"></span>
 		</div>
-		<div class="w-full flex justify-center mr-1">
-			<div @mouseover="isHover = true" @mouseleave="isHover = false" class="w-14 h-full rounded-larger overflow-hidden">
-				<a href="#">
-					<div :class="{'overflow-visible':isHover}" class="bg-transparent rounded-full overflow-hidden">
-						<img
-							class="w-14 h-14"
-							:src="server.gifUrl&&isHover ? server.gifUrl : server.imageUrl"
-							:alt="server.name" srcset=""
-						/>
-					</div>
-				</a>
-			</div>
+		<div @mouseover="isHover = true" @mouseleave="isHover = false" class="w-12 flex justify-center rounded-larger overflow-hidden">
+			<nuxt-link :class="{'overflow-visible':isHover}" class="rounded-full overflow-hidden" to="#">
+				<img
+					class="w-12 h-12"
+					:src="server.gifUrl&&isHover ? server.gifUrl : server.imageUrl"
+					:alt="server.name" srcset=""
+				/>
+			</nuxt-link>
 		</div>
 	</div>
 </template>
