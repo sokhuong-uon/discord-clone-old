@@ -45,9 +45,10 @@
 
 					<div class="smallScroleBar w-60 pb-18 flex flex-col overflow-auto bg-nightgray">
 						<div class="pr-1">
-							<div class="flex flex-col w-full h-80">
-								<div class="w-full">
-									<ChannelCard/>
+							<div class="h-3"></div>
+							<div class="flex flex-col w-full">
+								<div v-for="(channel,i) in servers[3].channels" :key="i">
+									<ChannelCard :channel="channel"/>
 								</div>
 							</div>
 							<div class="flex flex-col w-full h-80">
@@ -460,14 +461,13 @@ export default {
 
 /* small scrollbar */
 
-/* width */
-.smallScroleBar::-webkit-scrollbar {
-  width: 4px;
-}
-
 /* Track */
 .smallScroleBar::-webkit-scrollbar-track {
 	background: transparent;
+}
+/* width */
+.smallScroleBar::-webkit-scrollbar {
+  width: 6px;
 }
 
 /* Handle */
