@@ -156,8 +156,201 @@ export default {
 					imageUrl: "https://cdn.discordapp.com/icons/473401852243869706/e5068d423a09dd5f7ff9af6376090d2d.png?size=256",
 					gifUrl: "",
 					hasUnReadMessage: 15,
-					channels:[],
-					categories:[]
+					channels:[
+						{
+							name: "📖readme",
+							hasUnReadMessage: 1,
+						},
+						{
+							name: "🔊anouncements",
+							hasUnReadMessage: 0,
+						},
+						{
+							name: "🎉release",
+							hasUnReadMessage: 5,
+						},
+						{
+							name: "📝articles",
+							hasUnReadMessage: 15,
+						},
+					],
+					categories:[
+						{
+							name: "general",
+							channels:[
+								{
+									name: "welcome",
+									hasUnReadMessage: 1,
+								},
+								{
+									name: "introduction",
+									hasUnReadMessage: 0,
+								},
+								{
+									name: "general",
+									hasUnReadMessage: 5,
+								},
+								{
+									name: "showcase",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "documentation",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "off-topic",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "proposals",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "jobs",
+									hasUnReadMessage: 15,
+								},
+							],
+						},
+						{
+							name: "help🆘",
+							channels:[
+								{
+									name: "how-to-get-help",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "nuxt",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "axios",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "pwa",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "webpack",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "configuration",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "middleware",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "apolo",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "modules",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "plugins",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "auth",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "store",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "deployemnts",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "testing",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "routing",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "headless",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "press",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "content",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "vue",
+									hasUnReadMessage: 15,
+								},
+							]
+						},
+						{
+							name: "languages",
+							channels:[
+								{
+									name: "khmer",
+									hasUnReadMessage: 1,
+								},
+								{
+									name: "french",
+									hasUnReadMessage: 0,
+								},
+								{
+									name: "spanish",
+									hasUnReadMessage: 5,
+								},
+								{
+									name: "chinese",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "russian",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "protuguess",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "polish",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "german",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "persian",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "japanese",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "dutch",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "romanian",
+									hasUnReadMessage: 15,
+								},
+								{
+									name: "turkish",
+									hasUnReadMessage: 15,
+								},
+							],
+						}
+					]
 				},
 				{
 				name: "Tailwind CSS",
