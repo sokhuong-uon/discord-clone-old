@@ -26,12 +26,14 @@
 				</div>
 
 				<div class="relative w-full h-4 text-teal-500 overflow-hidden">
-					<div :class="{'-translate-y-4':isHover}" class="absolute transform duration-200 ease-in">
+					<div :class="{'-translate-y-5':isHover}" class="absolute transform duration-200 ease-in">
 						<div  class="relative w-full -ml-2px h-4 text-sm flex justify-start items-center">
 							<div>{{profile.status.emoji}}</div>
-							<div class="text-xs font-medium mt-1">{{profile.status.statement}}</div>
+							<div class="w-20 flex justify-start text-xs font-medium mt-2px tracking-normal">
+								<p>{{getStatement}}</p>
+							</div>
 						</div>
-						<div class="w-full h-3 flex">
+						<div class="w-full h-3 flex mt-1">
 							<div class="text-xs font-semibold">{{profile.tag}}</div>
 						</div>
 					</div>
@@ -100,6 +102,12 @@ export default {
 		},
 		onMouseLeave: function () {
 			this.isHover = false
+		}
+	},
+	computed:{
+		getStatement: function(){
+			let statement =  this.profile.status.statement
+			return statement.length == 11 ? statement : statement.substring(0,9) + '...'
 		}
 	}
 }
