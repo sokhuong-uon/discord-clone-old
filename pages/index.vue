@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full h-auto bg-black flex justify-items-stretch">
+	<div class="w-full h-auto bg-black flex">
 		<div class="flex overflow-hidden">
 			<!--Server icons-->
 			<div class="w-18 h-scree bg-mostnightgray">
@@ -38,17 +38,16 @@
 
 			<!--Server channels-->
 			<div class="w-60 h-screen bg-nightgray flex flex-col">
-				<div class="h-screen flex flex-col">
+				<div class="relative h-screen flex flex-col">
 					<div class="w-full h-12">
 						<ServerHeader :server="servers[3]"/>
 					</div>
 
-					<div class="smallScroleBar w-60 flex flex-col overflow-auto bg-nightgray">
-						<div class="w-11/12">
+					<div class="smallScroleBar w-60 pb-18 flex flex-col overflow-auto bg-nightgray">
+						<div class="pr-1">
 							<div class="flex flex-col w-full h-80">
 								<div class="w-full">
-
-								damn
+									<ChannelCard/>
 								</div>
 							</div>
 							<div class="flex flex-col w-full h-80">
@@ -63,19 +62,26 @@
 								damn
 								</div>
 							</div>
+							<div class="flex flex-col w-full h-80">
+								<div class="w-full">
+
+								damn
+								</div>
+							</div>
+
+
 						</div>
 					</div>
 
-					<div class="w-full h-13">
+					<div class="absolute w-full h-13 bottom-0">
 						<ServerFooter :profile="users[0]"/>
-						<!--<ServerFooter :profile="users[0]"/>-->
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<!--Main section-->
-		<div class="w-auto min-h-0 bg-gray-800">
+		<div class="w-auto bg-gray-800">
 			<!--Main section nav, sidebar-->
 			<div>hahaha</div>
 
@@ -85,7 +91,7 @@
 				<div>Wee</div>
 
 				<!--Members of the server or channel, online or offline-->
-				<div></div>
+				<div>Oyyy</div>
 			</div>
 		</div>
 	</div>
@@ -103,7 +109,7 @@ export default {
 					avatarUrlGif: "",
 					status:{
 						emoji: "😚",
-						statement: "Studying"
+						statement: "Growing And Doing something great"
 					},
 					state:{
 						svgPath: "",
@@ -436,9 +442,6 @@ export default {
 	mounted() {
 		console.log("%cEnjoy Your Time, Dev! 😉", "background: transparent; color: blue; font-size: 60px; font-weight: 600; font-family: Arial, Helvetica, sans-serif; height: 200px");
 		console.log("%c Do not pasth any code that you don't understand", "background: transparent; color: red; font-size: 30px; font-weight: 600; font-family: Lobster, serif; height: 200px");
-		console.table(this.servers);
-		console.count('%cTest by USK', "color: red");
-		console.table(console.memory);
 	}
 };
 </script>
@@ -459,7 +462,7 @@ export default {
 
 /* width */
 .smallScroleBar::-webkit-scrollbar {
-  width: 5px;
+  width: 4px;
 }
 
 /* Track */
