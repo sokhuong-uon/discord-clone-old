@@ -12,6 +12,7 @@ module.exports = {
 	    	'25': '.25',
 			'50': '.5',
 			'75': '.75',
+			'80': '.8',
 			'90': '.9',
 			'100': '1',
 			'125': '1.25',
@@ -19,10 +20,12 @@ module.exports = {
 	    	'200': '2',
 	    	'300': '3',
 	    	'400': '4',
-      	},
+		},
+
 		extend: {
 			spacing: {
 				'2px': '0.125rem',
+				'13': '3.25rem',
 				'14': '3.5rem',
 				'18': '4.5rem',
 				'28': '7rem',
@@ -34,8 +37,15 @@ module.exports = {
 			},
 			borderRadius:{
 				'larger':'1rem'
+			},
+			backgroundColor:{
+				'nightgray':'#2f3136',
+				'nightgraylighter':'#36393f',
+				'nightergray':'#292b2f',
+				'mostnightgray':'#202225'
 			}
-		}
+		},
+
 	},
 	variants: {},
 	plugins: [],

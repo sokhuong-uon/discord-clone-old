@@ -8,7 +8,7 @@
 		</div>
 		<div @mouseover="isHover = true" @mouseleave="isHover = false" class="w-12 h-12 flex justify-start">
 			<nuxt-link v-if="type==='server'" class="w-12 h-12" to="#haha">
-				<div :class="{'rounded-larger':isHover}" class="w-12 h-12 bg-gray-900 flex justify-center items-center rounded-full overflow-hidden">
+				<div :class="{'rounded-larger':isHover}" class="w-12 h-12 bg-black flex justify-center items-center rounded-full overflow-hidden">
 					<img
 						v-if="server.imageUrl"
 						class="w-12 h-12"
@@ -58,11 +58,11 @@ export default {
 		}
 	},
 	mounted() {
-		if(!this.server){
-			console.log('Not a server');
-		}else{
-			console.log(this.server.hasUnReadMessage);
-		}
+		// if(!this.server){
+		// 	console.log('Not a server');
+		// }else{
+		// 	console.log(this.server.hasUnReadMessage);
+		// }
 
 	},
 	computed: {

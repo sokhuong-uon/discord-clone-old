@@ -1,8 +1,8 @@
 <template>
-	<button @mouseover="onMouseOver" @mouseleave="onMouseLeave" class="w-60 h-12 bg-black bg-opacity-75">
-		<div class="w-full h-full flex items-center px-2">
+	<button @mouseover="isHover =true" @mouseleave="isHover =false" class="w-60 h-13 bg-nightergray">
+		<div class="w-full h-full flex items-center justify-start px-2 pb-2px">
 			<!--icon avatar and status-->
-			<div class="w-8 h-8">
+			<div class="w-8 h-8 mr-2">
 				<div class="relative w-8 h-8">
 					<img
 						class="w-full h-full rounded-full overflow-hidden"
@@ -10,28 +10,28 @@
 						:alt="profile.name" srcset=""
 					/>
 					<div class="absolute flex justify-center items-center w-3 h-3 bottom-0 right-0 bg-gray-600 rounded-full">
-						<div class="absolute w-3 h-3 bg-green-600 rounded-full overflow-hidden"></div>
-					</div>
+						<div class="absolute w-3 h-3 bg-green-600 rounded-full overflow-hidden">
 
+						</div>
+					</div>
 				</div>
 			</div>
 
 			<!--handle, name, and tage-->
-			<div class="w-24 h-full ml-1 flex flex-col justify-center">
-				<div class="w-full h-5">
-					<div class="w-full h-5 ml-px text-gray-200 font-semibold leading-tight flex justify-start items-center">
-						<span>{{profile.userName}}</span>
+			<div class="w-24 h-13 flex flex-col justify-center">
+				<div class="w-full h-4">
+					<div class="w-full h-4 text-gray-200 text-sm font-semibold leading-tight flex justify-start items-center">
+						<div>{{profile.userName}}</div>
 					</div>
 				</div>
 
-				<div class="relative w-full h-5 text-gray-500 overflow-hidden">
-					<div :class="{'-translate-y-5':isHover}" class="absolute transform duration-150 ease-in top-0 felx flex-col justify-between">
-						<div  class="w-full h-5 leading-tight flex justify-start items-center">
-							<span>{{profile.status.emoji}}</span>
-							<span class="text-sm">{{profile.status.statement}}</span>
+				<div class="relative w-full h-4 text-teal-500 overflow-hidden">
+					<div :class="{'-translate-y-4':isHover}" class="absolute transform duration-200 ease-in">
+						<div  class="w-full -ml-2px h-4 text-sm flex justify-start items-center">
+							{{profile.status.emoji}} <span class="text-xs">{{profile.status.statement}}</span>
 						</div>
-						<div class="w-full h-5 flex justify-start items-center">
-							<span class="text-sm">{{profile.tag}}</span>
+						<div class="w-full h-5 flex">
+							<div class="text-xs font-semibold">{{profile.tag}}</div>
 						</div>
 					</div>
 				</div>
@@ -42,21 +42,23 @@
 			<div class="w-24 h-12 flex items-center justify-center">
 				<button class="w-4/12 h-full">
 					<div class="w-8 h-8 flex items-center justify-center">
-						<svg class="w-6 h-6 text-gray-500" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-								d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
-							/>
-							<path
-								fill="#e53e3e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-								d="M21 4.27L19.73 3L3 19.73L4.27 21L8.46 16.82L9.69 15.58L11.35 13.92L14.99 10.28L21 4.27Z"
-							/>
+						<svg class="w-6 h-6 text-gray-500 transform scale-80" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g>
+								<path
+									stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+									d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+								/>
+								<path
+									fill="#e53e3e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+									d="M21 4.27L19.73 3L3 19.73L4.27 21L8.46 16.82L9.69 15.58L11.35 13.92L14.99 10.28L21 4.27Z"
+								/>
+							</g>
 						</svg>
 					</div>
 				</button>
 				<button class="w-4/12 h-full">
 					<div class="w-8 h-8 flex items-center justify-center">
-						<svg class="w-6 h-6 text-gray-500" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg class="w-6 h-6 text-gray-500 transform scale-80" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
 								fill="currentColor"
 								stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
@@ -67,7 +69,7 @@
 				</button>
 				<button class="w-4/12 h-full">
 					<div class="w-8 h-8 flex items-center justify-center">
-						<svg class="w-6 h-6 text-gray-500" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg class="w-6 h-6 text-gray-500 transform scale-80" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
 								fill="currentColor"
 								fill-rule="evenodd" clip-rule="evenodd"
