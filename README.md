@@ -1,5 +1,9 @@
 # discord-clone
 ![Discord](https://i.redd.it/e7hb6p5nx3g11.png)
+
+# Live Status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8719281c-e117-415e-b0ee-52fde0e09f99/deploy-status)](https://app.netlify.com/sites/usk-discord-clone/deploys)
+
 ## Build Setup
 
 ```bash
