@@ -91,7 +91,7 @@
 			<!--Message section communicate-->
 			<div>
 				<!--Actual Message section communicate-->
-				<div>Wee</div>
+				<div>Weeee</div>
 
 				<!--Members of the server or channel, online or offline-->
 				<div>Oyyy</div>
