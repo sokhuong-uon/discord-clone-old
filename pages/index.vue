@@ -1,73 +1,75 @@
 <template>
 	<div class="w-full h-auto bg-black flex justify-items-stretch">
-		<!--Server icons-->
-		<div class="w-18 h-scree bg-mostnightgray">
-			<div class="hidescrollbar w-18 pt-3 h-screen flex flex-col overflow-auto">
-				<!--Direct message dm-->
-				<div class="w-full h-12 mb-2">
-					<DiscordButton :button="buttons[0]"/>
-				</div>
+		<div class="flex overflow-hidden">
+			<!--Server icons-->
+			<div class="w-18 h-scree bg-mostnightgray">
+				<div class="hidescrollbar w-18 pt-3 h-screen flex flex-col overflow-auto">
+					<!--Direct message dm-->
+					<div class="w-full h-12 mb-2">
+						<DiscordButton :button="buttons[0]"/>
+					</div>
 
-				<div class="relative flex-shrink-0 flex justify-center h-2px w-full mb-2">
-					<div class="absolute h-2px w-8 bg-gray-900 rounded-full"></div>
-				</div>
+					<div class="relative flex-shrink-0 flex justify-center h-2px w-full mb-2">
+						<div class="absolute h-2px w-8 bg-gray-900 rounded-full"></div>
+					</div>
 
-				<!--servers-->
-				<div class="w-full h-auto flex justify-center">
-					<div class="w-full">
-					<div class="w-full">
-						<div v-for="(server, i) in servers" :key="i">
-						<RoundedIcon type="server" :server="server"/>
+					<!--servers-->
+					<div class="w-full h-auto flex justify-center">
+						<div class="w-full">
+						<div class="w-full">
+							<div v-for="(server, i) in servers" :key="i">
+							<RoundedIcon type="server" :server="server"/>
+							</div>
+						</div>
 						</div>
 					</div>
-					</div>
-				</div>
 
-				<!--download app-->
-				<div class="h-auto">
-					<RoundedIcon type="button" :button="buttons[1]"/>
-					<RoundedIcon type="button" :button="buttons[2]"/>
-					<div class="relative flex-shrink-0 flex justify-center h-2px w-full mb-2">
-					<div class="absolute h-2px w-8 bg-gray-900 rounded-full"></div>
+					<!--download app-->
+					<div class="h-auto">
+						<RoundedIcon type="button" :button="buttons[1]"/>
+						<RoundedIcon type="button" :button="buttons[2]"/>
+						<div class="relative flex-shrink-0 flex justify-center h-2px w-full mb-2">
+						<div class="absolute h-2px w-8 bg-gray-900 rounded-full"></div>
+						</div>
+						<RoundedIcon type="button" :button="buttons[3]"/>
 					</div>
-					<RoundedIcon type="button" :button="buttons[3]"/>
 				</div>
 			</div>
-		</div>
 
-		<!--Server channels-->
-		<div class="w-60 h-screen bg-nightgray flex flex-col">
-			<div class="h-screen flex flex-col">
-				<div class="w-full h-12">
-					<ServerHeader :server="servers[3]"/>
-				</div>
+			<!--Server channels-->
+			<div class="w-60 h-screen bg-nightgray flex flex-col">
+				<div class="h-screen flex flex-col">
+					<div class="w-full h-12">
+						<ServerHeader :server="servers[3]"/>
+					</div>
 
-				<div class="smallScroleBar w-60 flex flex-col overflow-auto bg-nightgray">
-					<div class="w-11/12">
-						<div class="flex flex-col w-full h-80">
-							<div class="w-full">
+					<div class="smallScroleBar w-60 flex flex-col overflow-auto bg-nightgray">
+						<div class="w-11/12">
+							<div class="flex flex-col w-full h-80">
+								<div class="w-full">
 
-							damn
+								damn
+								</div>
 							</div>
-						</div>
-						<div class="flex flex-col w-full h-80">
-							<div class="w-full">
+							<div class="flex flex-col w-full h-80">
+								<div class="w-full">
 
-							damn
+								damn
+								</div>
 							</div>
-						</div>
-						<div class="flex flex-col w-full h-80">
-							<div class="w-full">
+							<div class="flex flex-col w-full h-80">
+								<div class="w-full">
 
-							damn
+								damn
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="w-full h-13">
-					<ServerFooter :profile="users[0]"/>
-					<!--<ServerFooter :profile="users[0]"/>-->
+					<div class="w-full h-13">
+						<ServerFooter :profile="users[0]"/>
+						<!--<ServerFooter :profile="users[0]"/>-->
+					</div>
 				</div>
 			</div>
 		</div>
@@ -150,11 +152,12 @@ export default {
 				hasUnReadMessage: 15
 				},
 				{
-				name: "Nuxt.js",
-				imageUrl:
-					"https://cdn.discordapp.com/icons/473401852243869706/e5068d423a09dd5f7ff9af6376090d2d.png?size=256",
-				gifUrl: "",
-				hasUnReadMessage: 15
+					name: "Nuxt.js",
+					imageUrl: "https://cdn.discordapp.com/icons/473401852243869706/e5068d423a09dd5f7ff9af6376090d2d.png?size=256",
+					gifUrl: "",
+					hasUnReadMessage: 15,
+					channels:[],
+					categories:[]
 				},
 				{
 				name: "Tailwind CSS",
