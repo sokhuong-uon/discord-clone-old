@@ -84,14 +84,14 @@
 		</div>
 
 		<!--Main section-->
-		<div class="w-auto bg-gray-800">
+		<div class="w-auto flex-shrink-0 bg-gray-800">
 			<!--Main section nav, sidebar-->
 			<div>hahaha</div>
 
 			<!--Message section communicate-->
 			<div>
 				<!--Actual Message section communicate-->
-				<div>Weeeeee</div>
+				<div>Weee</div>
 
 				<!--Members of the server or channel, online or offline-->
 				<div>Oyyy</div>
