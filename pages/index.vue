@@ -5,7 +5,7 @@
 			<div class="hidescrollbar w-18 pt-3 h-screen flex flex-col overflow-auto">
 				<!--Direct message dm-->
 				<div class="w-full h-12 mb-2">
-					<RoundedIcon type="button" :button="buttons[0]"/>
+					<DiscordButton :button="buttons[0]"/>
 				</div>
 
 				<div class="relative flex-shrink-0 flex justify-center h-2px w-full mb-2">
