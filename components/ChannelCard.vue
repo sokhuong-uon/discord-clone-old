@@ -1,9 +1,9 @@
 <template>
 	<div @mouseover="isHover = true" @mouseleave="isHover = false" class="w-58 my-px h-8 flex justify-center">
 		<div class="relative w-2 h-8 flex items-center">
-			<span class="absolute w-1 h-2 bg-green-700 rounded-r-lg"></span>
+			<span :class="{'h-2':channel.hasUnReadMessage > 0}" class="absolute w-1 bg-green-700 rounded-r-lg"></span>
 		</div>
-		<div :class="{'bg-gray-800':isHover}" class="w-56 px-2 rounded-lg cursor-pointer hover:bg-gray-800 flex items-center text-green-500">
+		<div :class="{'bg-gray-800':isHover, 'text-gray-600':channel.hasUnReadMessage === 0, 'text-green-500':channel.hasUnReadMessage > 0}" class="w-56 px-2 rounded-lg cursor-pointer flex items-center">
 			<div class="w-6 h-6 mr-1">
 				<svg class="w-6 h-6" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path
