@@ -1,5 +1,5 @@
 # discord-clone
-
+![Discord](https://i.redd.it/e7hb6p5nx3g11.png)
 ## Build Setup
 
 ```bash
