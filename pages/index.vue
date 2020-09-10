@@ -43,7 +43,7 @@
 						<ServerHeader :server="servers[3]"/>
 					</div>
 
-					<div class="smallScroleBar w-60 pb-18 flex flex-col overflow-auto bg-nightgray">
+					<div class="smallScroleBar w-60 h-auto pb-18 flex flex-col overflow-auto bg-nightgray">
 						<div class="pr-1">
 							<div class="h-3"></div>
 							<div class="flex flex-col w-full">
@@ -51,22 +51,24 @@
 									<ChannelCard :channel="channel"/>
 								</div>
 							</div>
-							<div class="flex flex-col w-full h-80">
-								<div class="w-full">
 
-								damn
-								</div>
-							</div>
-							<div class="flex flex-col w-full h-80">
-								<div class="w-full">
-
-								damn
-								</div>
-							</div>
-							<div class="flex flex-col w-full h-80">
-								<div class="w-full">
-
-								damn
+							<div draggable="true" v-for="(category, i) in servers[3].categories" :key="i" class="flex flex-col w-full">
+								<div class="w-full pt-4">
+									<div class="w-58 my-px h-8 text-gray-700 flex justify-start items-center">
+										<svg class="mt-2" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												fill="#4a5568"
+												fill-rule="evenodd" clip-rule="evenodd"
+												d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+											/>
+										</svg>
+										<div>{{category.name}}</div>
+									</div>
+									<div class="flex flex-col w-full">
+										<div v-for="(channel,j) in category.channels" :key="j">
+											<ChannelCard :channel="channel"/>
+										</div>
+									</div>
 								</div>
 							</div>
 
@@ -203,7 +205,7 @@ export default {
 								},
 								{
 									name: "documentation",
-									hasUnReadMessage: 15,
+									hasUnReadMessage: 0,
 								},
 								{
 									name: "off-topic",
@@ -211,7 +213,7 @@ export default {
 								},
 								{
 									name: "proposals",
-									hasUnReadMessage: 15,
+									hasUnReadMessage: 0,
 								},
 								{
 									name: "jobs",
@@ -252,7 +254,7 @@ export default {
 								},
 								{
 									name: "apolo",
-									hasUnReadMessage: 15,
+									hasUnReadMessage: 0,
 								},
 								{
 									name: "modules",
@@ -288,7 +290,7 @@ export default {
 								},
 								{
 									name: "press",
-									hasUnReadMessage: 15,
+									hasUnReadMessage: 0,
 								},
 								{
 									name: "content",
@@ -317,19 +319,19 @@ export default {
 								},
 								{
 									name: "chinese",
-									hasUnReadMessage: 15,
+									hasUnReadMessage: 0,
 								},
 								{
 									name: "russian",
 									hasUnReadMessage: 15,
 								},
 								{
-									name: "protuguess",
-									hasUnReadMessage: 15,
+									name: "portuguess",
+									hasUnReadMessage: 0,
 								},
 								{
 									name: "polish",
-									hasUnReadMessage: 15,
+									hasUnReadMessage: 0,
 								},
 								{
 									name: "german",
@@ -337,19 +339,19 @@ export default {
 								},
 								{
 									name: "persian",
-									hasUnReadMessage: 15,
+									hasUnReadMessage: 0,
 								},
 								{
 									name: "japanese",
-									hasUnReadMessage: 15,
+									hasUnReadMessage: 0,
 								},
 								{
 									name: "dutch",
-									hasUnReadMessage: 15,
+									hasUnReadMessage: 0,
 								},
 								{
 									name: "romanian",
-									hasUnReadMessage: 15,
+									hasUnReadMessage: 0,
 								},
 								{
 									name: "turkish",
