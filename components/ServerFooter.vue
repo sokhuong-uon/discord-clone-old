@@ -27,10 +27,11 @@
 
 				<div class="relative w-full h-4 text-teal-500 overflow-hidden">
 					<div :class="{'-translate-y-4':isHover}" class="absolute transform duration-200 ease-in">
-						<div  class="w-full -ml-2px h-4 text-sm flex justify-start items-center">
-							{{profile.status.emoji}} <span class="text-xs">{{profile.status.statement}}</span>
+						<div  class="relative w-full -ml-2px h-4 text-sm flex justify-start items-center">
+							<div>{{profile.status.emoji}}</div>
+							<div class="text-xs font-medium mt-1">{{profile.status.statement}}</div>
 						</div>
-						<div class="w-full h-5 flex">
+						<div class="w-full h-3 flex">
 							<div class="text-xs font-semibold">{{profile.tag}}</div>
 						</div>
 					</div>
