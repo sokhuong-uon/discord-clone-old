@@ -54,7 +54,7 @@
 
                         <div draggable="true" v-for="(category, i) in servers[3].categories" :key="i" class="flex flex-col w-full">
                             <div class="w-full pt-4">
-                                <button class="w-58 h-6 rounded-lg text-gray-600 flex items-center">
+                                <button class="w-58 h-6 rounded-lg text-gray-600 bg-black flex items-center">
                                     <div class="w-4 h-4 flex justify-center items-center">
                                         <svg class="w-2 h-2 transform hover:-rotate-90" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/> </svg>
                                     </div>
