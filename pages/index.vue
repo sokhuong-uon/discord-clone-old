@@ -123,19 +123,21 @@
 		</div>
 
         <!--Message section communicate-->
-        <div class="relative w-auto h-full flex overflow-auto">
+        <div class="relative w-full mr-10 bg-teal-800 h-auto flex overflow-visible">
             <!--Actual Message section communicate-->
-            <div class="w-full ">
+            <div class="w-full flex-shrink ">
 
 			</div>
 
             <!--Members of the server or channel, online or offline-->
-            <div class="smallScroleBar h-full pb-18 flex flex-col overflow-auto bg-nightgray flex-shrink-0 ">
-				<div class="w-full h-16 flex justify-center items-end">
-					<h1 class="w-full ">ONLINE</h1>
-				</div>
-				<div class="pl-2" v-for="(user, i) in users" :key="i">
-					<UserInlineCard :profile = "user"/>
+            <div class="h-screen flex-shrink-0 bg-nightgray">
+				<div class="smallScroleBar w-full h-full pb-20 overflow-auto">
+					<div class="w-full h-16 text-gray-500 text-sm font-semibold flex justify-center items-end">
+						<h1 class="w-full h-6 pl-4">ONLINE-{{users.length}}</h1>
+					</div>
+					<div class="w-full h-10 pl-2" v-for="(user, i) in users" :key="i">
+						<UserInlineCard :profile = "user"/>
+					</div>
 				</div>
 			</div>
         </div>
@@ -169,6 +171,193 @@ export default {
 					}
 
             	},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing MEmu"
+					}
+				},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: ""
+					}
+				},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: ""
+					}
+				},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: ""
+					}
+				},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: ""
+					}
+				},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing MEmu"
+					}
+				},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing MEmu"
+					}
+				},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing MEmu"
+					}
+				},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing MEmu"
+					}
+				},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing MEmu"
+					}
+				},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing MEmu"
+					}
+				},
 				{
 					userName: "[WSB] Gaara",
 					tag: "#7519",
