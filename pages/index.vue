@@ -85,7 +85,7 @@
     </div>
 
     <!--Main section-->
-    <div class="w-full bg-gray-800 block">
+    <div class="w-full h-screen bg-gray-800 block">
         <!--Main section nav, sidebar-->
         <div class="relative w-auto h-12 border-b px-2 flex items-center border-gray-900  bg-nightgraylighter">
 			<div class="w-full h-6 overflow-hidden">
@@ -123,12 +123,21 @@
 		</div>
 
         <!--Message section communicate-->
-        <div class="w-full h-full overflow-auto">
+        <div class="relative w-auto h-full flex overflow-auto">
             <!--Actual Message section communicate-->
-            <div>Weee feioaw fjioea;fje jf;oieajf</div>
+            <div class="w-full ">
+
+			</div>
 
             <!--Members of the server or channel, online or offline-->
-            <div>Oyyy</div>
+            <div class="smallScroleBar h-full pb-18 flex flex-col overflow-auto bg-nightgray flex-shrink-0 ">
+				<div class="w-full h-16 flex justify-center items-end">
+					<h1 class="w-full ">ONLINE</h1>
+				</div>
+				<div class="pl-2" v-for="(user, i) in users" :key="i">
+					<UserInlineCard :profile = "user"/>
+				</div>
+			</div>
         </div>
     </div>
 </div>
@@ -141,20 +150,400 @@ export default {
 			searchFocused: false,
 			query:'',
 			gategoryBtnHover: false,
-            users: [{
-                userName: "USK",
-                tag: "#2168",
-                avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
-                avatarUrlGif: "",
-                status: {
-                    emoji: "😚",
-                    statement: "Growing And Doing something great"
-                },
-                state: {
-                    svgPath: "",
-                    statement: "invisible"
-                }
-            }],
+            users: [
+				{
+					userName: "USK",
+					tag: "#2168",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "invisible"
+					},
+					action:{
+						name: "Playing Visual Studia Code 📑"
+					}
+
+            	},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing MEmu"
+					}
+				},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing MEmu"
+					}
+				},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing MEmu"
+					}
+				},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing MEmu"
+					}
+				},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing MEmu"
+					}
+				},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing MEmu"
+					}
+				},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing MEmu"
+					}
+				},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing MEmu"
+					}
+				},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing MEmu"
+					}
+				},
+				{
+					userName: "[WSB] Gaara",
+					tag: "#7519",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing MEmu"
+					}
+				},
+				{
+					userName: "!Airbus5717",
+					tag: "#2272",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing Visual Studio Code"
+					}
+				},
+				{
+					userName: "- Lutèce Original Sin -",
+					tag: "#3023",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "/^\d+$/"
+					}
+				},
+				{
+					userName: "- ̗̀Nurdism ̖́-",
+					tag: "#0001",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Moe get off my fucking computer you asshole"
+					}
+				},
+				{
+					userName: "-B- 汉",
+					tag: "#4624",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing PHPSTORM"
+					}
+				},
+				{
+					userName: "-B- 汉",
+					tag: "#4624",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing PHPSTORM"
+					}
+				},
+				{
+					userName: "-B- 汉",
+					tag: "#4624",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing PHPSTORM"
+					}
+				},
+				{
+					userName: "-B- 汉",
+					tag: "#4624",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing PHPSTORM"
+					}
+				},
+				{
+					userName: "-B- 汉",
+					tag: "#4624",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing PHPSTORM"
+					}
+				},
+				{
+					userName: "-B- 汉",
+					tag: "#4624",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing PHPSTORM"
+					}
+				},
+				{
+					userName: "-B- 汉",
+					tag: "#4624",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing PHPSTORM"
+					}
+				},
+				{
+					userName: "-B- 汉",
+					tag: "#4624",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing PHPSTORM"
+					}
+				},
+				{
+					userName: "-B- 汉",
+					tag: "#4624",
+					avatarUrlImg: "https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256",
+					avatarUrlGif: "",
+					status: {
+						emoji: "😚",
+						statement: "Growing And Doing something great"
+					},
+					state: {
+						svgPath: "",
+						statement: "Do not Disturb"
+					},
+					action:{
+						name: "Playing BLALALA"
+					}
+				},
+			],
             buttons: [
                 {
                     name: "Home",
