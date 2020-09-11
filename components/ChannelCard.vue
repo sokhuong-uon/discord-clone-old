@@ -10,11 +10,17 @@
         <div class="text-base font-semibold mb-px">
 			<p>{{channel.name}}</p>
 		</div>
-        <div v-if="isHover" class="ml-auto">
-            <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#a0aec0" d="M8 9a3 3 0 100-6 3 3 0 000 6zm0 2a6 6 0 016 6H2a6 6 0 016-6zm8-4a1 1 0 00-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 002 0v-1h1a1 1 0 100-2h-1V7z" />
-            </svg>
-        </div>
+		<div v-if="isHover" class="ml-auto">
+			<div class="ml-auto flex items-center">
+				<svg class="mx-1" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#a0aec0" d="M8 9a3 3 0 100-6 3 3 0 000 6zm0 2a6 6 0 016 6H2a6 6 0 016-6zm8-4a1 1 0 00-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 002 0v-1h1a1 1 0 100-2h-1V7z" />
+				</svg>
+				<svg class=" mt-1" aria-hidden="false" width="18" height="18"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M14 7v2s-1.413 0-1.427.007c-.153.58-.4 1.12-.733 1.6l.9.9-1.247 1.246-.9-.9c-.48.334-1.02.587-1.6.734V14h-2v-1.42c-.58-.147-1.12-.4-1.6-.733l-.9.9L3.247 11.5l.9-.9A4.862 4.862 0 013.413 9H2V7h1.413c.147-.58.4-1.12.734-1.6l-.9-.9L4.5 3.247l.9.9A4.862 4.862 0 017 3.413V2h2v1.413c.58.154 1.12.4 1.6.734l.907-.894L12.753 4.5l-.9.9c.334.473.587 1.02.734 1.6H14zm-6 3a2 2 0 100-4 2 2 0 000 4z"/></svg>
+			</div>
+			<div>
+
+			</div>
+		</div>
     </div>
 </div>
 </template>
