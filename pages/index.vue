@@ -59,6 +59,12 @@
                                         <svg :class="{'-rotate-90':gategoryBtnHover}" class="w-2 h-2 transform duration-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/> </svg>
                                     </div>
                                     <div class="uppercase text-xs">{{category.name}}</div>
+									<div class="w-6 h-6 ml-auto">
+										<svg
+											class="" aria-hidden="false" width="18" height="18">
+											<path fill="#a0aec0" d="M15 10h-5v5H8v-5H3V8h5V3h2v5h5z"/>
+										</svg>
+									</div>
                                 </button>
                                 <div class="flex flex-col w-full">
                                     <div v-for="(channel,j) in category.channels" :key="j">
@@ -81,16 +87,12 @@
     <!--Main section-->
     <div class="w-full bg-gray-800 block">
         <!--Main section nav, sidebar-->
-        <div class="w-full h-12 border-b px-2 flex items-center border-gray-900  bg-nightgraylighter">
-			<div class="w-full h-6 flex-shrink min-w-0 flex items-center overflow-hidden">
-				<div class="w-6 h-6 px-4">
-					<svg width="24" height="24" class="icon-1_QxNX"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M5.887 21a.5.5 0 01-.493-.587L6 17H2.595a.5.5 0 01-.492-.586l.175-1A.5.5 0 012.77 15h3.58l1.06-6H4.005a.5.5 0 01-.492-.586l.175-1A.5.5 0 014.18 7h3.58l.637-3.587A.5.5 0 018.889 3h.984a.5.5 0 01.493.587L9.76 7h6l.637-3.587A.5.5 0 0116.889 3h.984a.5.5 0 01.493.587L17.76 7h3.405a.5.5 0 01.492.586l-.175 1A.5.5 0 0120.99 9h-3.58l-1.06 6h3.405a.5.5 0 01.492.586l-.175 1a.5.5 0 01-.492.414H16l-.637 3.587a.5.5 0 01-.492.413h-.984a.5.5 0 01-.493-.587L14 17H8l-.637 3.587a.5.5 0 01-.492.413h-.984zM9.41 9l-1.06 6h6l1.06-6h-6z"/></svg>
-				</div>
-				<div class="w-auto h-5 pr-4">anouncements</div>
-				<div class="w-1px h-6 mx-4 bg-gray-500"></div>
-				<div class="w-auto h-5 min-w-0 ml-2 flex-shrink-0">blablabl chafefje fjeaoife this this the name.....</div>
+        <div class="relative w-auto h-12 border-b px-2 flex items-center border-gray-900  bg-nightgraylighter">
+			<div class="w-full h-6 overflow-hidden">
+				<div class=" z-0 flex-grow h-6 bg-green-800">fefaeafe fafaif enai</div>
 			</div>
-			<div class="w-auto h-6 text-gray-500 flex-shrink-0 flex items-center justify-between overflow-hidden">
+
+			<div class="w-auto h-6 z-10 bg-nightgraylighter text-gray-500 flex-shrink-0 flex items-center justify-between overflow-hidden">
 				<svg class="w-6 h-6 mx-2" aria-hidden="false" fill="none"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M18 9v5a3 3 0 003 3v1H3v-1a3 3 0 003-3V9a6 6 0 1112 0zm-6 12c-1.476 0-2.752-.81-3.445-2h6.89c-.693 1.19-1.97 2-3.445 2z"/></svg>
 
 				<svg class="w-6 h-6 mx-2" aria-hidden="false"><path fill="currentColor" d="M22 12l-9.899-9.899-1.415 1.413 1.415 1.415-4.95 4.949v.002L5.736 8.465 4.322 9.88l4.243 4.242-5.657 5.656 1.414 1.414 5.657-5.656 4.243 4.242 1.414-1.414-1.414-1.414L19.171 12h.001l1.414 1.414L22 12z"/></svg>
@@ -100,7 +102,7 @@
 				<div class="relative mx-2 px-1 w-auto h-6 rounded-sm bg-gray-900 flex items-center text-sm">
 					<div class="w-full h-6 flex items-center">
 						<input
-							:class="{'w-60':searchFocused}"
+							:class="{'w-60':searchFocused || query}"
 							class="w-28 h-5 font-semibold outline-none bg-transparent transform duration-300"
 							v-model="query"
 							@focus="searchFocuse()"
@@ -459,7 +461,7 @@ export default {
 			this.query = '';
 		},
 		searchFocuse: function(){
-			this.searchFocused = true
+			this.searchFocused = true;
 		}
 	},
     mounted() {
