@@ -1,5 +1,5 @@
 <template>
-<div class="w-full h-auto bg-black flex">
+<div class="relative w-full h-auto bg-black flex">
     <div class="flex overflow-hidden">
         <!--Server icons-->
         <div class="w-18 h-scree bg-mostnightgray">
@@ -81,7 +81,7 @@
     <!--Main section-->
     <div class="w-auto flex-shrink-0 bg-gray-800">
         <!--Main section nav, sidebar-->
-        <div>hahaha</div>
+        <div>hahahfj wioafj ewio ;fjweo aifjea</div>
 
         <!--Message section communicate-->
         <div>
