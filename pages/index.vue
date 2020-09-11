@@ -1,6 +1,6 @@
 <template>
-<div class="relative w-full h-auto bg-black flex">
-    <div class="flex overflow-hidden">
+<div class="relative w-full h-auto bg-black flex overflow-hidden">
+    <div class="flex">
         <!--Server icons-->
         <div class="w-18 h-scree bg-mostnightgray">
             <div class="hidescrollbar w-18 pt-3 h-screen flex flex-col overflow-auto">
@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="relative flex-shrink-0 flex justify-center h-2px w-full mb-2">
-                    <div class="absolute h-2px w-8 bg-gray-900 rounded-full"></div>
+                    <div class="absolute h-2px w-8 bg-gray-800 rounded-full"></div>
                 </div>
 
                 <!--servers-->
@@ -29,7 +29,7 @@
                     <RoundedIcon type="button" :button="buttons[1]" />
                     <RoundedIcon type="button" :button="buttons[2]" />
                     <div class="relative flex-shrink-0 flex justify-center h-2px w-full mb-2">
-                        <div class="absolute h-2px w-8 bg-gray-900 rounded-full"></div>
+                        <div class="absolute h-2px w-8 bg-gray-800 rounded-full"></div>
                     </div>
                     <RoundedIcon type="button" :button="buttons[3]" />
                 </div>
@@ -79,7 +79,7 @@
     </div>
 
     <!--Main section-->
-    <div class="w-auto flex-shrink-0 bg-gray-800">
+    <div class=" w-full flex-shrink bg-gray-800">
         <!--Main section nav, sidebar-->
         <div>hahahfj wioafj ewio ;fjweo aifjea</div>
 
