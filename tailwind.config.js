@@ -51,6 +51,9 @@ module.exports = {
 				'nightgraylighter':'#36393f',
 				'nightergray':'#292b2f',
 				'mostnightgray':'#202225'
+			},
+			textColor: {
+				'graydiscord': '#8e9297'
 			}
 		},
 
