@@ -576,7 +576,7 @@ export default {
 						statement: "Do not Disturb"
 					},
 					action:{
-						name: "Moe get off my fucking computer you asshole"
+						name: "😐Moe get off my fucking computer you asshole"
 					}
 				},
 				{
