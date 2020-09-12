@@ -157,8 +157,14 @@
 		</div>-->
 
 		<div class="relative w-full h-full flex bg-pink-800">
-			<div class="flex-1 break-all w-auto h-28 inset-y-0 bg-green-900">
+			<div class="flex-1 break-all font-sans text-lg w-auto h-full pb-32 inset-y-0 overflow-auto">
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, sit aliquid ipsa dignisdolor sit amet consectetur adipisicing elit. Inventore, sit aliquid ipsa dignissimos repellat ex! Saepe animi tempore tempora ducimus placeat, rerum eligendi at exercitationem alias ratione! Nemo autem maiores sit quos facilis? Fuga vel vero natus sunt enim. Alias commodi perferendis neque nam ad provident? Harum placeat corporis consequatur?
+
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla natus minus, placeat modi nesciunt doloribus voluptas culpa rem odit ab architecto dolore iusto laborum consequatur nostrum consectetur accusamus provident alias perferendis fuga ipsam in? Iste, doloribus eaque sequi excepturi hic minus modi quibusdam temporibus et, porro ut nulla nemo quas aut voluptas consectetur at autem quisquam maiores dolorem. Voluptates natus beatae nisi inventore sed fugit illo quod expedita quasi enim ipsa excepturi veniam odit placeat laborum soluta nihil ad perspiciatis aspernatur provident, hic assumenda iusto? Officia corporis maiores inventore nostrum libero vel! Laboriosam, amet. Distinctio similique fugit aspernatur ex blanditiis?
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui voluptates nesciunt nihil voluptas reiciendis doloribus esse harum inventore nobis ipsum nulla blanditiis quos magni neque facilis ab, repellendus quaerat dicta iste, a aut? Sapiente mollitia, vel, quam natus voluptate assumenda libero explicabo id, aperiam vero magnam quis! A, consequuntur magni.
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate adipisci magnam id praesentium sapiente, quibusdam culpa, quia quas totam nemo necessitatibus cumque inventore atque autem. Optio explicabo in asperiores voluptas.
+
+			this is my text
 			</div>
 			<div class="w-atou min-w-0 overflow-x-hidden">
 				<MembersBar :users="users"/>
@@ -1096,23 +1102,23 @@ export default {
 /* small scrollbar */
 
 /* Track */
-.smallScroleBar::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: transparent;
 }
 
 /* width */
-.smallScroleBar::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 6px;
 }
 
 /* Handle */
-.smallScroleBar::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: rgb(57, 36, 36);
     border-radius: 10px;
 }
 
 /* Handle on hover */
-.smallScroleBar::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 </style>
