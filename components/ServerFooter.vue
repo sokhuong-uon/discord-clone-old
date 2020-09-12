@@ -40,12 +40,12 @@
 
         <!--group headse mic setting-->
         <div class="w-24 h-8 flex items-center justify-center focus:outline-none">
-            <button @click="Muted = !Muted" class="w-4/12 h-8 rounded-md hover:bg-gray-800 focus:outline-none">
+            <button @click="muted = !muted" class="w-4/12 h-8 rounded-md hover:bg-gray-800 focus:outline-none">
                 <div class="w-8 h-8 flex items-center justify-center">
 					<svg class="w-5 h-5 text-gray-500" viewBox="0 0 24 24">
-						<svg v-if="Muted" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg v-if="muted" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill="currentColor" d="M9.01 11.085C9.015 11.1125 9.02 11.14 9.02 11.17L15 5.18V5C15 3.34 13.66 2 12 2C10.34 2 9 3.34 9 5V11C9 11.03 9.005 11.0575 9.01 11.085Z"></path>
-							<path fill="#e53e3e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M21 4.27L19.73 3L3 19.73L4.27 21L8.46 16.82L9.69 15.58L11.35 13.92L14.99 10.28L21 4.27Z" />
+							<path class="" fill="#e53e3e" d="M3.20101 23.6243L1.7868 22.2101L21.5858 2.41113L23 3.82535L3.20101 23.6243Z"></path>
 							<path d="M11.7237 16.0927L10.9632 16.8531L10.2533 17.5688C10.4978 17.633 10.747 17.6839 11 17.72V22H13V17.72C16.28 17.23 19 14.41 19 11H17.3C17.3 14 14.76 16.1 12 16.1C11.9076 16.1 11.8155 16.0975 11.7237 16.0927Z" fill="currentColor"></path>
 						</svg>
 						<svg v-else aria-hidden="false" width="24" height="24" viewBox="0 0 24 24">
@@ -55,9 +55,14 @@
 					</svg>
                 </div>
             </button>
-            <button class="w-4/12 h-8 rounded-md hover:bg-gray-800 focus:outline-none">
+            <button @click="[deafen = !deafen, , muted = true]" class="w-4/12 h-8 rounded-md hover:bg-gray-800 focus:outline-none">
                 <div class="w-8 h-8 flex items-center justify-center">
-                    <svg class="w-5 h-5 text-gray-500" viewBox="0 0 24 24">
+                    <svg v-if="deafen" class="w-5 h-5 text-gray-500" viewBox="0 0 24 24">
+						<path d="M6.16204 15.0065C6.10859 15.0022 6.05455 15 6 15H4V12C4 7.588 7.589 4 12 4C13.4809 4 14.8691 4.40439 16.0599 5.10859L17.5102 3.65835C15.9292 2.61064 14.0346 2 12 2C6.486 2 2 6.485 2 12V19.1685L6.16204 15.0065Z" fill="currentColor"></path>
+						<path d="M19.725 9.91686C19.9043 10.5813 20 11.2796 20 12V15H18C16.896 15 16 15.896 16 17V20C16 21.104 16.896 22 18 22H20C21.105 22 22 21.104 22 20V12C22 10.7075 21.7536 9.47149 21.3053 8.33658L19.725 9.91686Z" fill="currentColor"></path>
+						<path class="" fill="#e53e3e" d="M3.20101 23.6243L1.7868 22.2101L21.5858 2.41113L23 3.82535L3.20101 23.6243Z"></path>
+					</svg>
+                    <svg v-else class="w-5 h-5 text-gray-500" viewBox="0 0 24 24">
 						<svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.003c-5.514 0-10 4.485-10 10v8a2 2 0 002 2h2a2 2 0 002-2v-3a2 2 0 00-2-2H4v-3c0-4.412 3.589-8 8-8s8 3.588 8 8v3h-2a2 2 0 00-2 2v3a2 2 0 002 2h2a2 2 0 002-2v-8c0-5.515-4.486-10-10-10z" fill="currentColor"/></svg>
 					</svg>
                 </div>
@@ -83,13 +88,18 @@ export default {
     props: ['profile'],
     data() {
         return {
-			Muted: false,
+			deafen: false,
+			muted: false,
             isHover: false,
             mouseOverTransition: '-translate-y-5',
             mouseLeaveTransition: ''
         }
     },
     methods: {
+		onDeafen: function () {
+			this.deafen = true
+			this.muted = true
+        },
         onMouseOver: function () {
             this.isHover = true
         },
