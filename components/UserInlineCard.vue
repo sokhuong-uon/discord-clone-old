@@ -5,9 +5,9 @@
 		<div class="w-8 h-8 mr-3">
 			<div class="relative w-8 h-8">
 				<img class="w-full h-full rounded-full overflow-hidden" :src="profile.avatarUrlImg" :alt="profile.name" srcset="" />
-				<div class="absolute flex justify-center items-center w-3 h-3 bottom-0 right-0 bg-gray-600 rounded-full">
-					<div class="absolute w-3 h-3 bg-green-600 rounded-full overflow-hidden">
-
+				<div class="absolute flex justify-center items-center w-3 h-3 bottom-0 right-0 bg-gray-700 rounded-full">
+					<div class="absolute w-3 h-3 rounded-full text-green-700 overflow-hidden">
+						
 					</div>
 				</div>
 			</div>
