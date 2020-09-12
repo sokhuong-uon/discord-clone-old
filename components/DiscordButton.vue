@@ -4,7 +4,7 @@
         <span :class="{'h-5':isHover}" class="absolute w-4/12 h-0 bg-green-700 rounded-r-lg"></span>
     </div>
     <div @mouseover="isHover = true" @mouseleave="isHover = false" class="w-12 h-12 flex justify-start">
-        <button class="w-12 h-12">
+        <button class="btn w-12 h-12">
             <div :class="{'bg-blue-700 rounded-larger':isHover}" class="w-12 h-12 bg-gray-800 flex justify-center items-center rounded-full overflow-hidden">
                 <svg class="text-green-600 w-12 h-6 mt-1 mr-1 transform mx-auto" viewBox="0 0 24 24">
                     <path fill="#F7FAFC" fill-rule="evenodd" clip-rule="evenodd" :d="button.svgPath" />
