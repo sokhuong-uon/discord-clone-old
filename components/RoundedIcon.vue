@@ -21,7 +21,7 @@
 				</div>
 			</nuxt-link>
 
-			<button v-if="type==='button'" class="w-12 h-12">
+			<button v-if="type==='button'" class="btn w-12 h-12">
 				<div :class="{'bg-green-600 rounded-larger':isHover}" class="w-12 h-12 bg-gray-800 flex justify-center items-center rounded-full overflow-hidden">
 					<svg v-if="button.name==='Home'" class="text-green-600 w-12 h-6 mt-1 mr-1 transform mx-auto" viewBox="0 0 24 24">
 						<path
