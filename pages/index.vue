@@ -1,5 +1,5 @@
 <template>
-<div class="relative w-full h-auto bg-black flex overflow-hidden">
+<div class="relative w-auto h-auto bg-black flex overflow-hidden">
     <div class="flex">
         <!--Server icons-->
         <div class="w-18 h-scree bg-mostnightgray">
@@ -85,26 +85,32 @@
     </div>
 
     <!--Main section-->
-    <div class="w-full h-screen bg-gray-800 block">
+    <div class="mainsection min-w-0 w-full h-screen bg-green-800 flex flex-col">
         <!--Main section nav, sidebar-->
-        <div class="relative w-auto h-12 border-b px-2 flex items-center border-gray-900  bg-nightgraylighter">
-			<div class="w-full h-6 overflow-hidden">
-				<div class=" z-0 flex-grow h-6 bg-green-800">fefaeafe fafaif enai</div>
+
+		<div class="relative w-auto h-12 border-b px-2 flex-shrink-0 flex items-center border-gray-900  bg-nightgraylighter">
+			<div class="w-full h-6 flex items-center overflow-hidden">
+				<div class="w-6 h-6 mx-2 text-gray-600">
+					<svg width="24" height="24" class=""><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M5.887 21a.5.5 0 01-.493-.587L6 17H2.595a.5.5 0 01-.492-.586l.175-1A.5.5 0 012.77 15h3.58l1.06-6H4.005a.5.5 0 01-.492-.586l.175-1A.5.5 0 014.18 7h3.58l.637-3.587A.5.5 0 018.889 3h.984a.5.5 0 01.493.587L9.76 7h6l.637-3.587A.5.5 0 0116.889 3h.984a.5.5 0 01.493.587L17.76 7h3.405a.5.5 0 01.492.586l-.175 1A.5.5 0 0120.99 9h-3.58l-1.06 6h3.405a.5.5 0 01.492.586l-.175 1a.5.5 0 01-.492.414H16l-.637 3.587a.5.5 0 01-.492.413h-.984a.5.5 0 01-.493-.587L14 17H8l-.637 3.587a.5.5 0 01-.492.413h-.984zM9.41 9l-1.06 6h6l1.06-6h-6z"/></svg>
+				</div>
+				<h2 class="w-auto h-6 mr-2 text-gray-300 font-bold tracking-tighter">apollo</h2>
+				<div class="w-px h-6 bg-gray-700 mx-2"></div>
+				<div class="w-auto h-4 ml-2 text-sm leading-none font-semibold tracking-tighter text-gray-500 truncate">Help related to Apollo in your Nuxt project. https://github.com/nuxt-community/apollo-module</div>
 			</div>
 
 			<div class="w-auto h-6 z-10 bg-nightgraylighter text-gray-500 flex-shrink-0 flex items-center justify-between overflow-hidden">
-				<div class="mx-2">
+				<div class="mx-2 flex items-center">
 					<button class="btn">
 						<svg class="w-6 h-6" aria-hidden="false" fill="none"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M18 9v5a3 3 0 003 3v1H3v-1a3 3 0 003-3V9a6 6 0 1112 0zm-6 12c-1.476 0-2.752-.81-3.445-2h6.89c-.693 1.19-1.97 2-3.445 2z"/></svg>
 					</button>
 				</div>
-				<div class="mx-2">
+				<div class="mx-2 flex items-center">
 					<button class="btn">
 						<svg class="w-6 h-6" aria-hidden="false"><path fill="currentColor" d="M22 12l-9.899-9.899-1.415 1.413 1.415 1.415-4.95 4.949v.002L5.736 8.465 4.322 9.88l4.243 4.242-5.657 5.656 1.414 1.414 5.657-5.656 4.243 4.242 1.414-1.414-1.414-1.414L19.171 12h.001l1.414 1.414L22 12z"/></svg>
 					</button>
 				</div>
 
-				<div class="mx-2">
+				<div class="mx-2 flex items-center">
 					<button class="btn">
 						<svg class="w-6 h-6" aria-hidden="false"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M14 8.006c0 2.205-1.794 4-4 4-2.205 0-4-1.795-4-4s1.794-4 4-4 4 1.795 4 4zm-12 11c0-3.533 3.29-6 8-6 4.711 0 8 2.467 8 6v1H2v-1z"/><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M14 8.006c0 2.205-1.794 4-4 4-2.205 0-4-1.795-4-4s1.794-4 4-4 4 1.795 4 4zm-12 11c0-3.533 3.29-6 8-6 4.711 0 8 2.467 8 6v1H2v-1z"/><path fill="currentColor" d="M20 20.006h2v-1c0-2.563-1.73-4.565-4.479-5.47 1.541 1.377 2.48 3.27 2.48 5.47v1zM14.883 11.908A4.007 4.007 0 0018 8.006a4.006 4.006 0 00-3.503-3.97A5.977 5.977 0 0116 8.007a5.974 5.974 0 01-1.362 3.804c.082.032.164.064.245.098z"/></svg>
 					</button>
@@ -114,7 +120,7 @@
 				<div class="relative mx-2 px-1 w-auto h-6 rounded-sm bg-gray-900 flex items-center text-sm">
 					<div class="w-full h-6 flex items-center">
 						<input
-							:class="{'w-60':searchFocused || query}"
+							:class="{'w-52':searchFocused || query}"
 							class="w-28 h-5 font-semibold outline-none bg-transparent transform duration-300"
 							v-model="query"
 							@focus="searchFocuse()"
@@ -128,12 +134,12 @@
 
 				</div>
 
-				<div class="mx-2">
+				<div class="mx-2 flex items-center">
 					<button class="btn">
 						<svg class="w-6 h-6" aria-hidden="false" fill="none"><path d="M19 3H4.99c-1.11 0-1.98.89-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5a2 2 0 00-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10z" fill="currentColor"/></svg>
 					</button>
 				</div>
-				<div class="mx-2">
+				<div class="mx-2 flex items-center">
 					<button class="btn">
 						<svg class="w-6 h-6" aria-hidden="false"><path fill="currentColor" d="M12 2C6.486 2 2 6.487 2 12c0 5.515 4.486 10 10 10s10-4.485 10-10c0-5.513-4.486-10-10-10zm0 16.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm1-4.375V15h-2v-3h1a2 2 0 10-2-2H8c0-2.205 1.795-4 4-4s4 1.795 4 4a4.01 4.01 0 01-3 3.875z"/></svg>
 					</button>
@@ -142,25 +148,25 @@
 			</div>
 		</div>
 
+        <!--<div class="w-auto min-w-0 h-auto mx-2 my-4 flex bg-pink-700 overflow-visible">
+			<div class="w-auto min-w-0 h-auto flex-shrink truncate overflow-x-visible">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, molestias nobis iure modi delectus voluptatum harum vitae praesentium iste distinctio, necessitatibus possimus natus molestiae error voluptatem dignissimos odit et repudiandae.</div>
+		</div>
+
+		<div class="relative w-full h-32 bg-gray-700">
+			<div class="absolute w-56 h-auto inset-y-0 left-0 bg-white"></div>
+		</div>-->
+
+		<div class="relative w-full h-full flex bg-pink-800">
+			<div class="flex-1 break-all w-auto h-28 inset-y-0 bg-green-900">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, sit aliquid ipsa dignisdolor sit amet consectetur adipisicing elit. Inventore, sit aliquid ipsa dignissimos repellat ex! Saepe animi tempore tempora ducimus placeat, rerum eligendi at exercitationem alias ratione! Nemo autem maiores sit quos facilis? Fuga vel vero natus sunt enim. Alias commodi perferendis neque nam ad provident? Harum placeat corporis consequatur?
+			</div>
+			<div class="w-atou min-w-0 overflow-x-hidden">
+				<MembersBar :users="users"/>
+			</div>
+		</div>
+
+
         <!--Message section communicate-->
-        <div class="relative w-full mr-10 bg-teal-800 h-auto flex overflow-visible">
-            <!--Actual Message section communicate-->
-            <div class="w-full flex-shrink ">
-
-			</div>
-
-            <!--Members of the server or channel, online or offline-->
-            <div class="h-screen flex-shrink-0 bg-nightgray">
-				<div class="smallScroleBar w-full h-full pb-20 overflow-auto">
-					<div class="w-full h-16 text-gray-500 text-sm font-semibold flex justify-center items-end">
-						<h1 class="w-full h-6 pl-4">ONLINE-{{users.length}}</h1>
-					</div>
-					<div class="w-full h-10 pl-2" v-for="(user, i) in users" :key="i">
-						<UserInlineCard :profile = "user"/>
-					</div>
-				</div>
-			</div>
-        </div>
     </div>
 </div>
 </template>
@@ -169,6 +175,7 @@
 export default {
     data() {
         return {
+			showMembers: false,
 			searchFocused: false,
 			query:'',
 			gategoryBtnHover: false,
