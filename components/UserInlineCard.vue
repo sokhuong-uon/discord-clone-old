@@ -1,5 +1,5 @@
 <template>
-<div class="w-56 h-10 rounded-md py-1 px-2 flex items-center hover:bg-gray-800">
+<div class="w-56 h-10 rounded-md py-1 px-2 text-graydiscord hover:text-gray-200 flex items-center hover:bg-gray-800">
 	<!--icon avatar and status-->
 	<div class="w-8 h-8 mr-3">
 		<div class="relative w-8 h-8">
@@ -11,10 +11,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="w-41 h-10 text-gray-500 flex flex-col justify-center items-center">
+	<div class="w-41 h-10 flex flex-col justify-center items-center">
 
-		<div class="w-41 h-5">{{profile.userName}}</div>
-		<div class="w-41 h-auto text-xs truncate overflow-hidden">{{profile.action.name}}</div>
+		<div class="w-41 h-5 text-current">{{profile.userName}}</div>
+		<div class="w-41 h-auto text-xs text-graydiscord truncate overflow-hidden">{{profile.action.name}}</div>
 	</div>
 
 </div>
