@@ -111,7 +111,7 @@
 				</div>
 
 				<div class="mx-2 flex items-center">
-					<button class="btn">
+					<button @click="showMembers = !showMembers" class="btn">
 						<svg class="w-6 h-6" aria-hidden="false"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M14 8.006c0 2.205-1.794 4-4 4-2.205 0-4-1.795-4-4s1.794-4 4-4 4 1.795 4 4zm-12 11c0-3.533 3.29-6 8-6 4.711 0 8 2.467 8 6v1H2v-1z"/><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M14 8.006c0 2.205-1.794 4-4 4-2.205 0-4-1.795-4-4s1.794-4 4-4 4 1.795 4 4zm-12 11c0-3.533 3.29-6 8-6 4.711 0 8 2.467 8 6v1H2v-1z"/><path fill="currentColor" d="M20 20.006h2v-1c0-2.563-1.73-4.565-4.479-5.47 1.541 1.377 2.48 3.27 2.48 5.47v1zM14.883 11.908A4.007 4.007 0 0018 8.006a4.006 4.006 0 00-3.503-3.97A5.977 5.977 0 0116 8.007a5.974 5.974 0 01-1.362 3.804c.082.032.164.064.245.098z"/></svg>
 					</button>
 				</div>
@@ -156,17 +156,15 @@
 			<div class="absolute w-56 h-auto inset-y-0 left-0 bg-white"></div>
 		</div>-->
 
-		<div class="relative w-full h-full flex bg-pink-800">
-			<div class="flex-1 break-all font-sans text-lg w-auto h-full pb-32 inset-y-0 overflow-auto">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, sit aliquid ipsa dignisdolor sit amet consectetur adipisicing elit. Inventore, sit aliquid ipsa dignissimos repellat ex! Saepe animi tempore tempora ducimus placeat, rerum eligendi at exercitationem alias ratione! Nemo autem maiores sit quos facilis? Fuga vel vero natus sunt enim. Alias commodi perferendis neque nam ad provident? Harum placeat corporis consequatur?
-
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla natus minus, placeat modi nesciunt doloribus voluptas culpa rem odit ab architecto dolore iusto laborum consequatur nostrum consectetur accusamus provident alias perferendis fuga ipsam in? Iste, doloribus eaque sequi excepturi hic minus modi quibusdam temporibus et, porro ut nulla nemo quas aut voluptas consectetur at autem quisquam maiores dolorem. Voluptates natus beatae nisi inventore sed fugit illo quod expedita quasi enim ipsa excepturi veniam odit placeat laborum soluta nihil ad perspiciatis aspernatur provident, hic assumenda iusto? Officia corporis maiores inventore nostrum libero vel! Laboriosam, amet. Distinctio similique fugit aspernatur ex blanditiis?
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui voluptates nesciunt nihil voluptas reiciendis doloribus esse harum inventore nobis ipsum nulla blanditiis quos magni neque facilis ab, repellendus quaerat dicta iste, a aut? Sapiente mollitia, vel, quam natus voluptate assumenda libero explicabo id, aperiam vero magnam quis! A, consequuntur magni.
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate adipisci magnam id praesentium sapiente, quibusdam culpa, quia quas totam nemo necessitatibus cumque inventore atque autem. Optio explicabo in asperiores voluptas.
-
-			this is my text
+		<div class="relative w-full h-full flex">
+			<div class="flex-1 flex-shrink flex-grow min-w-0 break-all bg-green-700 font-sans text-lg w-auto h-full pb-32 inset-y-0 overflow-auto">
+				<Chat/>
+				<Chat/>
+				<Chat/>
+				<Chat/>
+				<Chat/>
 			</div>
-			<div class="w-atou min-w-0 overflow-x-hidden">
+			<div :class="{'w-60':showMembers, 'w-0': !showMembers}" class="h-full">
 				<MembersBar :users="users"/>
 			</div>
 		</div>
@@ -1073,11 +1071,14 @@ export default {
 		},
 		searchFocuse: function(){
 			this.searchFocused = true;
-		}
+		},
 	},
     mounted() {
-        console.log("%cEnjoy Your Time, Dev! 😉", "background: transparent; color: blue; font-size: 60px; font-weight: 600; font-family: Arial, Helvetica, sans-serif; height: 200px");
-        console.log("%c Do not pasth any code that you don't understand", "background: transparent; color: red; font-size: 30px; font-weight: 600; font-family: Lobster, serif; height: 200px");
+		let link = 'https://github.com/SOKHUONG/discord-clone';
+        console.log("%c⚠ Do not pasth any code that you don't understand !", "background: yellow; color: red; font-size: 30px; font-weight: 600; font-family: Lobster, serif; height: 200px");
+        console.log("%c If you are a developer and know exactly what you're doing,", "background: transparent; color: #ed0e90; font-size: 30px; font-weight: 600; font-family: Lobster, serif; height: 200px");
+        console.log("%cEnjoy Your Time, Dev! 😉", "background: transparent; color: #ed0e90; font-size: 50px; font-weight: 700; font-family: Arial, Helvetica, sans-serif; height: 200px");
+		console.log(`%c Source code of this project on github: %c${link}`,"font-family: Lobster, serif;color: #0eed98; font-size: 25px","font-size: 15px;");
     }
 };
 </script>
