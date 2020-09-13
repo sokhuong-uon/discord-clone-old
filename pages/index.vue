@@ -83,6 +83,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import servers from '~/static/data/servers.json';
 import users from '~/static/data/users.json';
 export default {
@@ -113,8 +114,18 @@ export default {
             ],
         };
     },
-	asyncData({ params }) {
-		return {servers}
+	// asyncData({ params }) {
+	// 	return {servers}
+	// },
+	asyncData({ params, error }) {
+		return axios
+		.get(`https://raw.githubusercontent.com/SOKHUONG/discord-clone/master/static/data/servers.json`)
+		.then(res => {
+			return { servers: res.data }
+		})
+		.catch(e => {
+			error({ statusCode: 404, message: 'Post not found' })
+		})
 	},
 	methods: {
 		deleteQuery: function(){
