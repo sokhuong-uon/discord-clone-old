@@ -172,8 +172,6 @@
 
 <script>
 import axios from 'axios';
-import servers from '~/static/data/servers.json';
-import users from '~/static/data/users.json';
 export default {
     data() {
         return {
@@ -181,7 +179,6 @@ export default {
 			searchFocused: false,
 			query:'',
 			gategoryBtnHover: false,
-            users: users,
             buttons: [
                 {
                     name: "Home",
@@ -203,18 +200,16 @@ export default {
 
         };
     },
-	// asyncData({ params }) {
-	// 	return {servers}
-	// },
+	
 	asyncData({ params, error }) {
 		return axios
-		.get(`https://raw.githubusercontent.com/SOKHUONG/discord-clone/master/static/data/servers.json`)
+		.get(`https://raw.githubusercontent.com/SOKHUONG/discord-clone/master/static/data/app.json`)
 		.then(res => {
 			return {
-				servers: res.data
+				servers: res.data.servers,
+				users: res.data.users
 			}
 		})
-		
 		.catch(e => {
 			error({ statusCode: 404, message: 'Post not found' })
 		})
