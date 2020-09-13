@@ -1,5 +1,5 @@
 <template>
-<button class="w-60 h-12 bg-nightgray border-b border-gray-900">
+<button class="btn w-60 h-12 bg-nightgray border-b border-gray-900">
     <div class="w-full h-full flex items-center px-4">
         <!--If server if boosted-->
         <div>
@@ -8,7 +8,7 @@
             </svg>
         </div>
         <!--server name-->
-        <h1 class="w-8 text-white ml-1 mr-auto text-sm shadow-md font-semibold tracking-wide">{{server.name}}</h1>
+        <h1 class="w- h-4 text-white ml-1 mr-auto text-sm shadow-md font-semibold tracking-wide">{{server.name}}</h1>
 
         <!--menubar-->
         <div class="w-4 h-4 overflow-hidden">
@@ -29,5 +29,7 @@ export default {
 </script>
 
 <style>
-
+.btn:focus{
+	outline: 0;
+}
 </style>
