@@ -61,7 +61,87 @@
 		"name": "WebGL & WebGPU",
 		"imageUrl": "https://cdn.discordapp.com/icons/734147990985375826/a0088f3f110cc0fdd7a70282a7036cd5.png?size=256",
 		"gifUrl": "",
-		"hasUnReadMessage": 15
+		"hasUnReadMessage": 15,
+
+		"categories": [{
+				"name": "📔notes",
+				"channels": [{
+						"name": "news",
+						"hasUnReadMessage": 1
+					},
+					{
+						"name": "resources",
+						"hasUnReadMessage": 0
+					},
+					{
+						"name": "showcase",
+						"hasUnReadMessage": 0
+					}
+				]
+			},
+			{
+				"name": "general",
+				"channels": [
+					{
+						"name": "random",
+						"hasUnReadMessage": 15
+					},
+					{
+						"name": "future",
+						"hasUnReadMessage": 15
+					},
+					{
+						"name": "js-related",
+						"hasUnReadMessage": 15
+					},
+					{
+						"name": "glsl-related",
+						"hasUnReadMessage": 15
+					},
+					{
+						"name": "math-and-algorithm",
+						"hasUnReadMessage": 15
+					}
+				]
+			},
+			{
+				"name": "help channels",
+				"channels": [
+					{
+						"name": "pixi-js",
+						"hasUnReadMessage": 1
+					},
+					{
+						"name": "play-canvas",
+						"hasUnReadMessage": 0
+					},
+					{
+						"name": "regl",
+						"hasUnReadMessage": 5
+					},
+					{
+						"name": "babylon-js",
+						"hasUnReadMessage": 0
+					}
+
+				]
+			},
+			{
+				"name": "cocos",
+				"channels": [
+					{
+						"name": "coop",
+						"hasUnReadMessage": 1
+					},
+					{
+						"name": "call",
+						"hasUnReadMessage": 1
+					}
+
+
+				]
+			}
+		]
 	},
 	{
 		"name": "Three.js",
