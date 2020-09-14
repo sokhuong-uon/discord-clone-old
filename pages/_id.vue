@@ -162,7 +162,7 @@
 					</div>
 					<div class="h-8"></div>
 				</div>
-				<form class="blur-shadow flex-shrink-0 w-full h-auto px-8 mb-4 bg-nightgraylighter shadow-2xl" action="" method="post">
+				<form ref="form" class="blur-shadow flex-shrink-0 w-full h-auto px-8 mb-4 bg-nightgraylighter shadow-2xl" action="" method="post">
 					<div class="relative flex items-center mb-10 w-full h-auto rounded-lg bg-grayinput -mt-1">
 
 						<div class="relative flex items-center">
@@ -172,8 +172,9 @@
 								<ResizeAuto class="">
 									<template class="" v-slot:default="{resize}">
 										<textarea
+										@keyup.enter="onEnter"
 										rows="2"
-										class="textarea rounded-lg"
+										class="textarea rounded-lg bg-transparent outline-none"
 										placeholder="Message #general"
 										@input="resize"
 										></textarea>
@@ -250,6 +251,10 @@ export default {
 		searchFocuse: function(){
 			this.searchFocused = true;
 		},
+		onEnter: function(event){
+			event.preventDefault();
+			this.$refs.form.submit();
+		}
 	},
     mounted() {
 		console.table(this.chats);
