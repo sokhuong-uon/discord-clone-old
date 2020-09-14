@@ -52,10 +52,12 @@ module.exports = {
 				'nightgray':'#2f3136',
 				'nightgraylighter':'#36393f',
 				'nightergray':'#292b2f',
-				'mostnightgray':'#202225'
+				'mostnightgray':'#202225',
+
 			},
 			textColor: {
-				'graydiscord': '#8e9297'
+				'graydiscord': '#8e9297',
+				'chattext':'#dcddde',
 			},
 			minWidth:{
 				'2px': '0.125rem',
