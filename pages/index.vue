@@ -111,7 +111,7 @@ export default {
             ],
         };
     },
-	
+
 	asyncData({ params, error }) {
 		return axios
 		.get(`https://raw.githubusercontent.com/SOKHUONG/discord-clone/master/static/data/app.json`)
@@ -125,6 +125,7 @@ export default {
 			error({ statusCode: 404, message: 'Post not found' })
 		})
 	},
+	
 	methods: {
 		deleteQuery: function(){
 			this.query = '';
@@ -134,6 +135,7 @@ export default {
 		},
 	},
     mounted() {
+		console.table(this.servers);
 		let link = 'https://github.com/SOKHUONG/discord-clone';
         console.log("%c⚠ Do not pasth any code that you don't understand !", "background: yellow; color: red; font-size: 30px; font-weight: 600; font-family: Lobster, serif; height: 200px");
         console.log("%c If you are a developer and know exactly what you're doing,", "background: transparent; color: #ed0e90; font-size: 30px; font-weight: 600; font-family: Lobster, serif; height: 200px");

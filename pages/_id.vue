@@ -152,12 +152,11 @@
 
 
 		<div class="relative w-full h-full flex">
-			<div class="min-w-0 break-normal bg-green-700 font-sans text-lg w-auto h-full pb-32 inset-y-0 overflow-auto">
-				<Chat/>
-				<Chat/>
-				<Chat/>
-				<Chat/>
-				<Chat/>
+			<div class="w-full h-full min-w-0 break-normal bg-nightgraylighter font-sans text-lg pb-32 inset-y-0 overflow-auto">
+				<div class="w-full h-1 -mt-1 pr-12 pl-18"></div>
+				<div v-for="(chat, i) in chats[$route.params.id]" :key="i">
+					<Chat :chat="chat"/>
+				</div>
 			</div>
 			<div :class="{'w-60':showMembers, 'w-0': !showMembers}" class="h-full">
 				<MembersBar :users="users"/>
@@ -172,13 +171,15 @@
 
 <script>
 import axios from 'axios';
+import chats from "~/static/data/chats.json";
 export default {
     data() {
         return {
-			showMembers: false,
+			showMembers: true,
 			searchFocused: false,
 			query:'',
 			gategoryBtnHover: false,
+			chats: chats,
             buttons: [
                 {
                     name: "Home",
@@ -200,7 +201,7 @@ export default {
 
         };
     },
-	
+
 	asyncData({ params, error }) {
 		return axios
 		.get(`https://raw.githubusercontent.com/SOKHUONG/discord-clone/master/static/data/app.json`)
@@ -214,6 +215,7 @@ export default {
 			error({ statusCode: 404, message: 'Post not found' })
 		})
 	},
+
 	methods: {
 		deleteQuery: function(){
 			this.query = '';
@@ -223,6 +225,7 @@ export default {
 		},
 	},
     mounted() {
+		console.table(this.chats);
     }
 };
 </script>
