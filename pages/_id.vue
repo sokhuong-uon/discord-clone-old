@@ -266,17 +266,15 @@ export default {
 .btn:focus{
 	outline: 0;
 }
-.blur-shadow{
-	box-shadow: 0 -4px rgba(220, 8, 8, 0.361);
-}
+
 .textarea {
   overflow-y: auto;
   resize: vertical;
   padding: 0.5rem;
   max-height: 18rem;
   min-width: 15rem;
-  max-width: 100%;
-  appearance: none;
+  width: 20rem ;
+  flex-shrink: 1;
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 .hidescrollbar::-webkit-scrollbar {
