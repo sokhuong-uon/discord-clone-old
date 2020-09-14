@@ -86,7 +86,7 @@
     </div>
 
     <!--Main section-->
-    <div class="mainsection min-w-0 w-full h-screen bg-green-800 flex flex-col">
+    <div class="mainsection min-w-0 w-full h-screen bg-nightgraylighter flex flex-col">
         <!--Main section nav, sidebar-->
 
 		<div class="relative w-auto h-12 border-b px-2 flex-shrink-0 flex items-center border-gray-900  bg-nightgraylighter">
@@ -152,11 +152,38 @@
 
 
 		<div class="relative w-full h-full flex">
-			<div class="w-full h-full min-w-0 break-normal bg-nightgraylighter font-sans text-lg pb-32 inset-y-0 overflow-auto">
-				<div class="w-full h-1 -mt-1 pr-12 pl-18"></div>
-				<div v-for="(chat, i) in chats[$route.params.id]" :key="i">
-					<Chat :chat="chat"/>
+			<div class="flex flex-col">
+				<div class="w-full overflow-auto mb-1 min-h-0 flex-shrink h-170 min-w-0 break-normal bg-nightgraylighter font-sans text-lg inset-y-0">
+					<div class="w-full h-auto overflow-auto">
+						<div class="w-full h-1 -mt-1 pr-12 pl-18"></div>
+						<div v-for="(chat, i) in chats[$route.params.id]" :key="i">
+							<Chat :chat="chat"/>
+						</div>
+					</div>
+					<div class="h-8"></div>
 				</div>
+				<form class="blur-shadow flex-shrink-0 w-full h-auto px-8 mb-4 bg-nightgraylighter shadow-2xl" action="" method="post">
+					<div class="relative flex items-center mb-10 w-full h-auto rounded-lg bg-grayinput -mt-1">
+
+						<div class="relative flex items-center">
+							<div class="absolute w-14">
+							</div>
+							<div class="w-full h-auto">
+								<ResizeAuto class="">
+									<template class="" v-slot:default="{resize}">
+										<textarea
+										rows="2"
+										class="textarea rounded-lg"
+										placeholder="Message #general"
+										@input="resize"
+										></textarea>
+									</template>
+								</ResizeAuto>
+							</div>
+
+						</div>
+					</div>
+				</form>
 			</div>
 			<div :class="{'w-60':showMembers, 'w-0': !showMembers}" class="h-full">
 				<MembersBar :users="users"/>
@@ -233,6 +260,18 @@ export default {
 <style>
 .btn:focus{
 	outline: 0;
+}
+.blur-shadow{
+	box-shadow: 0 -4px rgba(220, 8, 8, 0.361);
+}
+.textarea {
+  overflow-y: auto;
+  resize: vertical;
+  padding: 0.5rem;
+  max-height: 18rem;
+  min-width: 15rem;
+  max-width: 100%;
+  appearance: none;
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 .hidescrollbar::-webkit-scrollbar {
