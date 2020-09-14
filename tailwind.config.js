@@ -44,6 +44,9 @@ module.exports = {
 				'90': '22.5rem',
 				'96': '24rem',
 				'120': '30rem',
+				'160': '40rem',
+				'168': '42rem',
+				'170': '42.5rem',
 			},
 			borderRadius:{
 				'larger':'1rem'
@@ -53,6 +56,7 @@ module.exports = {
 				'nightgraylighter':'#36393f',
 				'nightergray':'#292b2f',
 				'mostnightgray':'#202225',
+				'grayinput':'#40444b',
 
 			},
 			textColor: {
