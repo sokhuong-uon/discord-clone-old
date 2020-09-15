@@ -7,11 +7,11 @@
 	</div>
 	<div class="w-full h-auto min-w-0 inline-block flex-shrink">
 		<div class="w-full h-8">
-			<span class=" text-white">{{chat.author.name}}</span>
+			<span class=" text-white">{{chat.author.userName}}</span>
 			<span class=" text-gray-600 text-xs">{{chat.date}}</span>
 		</div>
-		<div class="text-chattext text-base">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, sit aliquid ipsa dignisdolor sit amet consectetur adipisicing elit. Inventore, sit aliquid ipsa dignissimos repellat ex! Saepe animi tempore tempora ducimus placeat, rerum eligendi at exercitationem alias ratione! Nemo autem maiores sit quos facilis? Fuga vel vero natus sunt enim. Alias commodi perferendis neque nam ad provident? Harum placeat corporis consequatur?
+		<div class="text-chattext text-base break-normal">
+			{{chat.value}}
 		</div>
 	</div>
 
