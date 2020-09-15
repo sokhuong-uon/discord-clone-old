@@ -84,6 +84,9 @@
 
 <script>
 import axios from 'axios';
+import chats from "~/static/data/chats.json";
+import users from "~/static/data/users.json";
+import servers from "~/static/data/servers.json";
 export default {
     data() {
         return {
@@ -91,6 +94,8 @@ export default {
 			searchFocused: false,
 			query:'',
 			gategoryBtnHover: false,
+			users: users,
+			servers: servers,
             buttons: [
                 {
                     name: "Home",
@@ -112,20 +117,20 @@ export default {
         };
     },
 
-	asyncData({ params, error }) {
-		return axios
-		.get(`https://raw.githubusercontent.com/SOKHUONG/discord-clone/master/static/data/app.json`)
-		.then(res => {
-			return {
-				servers: res.data.servers,
-				users: res.data.users
-			}
-		})
-		.catch(e => {
-			error({ statusCode: 404, message: 'Post not found' })
-		})
-	},
-	
+	// asyncData({ params, error }) {
+	// 	return axios
+	// 	.get(`https://raw.githubusercontent.com/SOKHUONG/discord-clone/master/static/data/app.json`)
+	// 	.then(res => {
+	// 		return {
+	// 			servers: res.data.servers,
+	// 			users: res.data.users
+	// 		}
+	// 	})
+	// 	.catch(e => {
+	// 		error({ statusCode: 404, message: 'Post not found' })
+	// 	})
+	// },
+
 	methods: {
 		deleteQuery: function(){
 			this.query = '';

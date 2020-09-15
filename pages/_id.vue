@@ -173,8 +173,9 @@
 									<template class="" v-slot:default="{resize}">
 										<textarea
 										@keyup.enter="onEnter"
+										v-model="message"
 										rows="2"
-										class="textarea rounded-lg bg-transparent outline-none"
+										class="textarea text-gray-400 rounded-lg bg-transparent outline-none"
 										placeholder="Message #general"
 										@input="resize"
 										></textarea>
@@ -199,7 +200,10 @@
 
 <script>
 import axios from 'axios';
+import _ from 'lodash';
 import chats from "~/static/data/chats.json";
+import users from "~/static/data/users.json";
+import servers from "~/static/data/servers.json";
 export default {
     data() {
         return {
@@ -208,6 +212,9 @@ export default {
 			query:'',
 			gategoryBtnHover: false,
 			chats: chats,
+			message:'',
+			users: users,
+			servers: servers,
             buttons: [
                 {
                     name: "Home",
@@ -230,19 +237,19 @@ export default {
         };
     },
 
-	asyncData({ params, error }) {
-		return axios
-		.get(`https://raw.githubusercontent.com/SOKHUONG/discord-clone/master/static/data/app.json`)
-		.then(res => {
-			return {
-				servers: res.data.servers,
-				users: res.data.users
-			}
-		})
-		.catch(e => {
-			error({ statusCode: 404, message: 'Post not found' })
-		})
-	},
+	// asyncData({ params, error }) {
+	// 	return axios
+	// 	.get(`https://raw.githubusercontent.com/SOKHUONG/discord-clone/master/static/data/app.json`)
+	// 	.then(res => {
+	// 		return {
+	// 			servers: res.data.servers,
+	// 			users: res.data.users
+	// 		}
+	// 	})
+	// 	.catch(e => {
+	// 		error({ statusCode: 404, message: 'Post not found' })
+	// 	})
+	// },
 
 	methods: {
 		deleteQuery: function(){
@@ -253,11 +260,27 @@ export default {
 		},
 		onEnter: function(event){
 			event.preventDefault();
-			this.$refs.form.submit();
+			// this.$refs.form.submit();
+			console.log(this.message);
+
+            let currentDateWithFormat = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+			let author = _.sample(users);
+			console.log(author);
+
+			this.chats[this.$route.params.id].push({
+				"author":{
+					"userName": author.userName,
+					"avatarUrl":author.avatarUrlImg
+				},
+				"date": currentDateWithFormat,
+				"value": this.message
+			});
+			this.message = '';
+			console.log(chats);
 		}
 	},
     mounted() {
-		console.table(this.chats);
+		console.table(this.$route.params.id);
     }
 };
 </script>
