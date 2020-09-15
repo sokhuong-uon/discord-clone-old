@@ -261,11 +261,11 @@ export default {
 		onEnter: function(event){
 			event.preventDefault();
 			// this.$refs.form.submit();
-			console.log(this.message);
+			// console.log(this.message);
 
             let currentDateWithFormat = new Date().toJSON().slice(0,10).replace(/-/g,'/');
 			let author = _.sample(users);
-			console.log(author);
+			// console.log(author);
 
 			this.chats[this.$route.params.id].push({
 				"author":{
@@ -276,11 +276,11 @@ export default {
 				"value": this.message
 			});
 			this.message = '';
-			console.log(chats);
+			// console.log(chats);
 		}
 	},
     mounted() {
-		console.table(this.$route.params.id);
+		// console.table(this.$route.params.id);
     }
 };
 </script>
