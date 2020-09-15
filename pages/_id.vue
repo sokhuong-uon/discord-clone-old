@@ -166,21 +166,17 @@
 					<div class="relative flex items-center mb-10 w-full h-auto rounded-lg bg-grayinput -mt-1">
 
 						<div class="relative flex items-center">
-							<div class="absolute w-14">
-							</div>
-							<div class="w-full h-auto">
-								<ResizeAuto class="">
-									<template class="" v-slot:default="{resize}">
-										<textarea
+
+							<div class="w-70 h-auto">
+
+									<div
+										id="msginput"
 										@keyup.enter="onEnter"
-										v-model="message"
-										rows="2"
-										class="textarea text-gray-400 rounded-lg bg-transparent outline-none"
-										placeholder="Message #general"
-										@input="resize"
-										></textarea>
-									</template>
-								</ResizeAuto>
+										class="messageinput bg-pink-900 w-auto overflow-auto text-gray-400 max-w-lg rounded-lg bg-transparent outline-none"
+										contenteditable="true"
+										>fe
+									</div>
+
 							</div>
 
 						</div>
@@ -209,6 +205,11 @@ export default {
         return {
 			showMembers: true,
 			searchFocused: false,
+			content: [
+				{ value: 'paragraph 1' },
+				{ value: 'paragraph 2' },
+				{ value: 'paragraph 3' },
+			],
 			query:'',
 			gategoryBtnHover: false,
 			chats: chats,
@@ -266,6 +267,7 @@ export default {
             let currentDateWithFormat = new Date().toJSON().slice(0,10).replace(/-/g,'/');
 			let author = _.sample(users);
 			// console.log(author);
+			let data = document.getElementById('msginput');
 
 			this.chats[this.$route.params.id].push({
 				"author":{
@@ -273,13 +275,29 @@ export default {
 					"avatarUrl":author.avatarUrlImg
 				},
 				"date": currentDateWithFormat,
-				"value": this.message
+				"value": data.innerText
 			});
-			this.message = '';
-			// console.log(chats);
+			data.innerText = '';
+		},
+		onInput(event, index) {
+			const value = event.target.innerText;
+			this.content[index].value = value;
+		},
+		onRemove(index) {
+			if (this.content.length > 1 && this.content[index].value.length === 0) {
+				this.$delete(this.content, index);
+				this.updateAllContent();
+			}
+		},
+		updateAllContent() {
+			this.content.forEach((c, index) => {
+				const el = document.getElementById(`content-${index}`);
+				el.innerText = c.value;
+			});
 		}
 	},
     mounted() {
+		// this.updateAllContent();
 		// console.table(this.$route.params.id);
     }
 };
@@ -290,14 +308,9 @@ export default {
 	outline: 0;
 }
 
-.textarea {
-  overflow-y: auto;
-  resize: vertical;
-  padding: 0.5rem;
-  max-height: 18rem;
-  min-width: 15rem;
-  width: 20rem ;
-  flex-shrink: 1;
+.messageinput{
+	max-height: 20rem;
+	min-width: 20rem;
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 .hidescrollbar::-webkit-scrollbar {

@@ -10,11 +10,14 @@
 			<span class=" text-white">{{chat.author.userName}}</span>
 			<span class=" text-gray-600 text-xs">{{chat.date}}</span>
 		</div>
-		<div class="text-chattext text-base break-normal">
+		<div @keyup.enter="onSubmit" id="textarea" :contenteditable="editing" :class="{'bg-grayinput messageinput overflow-auto':editing}" class="text-chattext  outline-none text-base break-normal">
 			{{chat.value}}
 		</div>
 	</div>
-
+	<div class="">
+		<button class="bg-green-700" @click="editing = true">edit</button>
+		<button class="bg-pink-700" @click="editing = false">save</button>
+	</div>
 </div>
 </template>
 
@@ -23,6 +26,12 @@ export default {
 	props: ['chat'],
 	data() {
 		return {
+			editing: false
+		}
+	},
+	methods: {
+		onSubmit: function(){
+			let contentent = document.getElementById('textarea');
 
 		}
 	}
@@ -31,5 +40,8 @@ export default {
 </script>
 
 <style>
-
+.messageinput{
+	max-height: 20rem;
+	max-width: 20rem;
+}
 </style>
