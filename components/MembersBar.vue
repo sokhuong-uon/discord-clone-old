@@ -1,5 +1,5 @@
 <template>
-<div class="smallScroleBar w-full h-full pb-20 bg-nightgray overflow-auto">
+<div class="smallScroleBar w-full h-full pb-18 bg-nightgray overflow-auto">
 	<div class="w-full h-16 text-gray-500 text-sm font-semibold flex justify-center items-end">
 		<h1 class="w-full h-6 pl-4">ONLINE-{{users.length}}</h1>
 	</div>
