@@ -153,14 +153,14 @@
 
 		<div class="relative w-full h-screen flex">
 			<div class="flex flex-col">
-				<div class="w-full overflow-auto mb-1 min-h-0 flex-shrink h-170 min-w-0 break-normal bg-nightgraylighter font-sans text-lg inset-y-0">
+				<div id="chatspace" class="w-full overflow-auto mb-1 min-h-0 flex-shrink h-170 min-w-0 break-normal bg-nightgraylighter font-sans text-lg inset-y-0">
 					<div class="w-full h-auto overflow-auto">
 						<div class="w-full h-1 -mt-1 pr-12 pl-18"></div>
 						<div v-for="(chat, i) in chats[$route.params.id]" :key="i">
 							<Chat :chat="chat"/>
 						</div>
 					</div>
-					<div class="h-8"></div>
+					<div class="h-18"></div>
 				</div>
 				<div class="flex blur-shadow flex-shrink-0 w-full h-auto px-8 mb-16 bg-nightgraylighter shadow-2xl">
 					<div class="relative flex items-start blur-shadow flex-shrink-0 w-full h-6/12 rounded-lg overflow-hidden bg-grayinput">
@@ -314,6 +314,8 @@ export default {
 				"date": currentDateWithFormat,
 				"value": message.innerText
 			});
+			let chatSection = document.getElementById('chatspace');
+			chatSection.scrollTop = chatSection.scrollHeight + 1000;
 			message.innerText = '';
 		},
 		onInput(event, index) {
