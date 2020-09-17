@@ -39,34 +39,53 @@
         <!--Server channels-->
         <div class="w-60 h-screen bg-nightgray flex flex-col">
             <div class="relative h-screen flex flex-col">
-                <div class="w-full h-12">
-                    <button class="w-60 h-12 bg-nightgray border-b border-gray-900">
-						<div class="w-full h-full flex items-center px-4">
-							<!--If server if boosted-->
-							<div>
-								<svg class="w-4 h-4 text-gray-600" aria-hidden="false" viewBox="0 0 16 15.2">
-									<path fill="currentColor" fill-rule="evenodd" d="M16 7.6c0 .79-1.28 1.38-1.52 2.09s.44 2 0 2.59-1.84.35-2.46.8-.79 1.84-1.54 2.09-1.67-.8-2.47-.8-1.75 1-2.47.8-.92-1.64-1.54-2.09-2-.18-2.46-.8.23-1.84 0-2.59S0 8.39 0 7.6s1.28-1.38 1.52-2.09-.44-2 0-2.59 1.85-.35 2.48-.8S4.78.28 5.53 0 7.2.83 8 .83s1.75-1 2.47-.8.91 1.64 1.53 2.09 2 .18 2.46.8-.23 1.84 0 2.59S16 6.81 16 7.6z" />
-								</svg>
-							</div>
-							<!--server name-->
-							<h1 class="w- h-4 text-white ml-1 mr-auto text-sm shadow-md font-semibold tracking-wide">Home</h1>
-
-							<!--menubar-->
-							<div class="w-4 h-4 overflow-hidden">
-								<svg class="w-4 h-4 text-gray-200">
-									<g fill="none" fill-rule="evenodd">
-										<path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4.5 4.5l9 9M13.5 4.5l-9 9" />
-									</g>
-								</svg>
-							</div>
-						</div>
+                <div class="w-full h-12 px-3 border-b border-gray-900 flex-shrink-0 flex items-center justify-center">
+                    <button class="btn w-full h-auto rounded-md bg-mostnightgray flex items-center justify-start text-sm">
+						<span class="px-2 my-1 text-graydiscord font-medium">Find or start a conversation</span>
 					</button>
                 </div>
 
-                <div class="smallScroleBar w-60 h-auto pb-18 flex flex-col overflow-auto bg-nightgray">
-                    <div class="pr-1">
-                        <div class="h-4"></div>
+                <div class="smallScroleBar w-60 h-174 flex justify-center overflow-auto bg-nightgray">
+                    <div class="px-1">
+                        <div class="h-2"></div>
+						<div class="w-56 h-10 flex items-center px-2 rounded-md overflow-hidden hover:bg-nightgraylighter">
+							<div class="w-full flex items-center">
+								<div class="w-8 h-8 flex items-center justify-center mr-3">
+									<svg class="text-gray-200" aria-hidden="false" width="24" height="24" viewBox="0 0 24 24">
+										<g fill="none" fill-rule="evenodd">
+											<path fill="currentColor" fill-rule="nonzero" d="M2.5 4v1.5A11.5 11.5 0 008 15.3V20h15v-2c0-2.66-5.33-4-8-4h-.25C10 14 6 10 6 5.5V4H2.5zM15 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M0 0h24v24H0V0zm0 0h24v24H0V0zm0 0h24v24H0V0z"/>
+										</g>
+									</svg>
+								</div>
+								<div>
+									<div class="w-full font-medium text-gray-200">
+										Friends
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="w-56 h-10 flex items-center px-2 rounded-md overflow-hidden hover:bg-nightgraylighter">
+							<div class="w-full flex items-center">
+								<div class="w-8 h-8 flex items-center justify-center mr-3">
+									<svg class="text-gray-200" aria-hidden="false" width="24" height="24"><path fill="currentColor" d="M2.99 9.36c0 .42-.36.76-.78.76h-.43A.78.78 0 011 9.36c0-.42.36-.77.78-.77h.43c.42 0 .78.35.78.77zm19.26-.21a7.6 7.6 0 01-3.91 10.24 7.92 7.92 0 01-10.38-3.76 7.3 7.3 0 01-.64-2.44H5.76a.78.78 0 01-.78-.77c0-.42.35-.76.78-.76h2.27c.43 0 .79-.35.79-.77a.78.78 0 00-.79-.77H4.41a.78.78 0 01-.78-.76c0-.42.35-.77.78-.77h5.05c.42 0 .78-.35.78-.76a.78.78 0 00-.78-.77H7.4a1.19 1.19 0 110-2.37h8.03a7.91 7.91 0 016.82 4.46zm-8.98-.77a4.35 4.35 0 00-2.2 5.82A4.51 4.51 0 0017 16.36a4.35 4.35 0 002.2-5.82 4.51 4.51 0 00-5.93-2.16zm3.58 1.47l1.42 2.36c.07.14.07.21 0 .35l-1.42 2.37c-.07.14-.22.14-.29.14H13.8c-.14 0-.21-.07-.28-.14l-1.42-2.37c-.08-.14-.08-.2 0-.35l1.42-2.36c.07-.14.21-.14.28-.14h2.77c.14-.07.22 0 .29.14z"/></svg>
+								</div>
+								<div>
+									<div class="w-full font-medium text-gray-200">
+										Nitro
+									</div>
+								</div>
+							</div>
+						</div>
+						<h2 class="w-56 pt-5 pb-1 pl-5 flex items-center text-gray-500 hover:text-gray-200">
+							<span class=" text-xs uppercase">Direct Messages</span>
+							<div class="ml-auto hover:bg-green-500">
+								<svg class="text-gray-200" aria-hidden="false" width="18" height="18" viewBox="0 0 18 18"><path fill="currentColor" d="M15 10h-5v5H8v-5H3V8h5V3h2v5h5z"/></svg>
+							</div>
+						</h2>
 
+						<div v-for="(friend, i) in users" :key="i" class="w-56">
+							<FriendCard :profile="friend"/>
+						</div>
 
                     </div>
                 </div>
