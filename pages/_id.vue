@@ -151,74 +151,78 @@
 
 
 
-		<div class="relative w-full h-screen flex">
+		<div class="relative w-full h-186 flex flex-shrink min-h-0">
+			<!--chat section-->
 			<div class="flex flex-col">
-				<div id="chatspace" class="w-full overflow-auto mb-1 min-h-0 flex-shrink h-170 min-w-0 break-normal bg-nightgraylighter font-sans text-lg inset-y-0">
-					<div class="w-full h-auto overflow-auto">
-						<div class="w-full h-1 -mt-1 pr-12 pl-18"></div>
+				<div class="w-full h-1 -mt-1 pr-12 pl-18"></div>
+				<div  class="relative w-full min-h-0 h-186 min-w-0 break-normal bg-nightgraylighter font-sans text-lg">
+
+					<div id="chatspace" class="w-full h-full overflow-auto flex-shrink">
 						<div v-for="(chat, i) in chats[$route.params.id]" :key="i">
 							<Chat :chat="chat"/>
 						</div>
+						<div class="mb-32"></div>
 					</div>
-					<div class="h-18"></div>
-				</div>
-				<div class="flex blur-shadow flex-shrink-0 w-full h-auto px-8 mb-16 bg-nightgraylighter shadow-2xl">
-					<div class="relative flex items-start blur-shadow flex-shrink-0 w-full h-6/12 rounded-lg overflow-hidden bg-grayinput">
 
-						<div class="relative h-12 flex flex-col items-start justify-start">
+					<div class=" absolute bottom-0 flex blur-shadow w-full h-12 px-8 mb-1">
+						<div class="relative flex items-start blur-shadow w-full h-full rounded-lg overflow-hidden bg-grayinput">
 
-							<div class="h-full flex items-center justify-center">
-								<button class="btn w-14 h-12 flex items-center justify-center text-gray-300">
-									<input class="btn absolute h-12 w-14 opacity-0" type="file" name="" id="" value="">
-									<svg width="24" height="24"><path class="" fill="currentColor" d="M12 2a10.01 10.01 0 000 20 10.01 10.01 0 000-20zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
-								</button>
+							<div class="relative h-12 flex flex-col items-start justify-start">
+								<div class="h-full flex items-center justify-center">
+									<button class="btn w-14 h-12 flex items-center justify-center text-gray-300">
+										<input class="btn absolute h-12 w-14 opacity-0" type="file" name="" id="" value="">
+										<svg width="24" height="24"><path class="" fill="currentColor" d="M12 2a10.01 10.01 0 000 20 10.01 10.01 0 000-20zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+									</button>
+								</div>
 							</div>
-						</div>
 
-						<form ref="form" class="w-full h-auto rounded-lg px30 overflow-hidden" action="" method="post">
-							<div class="relative flex items-center w-full h-auto rounded-lg bg-grayinput">
+							<form ref="form" class="w-full h-auto rounded-lg px30 overflow-hidden" action="" method="post">
+								<div class="relative flex items-center w-full h-auto rounded-lg bg-grayinput">
 
-								<div class="w-full relative flex items-center my-1">
-									<div class="w-full flex items-center">
-										<div
-											id="msginput"
-											@keydown.enter="onEnter"
-											class="messageinput py-2 flex-grow break-all sm:break-words w-12/12 overflow-y-auto overflow-x-hidden text-gray-400 rounded-lg bg-transparent outline-none"
-											contenteditable="true"
-											>
+									<div class="w-full relative flex items-center my-1">
+										<div class="w-full flex items-center">
+											<div
+												id="msginput"
+												@keydown.enter="onEnter"
+												class="messageinput py-2 flex-grow break-all sm:break-words w-12/12 overflow-y-auto overflow-x-hidden text-gray-400 rounded-lg bg-transparent outline-none"
+												contenteditable="true"
+												>
+
+											</div>
 
 										</div>
 
 									</div>
-
 								</div>
-							</div>
-						</form>
+							</form>
 
-						<div class="w-30 h-12 text-gray-400 flex items-center justify-around">
-							<div class="w-8 h-8 flex items-center justify-center">
-								<button class="btn flex items-center justify-center">
-									<svg width="24" height="24" class="" aria-hidden="false"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M16.886 7.999H20c1.104 0 2 .897 2 2v2H2v-2c0-1.103.897-2 2-2h3.114a5.028 5.028 0 01-1.235-.878 3.002 3.002 0 010-4.242c1.133-1.133 3.107-1.133 4.242-.002 1.637 1.637 1.858 4.718 1.877 5.064a.094.094 0 01-.004.032.107.107 0 00-.004.026h.02a.108.108 0 00-.004-.026c-.003-.01-.005-.02-.004-.031.02-.346.24-3.427 1.877-5.064 1.135-1.133 3.107-1.132 4.242-.001a3.006 3.006 0 010 4.244 5.028 5.028 0 01-1.235.878zM7.293 5.707A1.002 1.002 0 018 4c.268 0 .519.103.707.292.59.59.934 1.648 1.118 2.53-.88-.183-1.946-.529-2.532-1.115zm6.881 1.117c.185-.883.528-1.941 1.119-2.531A.986.986 0 0116 4c.268 0 .519.103.706.291.39.391.391 1.025.001 1.416-.591.591-1.65.935-2.533 1.117zM3 13.999v6c0 1.103.897 2 2 2h6v-8H3zm10 0v8h6c1.104 0 2-.897 2-2v-6h-8z"/></svg>
-								</button>
-							</div>
-							<div class="w-8 h-8 flex items-center justify-center">
-								<button class="btn flex items-center justify-center">
-									<svg width="24" height="24" class="icon-3D60ES" aria-hidden="false"><path fill="currentColor" d="M2 2a2 2 0 00-2 2v16a2 2 0 002 2h20a2 2 0 002-2V4a2 2 0 00-2-2H2zm7.764 9.448v4.032c-.864.564-1.884.876-3.024.876-2.628 0-4.08-1.728-4.08-4.284 0-2.568 1.572-4.308 4.128-4.308 1.02 0 1.872.24 2.532.612l-.276 1.788c-.624-.396-1.356-.708-2.208-.708-1.428 0-2.124 1.056-2.124 2.604 0 1.56.72 2.652 2.148 2.652.456 0 .78-.096 1.116-.264v-1.476H6.428v-1.524h3.336zm1.784-3.528H13.6v8.28h-2.052V7.92zm8.924 0v1.716h-2.916v1.692h2.304v1.716h-2.304V16.2h-2.04V7.92h4.956z"/></svg>
-								</button>
-							</div>
-							<div class="w-8 h-8 flex items-center justify-center">
-								<button class="btn flex items-center justify-center">
-									<div>
-										<!--<svg width="24" height="24" class="icon-3D60ES" aria-hidden="false"><path fill="currentColor" d="M2 2a2 2 0 00-2 2v16a2 2 0 002 2h20a2 2 0 002-2V4a2 2 0 00-2-2H2zm7.764 9.448v4.032c-.864.564-1.884.876-3.024.876-2.628 0-4.08-1.728-4.08-4.284 0-2.568 1.572-4.308 4.128-4.308 1.02 0 1.872.24 2.532.612l-.276 1.788c-.624-.396-1.356-.708-2.208-.708-1.428 0-2.124 1.056-2.124 2.604 0 1.56.72 2.652 2.148 2.652.456 0 .78-.096 1.116-.264v-1.476H6.428v-1.524h3.336zm1.784-3.528H13.6v8.28h-2.052V7.92zm8.924 0v1.716h-2.916v1.692h2.304v1.716h-2.304V16.2h-2.04V7.92h4.956z"/></svg>-->
-										<div @mouseover="emojiHover" @click="selectEmoji" class="transform scale-125 hover:scale-150">{{emoji}}</div>
-									</div>
-								</button>
+							<div class="w-30 h-12 text-gray-400 flex items-center justify-around">
+								<div class="w-8 h-8 flex items-center justify-center">
+									<button class="btn flex items-center justify-center">
+										<svg width="24" height="24" class="" aria-hidden="false"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M16.886 7.999H20c1.104 0 2 .897 2 2v2H2v-2c0-1.103.897-2 2-2h3.114a5.028 5.028 0 01-1.235-.878 3.002 3.002 0 010-4.242c1.133-1.133 3.107-1.133 4.242-.002 1.637 1.637 1.858 4.718 1.877 5.064a.094.094 0 01-.004.032.107.107 0 00-.004.026h.02a.108.108 0 00-.004-.026c-.003-.01-.005-.02-.004-.031.02-.346.24-3.427 1.877-5.064 1.135-1.133 3.107-1.132 4.242-.001a3.006 3.006 0 010 4.244 5.028 5.028 0 01-1.235.878zM7.293 5.707A1.002 1.002 0 018 4c.268 0 .519.103.707.292.59.59.934 1.648 1.118 2.53-.88-.183-1.946-.529-2.532-1.115zm6.881 1.117c.185-.883.528-1.941 1.119-2.531A.986.986 0 0116 4c.268 0 .519.103.706.291.39.391.391 1.025.001 1.416-.591.591-1.65.935-2.533 1.117zM3 13.999v6c0 1.103.897 2 2 2h6v-8H3zm10 0v8h6c1.104 0 2-.897 2-2v-6h-8z"/></svg>
+									</button>
+								</div>
+								<div class="w-8 h-8 flex items-center justify-center">
+									<button class="btn flex items-center justify-center">
+										<svg width="24" height="24" class="icon-3D60ES" aria-hidden="false"><path fill="currentColor" d="M2 2a2 2 0 00-2 2v16a2 2 0 002 2h20a2 2 0 002-2V4a2 2 0 00-2-2H2zm7.764 9.448v4.032c-.864.564-1.884.876-3.024.876-2.628 0-4.08-1.728-4.08-4.284 0-2.568 1.572-4.308 4.128-4.308 1.02 0 1.872.24 2.532.612l-.276 1.788c-.624-.396-1.356-.708-2.208-.708-1.428 0-2.124 1.056-2.124 2.604 0 1.56.72 2.652 2.148 2.652.456 0 .78-.096 1.116-.264v-1.476H6.428v-1.524h3.336zm1.784-3.528H13.6v8.28h-2.052V7.92zm8.924 0v1.716h-2.916v1.692h2.304v1.716h-2.304V16.2h-2.04V7.92h4.956z"/></svg>
+									</button>
+								</div>
+								<div class="w-8 h-8 flex items-center justify-center">
+									<button class="btn flex items-center justify-center">
+										<div>
+											<!--<svg width="24" height="24" class="icon-3D60ES" aria-hidden="false"><path fill="currentColor" d="M2 2a2 2 0 00-2 2v16a2 2 0 002 2h20a2 2 0 002-2V4a2 2 0 00-2-2H2zm7.764 9.448v4.032c-.864.564-1.884.876-3.024.876-2.628 0-4.08-1.728-4.08-4.284 0-2.568 1.572-4.308 4.128-4.308 1.02 0 1.872.24 2.532.612l-.276 1.788c-.624-.396-1.356-.708-2.208-.708-1.428 0-2.124 1.056-2.124 2.604 0 1.56.72 2.652 2.148 2.652.456 0 .78-.096 1.116-.264v-1.476H6.428v-1.524h3.336zm1.784-3.528H13.6v8.28h-2.052V7.92zm8.924 0v1.716h-2.916v1.692h2.304v1.716h-2.304V16.2h-2.04V7.92h4.956z"/></svg>-->
+											<div @mouseover="emojiHover" @click="selectEmoji" class="transform scale-125 hover:scale-150">{{emoji}}</div>
+										</div>
+									</button>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+
 			</div>
 
+			<!--show members section-->
 			<div :class="{'w-60':showMembers, 'w-0': !showMembers}" class="h-full">
 				<MembersBar :users="users"/>
 			</div>
@@ -315,7 +319,8 @@ export default {
 				"value": message.innerText
 			});
 			let chatSection = document.getElementById('chatspace');
-			chatSection.scrollTop = chatSection.scrollHeight + 1000;
+			chatSection.scrollTop = chatSection.scrollHeight;
+
 			message.innerText = '';
 		},
 		onInput(event, index) {
