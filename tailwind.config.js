@@ -49,6 +49,11 @@ module.exports = {
 				'170': '42.5rem',
 				'174': '43.5rem',
 				'178': '44.5rem',
+				'180': '45rem',
+				'182': '45.5rem',
+				'184': '46rem',
+				'186': '46.5rem',
+				'188': '47rem',
 			},
 			borderRadius:{
 				'larger':'1rem'
