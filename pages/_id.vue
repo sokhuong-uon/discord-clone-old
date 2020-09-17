@@ -163,17 +163,27 @@
 					<div class="h-8"></div>
 				</div>
 				<div class="flex blur-shadow flex-shrink-0 w-full h-auto px-8 mb-16 bg-nightgraylighter shadow-2xl">
-					<div class="flex blur-shadow flex-shrink-0 w-full h-6/12 bg-grayinput">
-						<form ref="form" class="w-full h-auto" action="" method="post">
-							<div class="relative flex items-center w-full h-auto rounded-lg bg-grayinput -mt-1">
+					<div class="relative flex items-start blur-shadow flex-shrink-0 w-full h-6/12 rounded-lg overflow-hidden bg-grayinput">
+
+						<div class="relative h-12 flex flex-col items-start justify-start">
+
+							<div class="h-full flex items-center justify-center">
+								<button class="btn w-14 h-12 flex items-center justify-center text-gray-300">
+									<input class="btn absolute h-12 w-14 opacity-0" type="file" name="" id="" value="">
+									<svg width="24" height="24"><path class="" fill="currentColor" d="M12 2a10.01 10.01 0 000 20 10.01 10.01 0 000-20zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+								</button>
+							</div>
+						</div>
+
+						<form ref="form" class="w-full h-auto rounded-lg px30 overflow-hidden" action="" method="post">
+							<div class="relative flex items-center w-full h-auto rounded-lg bg-grayinput">
 
 								<div class="w-full relative flex items-center my-1">
-
 									<div class="w-full flex items-center">
 										<div
 											id="msginput"
 											@keydown.enter="onEnter"
-											class="messageinput py-2 flex-grow break-all sm:break-words bg-pink-900 w-12/12 overflow-y-auto overflow-x-hidden text-gray-400 rounded-lg bg-transparent outline-none"
+											class="messageinput py-2 flex-grow break-all sm:break-words w-12/12 overflow-y-auto overflow-x-hidden text-gray-400 rounded-lg bg-transparent outline-none"
 											contenteditable="true"
 											>
 										</div>
@@ -184,10 +194,10 @@
 							</div>
 						</form>
 
-						<div class="w-30 h-10 text-gray-400 flex items-center justify-around">
+						<div class="w-30 h-12 text-gray-400 flex items-center justify-around">
 							<div class="w-8 h-8 flex items-center justify-center">
 								<button class="btn flex items-center justify-center">
-									<svg width="24" height="24" class="icon-3D60ES" aria-hidden="false"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M16.886 7.999H20c1.104 0 2 .897 2 2v2H2v-2c0-1.103.897-2 2-2h3.114a5.028 5.028 0 01-1.235-.878 3.002 3.002 0 010-4.242c1.133-1.133 3.107-1.133 4.242-.002 1.637 1.637 1.858 4.718 1.877 5.064a.094.094 0 01-.004.032.107.107 0 00-.004.026h.02a.108.108 0 00-.004-.026c-.003-.01-.005-.02-.004-.031.02-.346.24-3.427 1.877-5.064 1.135-1.133 3.107-1.132 4.242-.001a3.006 3.006 0 010 4.244 5.028 5.028 0 01-1.235.878zM7.293 5.707A1.002 1.002 0 018 4c.268 0 .519.103.707.292.59.59.934 1.648 1.118 2.53-.88-.183-1.946-.529-2.532-1.115zm6.881 1.117c.185-.883.528-1.941 1.119-2.531A.986.986 0 0116 4c.268 0 .519.103.706.291.39.391.391 1.025.001 1.416-.591.591-1.65.935-2.533 1.117zM3 13.999v6c0 1.103.897 2 2 2h6v-8H3zm10 0v8h6c1.104 0 2-.897 2-2v-6h-8z"/></svg>
+									<svg width="24" height="24" class="" aria-hidden="false"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M16.886 7.999H20c1.104 0 2 .897 2 2v2H2v-2c0-1.103.897-2 2-2h3.114a5.028 5.028 0 01-1.235-.878 3.002 3.002 0 010-4.242c1.133-1.133 3.107-1.133 4.242-.002 1.637 1.637 1.858 4.718 1.877 5.064a.094.094 0 01-.004.032.107.107 0 00-.004.026h.02a.108.108 0 00-.004-.026c-.003-.01-.005-.02-.004-.031.02-.346.24-3.427 1.877-5.064 1.135-1.133 3.107-1.132 4.242-.001a3.006 3.006 0 010 4.244 5.028 5.028 0 01-1.235.878zM7.293 5.707A1.002 1.002 0 018 4c.268 0 .519.103.707.292.59.59.934 1.648 1.118 2.53-.88-.183-1.946-.529-2.532-1.115zm6.881 1.117c.185-.883.528-1.941 1.119-2.531A.986.986 0 0116 4c.268 0 .519.103.706.291.39.391.391 1.025.001 1.416-.591.591-1.65.935-2.533 1.117zM3 13.999v6c0 1.103.897 2 2 2h6v-8H3zm10 0v8h6c1.104 0 2-.897 2-2v-6h-8z"/></svg>
 								</button>
 							</div>
 							<div class="w-8 h-8 flex items-center justify-center">
@@ -205,7 +215,6 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
 
 			<div :class="{'w-60':showMembers, 'w-0': !showMembers}" class="h-full">
