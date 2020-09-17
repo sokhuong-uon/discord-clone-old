@@ -7,8 +7,8 @@
 	</div>
 	<div class="w-full h-auto min-w-0 inline-block flex-shrink">
 		<div class="w-full h-8">
-			<span class=" text-white">{{chat.author.userName}}</span>
-			<span class=" text-gray-600 text-xs">{{chat.date}}</span>
+			<span class="text-white">{{chat.author.userName}}</span>
+			<span class="text-gray-600 text-xs">{{chat.date}}</span>
 		</div>
 		<div @keydown.enter="onSubmit" @keyup.esc="editing = false" id="textarea" :contenteditable="editing" :class="{'bg-grayinput messageinput w-12/12 overflow-x-hidden overflow-y-auto':editing}" class="text-chattext break-all md:break-words  outline-none text-base ">
 			{{chat.value}}
