@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./channels",
+    "baseUrl": ".",
     "paths": {
       "~/*": ["./*"],
       "@/*": ["./*"],
