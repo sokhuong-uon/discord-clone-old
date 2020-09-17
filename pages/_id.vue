@@ -186,6 +186,7 @@
 											class="messageinput py-2 flex-grow break-all sm:break-words w-12/12 overflow-y-auto overflow-x-hidden text-gray-400 rounded-lg bg-transparent outline-none"
 											contenteditable="true"
 											>
+
 										</div>
 
 									</div>
@@ -209,7 +210,7 @@
 								<button class="btn flex items-center justify-center">
 									<div>
 										<!--<svg width="24" height="24" class="icon-3D60ES" aria-hidden="false"><path fill="currentColor" d="M2 2a2 2 0 00-2 2v16a2 2 0 002 2h20a2 2 0 002-2V4a2 2 0 00-2-2H2zm7.764 9.448v4.032c-.864.564-1.884.876-3.024.876-2.628 0-4.08-1.728-4.08-4.284 0-2.568 1.572-4.308 4.128-4.308 1.02 0 1.872.24 2.532.612l-.276 1.788c-.624-.396-1.356-.708-2.208-.708-1.428 0-2.124 1.056-2.124 2.604 0 1.56.72 2.652 2.148 2.652.456 0 .78-.096 1.116-.264v-1.476H6.428v-1.524h3.336zm1.784-3.528H13.6v8.28h-2.052V7.92zm8.924 0v1.716h-2.916v1.692h2.304v1.716h-2.304V16.2h-2.04V7.92h4.956z"/></svg>-->
-										<div @mouseover="emojiHover" class="transform scale-125 hover:scale-150">{{emoji}}</div>
+										<div @mouseover="emojiHover" @click="selectEmoji" class="transform scale-125 hover:scale-150">{{emoji}}</div>
 									</div>
 								</button>
 							</div>
@@ -303,7 +304,7 @@ export default {
             let currentDateWithFormat = new Date().toJSON().slice(0,10).replace(/-/g,'/');
 			let author = _.sample(users);
 			// console.log(author);
-			let data = document.getElementById('msginput');
+			let message = document.getElementById('msginput');
 
 			this.chats[this.$route.params.id].push({
 				"author":{
@@ -311,9 +312,9 @@ export default {
 					"avatarUrl":author.avatarUrlImg
 				},
 				"date": currentDateWithFormat,
-				"value": data.innerText
+				"value": message.innerText
 			});
-			data.innerText = '';
+			message.innerText = '';
 		},
 		onInput(event, index) {
 			const value = event.target.innerText;
@@ -334,6 +335,10 @@ export default {
 		emojiHover(){
 			let currentEmoji = _.sample(emoji);
 			this.emoji = currentEmoji.face;
+		},
+		selectEmoji(){
+			let message = document.getElementById('msginput');
+			message.innerText += this.emoji;
 		}
 	},
     mounted() {
