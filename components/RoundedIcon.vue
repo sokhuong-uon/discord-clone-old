@@ -7,7 +7,7 @@
 			<span :class="{'h-5':isHover}" class="absolute w-4/12 h-0 bg-green-700 rounded-r-lg"></span>
 		</div>
 		<div @mouseover="isHover = true" @mouseleave="isHover = false" class="w-12 h-12 flex justify-start">
-			<nuxt-link v-if="type==='server'" class="w-12 h-12" :to="`${param}`">
+			<nuxt-link v-if="type==='server'" class="w-12 h-12" :to="`/${param}`">
 				<div :class="{'rounded-larger':isHover}" class="w-12 h-12 flex justify-center items-center rounded-full overflow-hidden">
 					<img
 						v-if="server.imageUrl"

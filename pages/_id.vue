@@ -212,8 +212,6 @@
 				<MembersBar :users="users"/>
 			</div>
 		</div>
-
-
         <!--Message section communicate-->
     </div>
 </div>
@@ -226,6 +224,7 @@ import chats from "~/static/data/chats.json";
 import users from "~/static/data/users.json";
 import servers from "~/static/data/servers.json";
 export default {
+
     data() {
         return {
 			showMembers: true,

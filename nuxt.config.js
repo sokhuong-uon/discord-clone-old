@@ -1,5 +1,9 @@
-
+import hooks from './hooks';
 export default {
+	router: {
+    base: '/channels'
+  },
+  hooks: hooks(this),
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode

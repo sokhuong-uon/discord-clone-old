@@ -15,7 +15,7 @@
 		<div class="w-40 flex items-center ml-3">
 			<div class="w-32 flex flex-col">
 				<div class=" w-32 h-4 text-current leading-none flex items-center">
-					<span class="h-5">{{profile.userName}}</span>
+					<span class="h-5 truncate">{{profile.userName}}</span>
 				</div>
 				<div class="w-full flex justify-start text-xs text-graydiscord">
 					<p class="truncate overflow-hidden">{{profile.action.name}}</p>
