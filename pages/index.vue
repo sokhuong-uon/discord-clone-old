@@ -76,7 +76,7 @@
 								</div>
 							</div>
 						</div>
-						<h2 class="w-56 pt-5 pb-1 pl-5 flex items-center text-gray-500 hover:text-gray-200">
+						<h2 class="w-56 pt-5 pb-1 pl-5 pr-3 flex items-center text-gray-500 hover:text-gray-200">
 							<span class=" text-xs uppercase">Direct Messages</span>
 							<div class="ml-auto hover:bg-green-500">
 								<svg class="text-gray-200" aria-hidden="false" width="18" height="18" viewBox="0 0 18 18"><path fill="currentColor" d="M15 10h-5v5H8v-5H3V8h5V3h2v5h5z"/></svg>
