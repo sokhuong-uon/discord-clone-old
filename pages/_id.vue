@@ -164,7 +164,7 @@
 						<div class="mb-32"></div>
 					</div>
 
-					<div class=" absolute bottom-0 flex blur-shadow w-full h-auto px-8 mb-1">
+					<div class=" absolute bottom-0 flex blur-shadow w-full h-auto px-8 bg-nightgraylighter">
 						<div class="relative flex items-start blur-shadow w-full h-full rounded-lg overflow-hidden bg-grayinput">
 
 							<div class="relative h-12 flex flex-col items-start justify-start">
