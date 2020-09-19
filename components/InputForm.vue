@@ -1,7 +1,6 @@
 <template>
-<div class="flex w-12/12 h-auto px-8 pb-2 bg-nightgraylighter">
-	<div class=" flex-1 flex items-start w-full h-full rounded-lg overflow-hidden bg-grayinput">
-
+<div class="flex h-auto px-8 pb-2 bg-nightgraylighter">
+	<div class="flex items-start w-full h-full rounded-lg overflow-hidden bg-grayinput">
 		<div class="relative h-12 flex flex-col items-start justify-start">
 			<div class="h-full flex items-center justify-center">
 				<button class="btn w-14 h-12 flex items-center justify-center text-gray-300">
