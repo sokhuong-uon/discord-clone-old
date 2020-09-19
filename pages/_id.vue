@@ -1,9 +1,9 @@
 <template>
 <div class="relative w-auto h-screen bg-black flex overflow-hidden">
     <div class="flex">
-        <!--Server icons-->
-        <div class="w-18 h-scree bg-mostnightgray">
-            <div class="hidescrollbar w-18 pt-3 h-screen flex flex-col overflow-auto">
+        <!--Server sidebar-->
+        <div class="w-18 bg-mostnightgray overflow-hidden">
+            <div class="hidescrollbar w-18 pt-3 h-full flex flex-col overflow-auto">
                 <!--Direct message dm-->
                 <div class="w-full h-12 mb-2">
                     <DiscordButton :button="buttons[0]" />
@@ -38,7 +38,7 @@
 
 
         <!--Server channels-->
-        <div class="w-60 h-screen bg-nightgray flex flex-col">
+        <div class="w-60 flex-1 bg-nightgray flex flex-col">
 			<div class="w-full h-12">
 				<ServerHeader :server="servers[$route.params.id]" />
 			</div>
