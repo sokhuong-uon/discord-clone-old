@@ -97,6 +97,20 @@
         </div>
     </div>
 
+	<!-- Main section-->
+	<div class="flex-1 bg-green-600 flex flex-col">
+		<div class="w-full h-12 bg-pink-600 border-b border-black flex items-center">
+			<!--sidebar-->
+			<div class=" flex-1 h-6 bg-yellow-700"></div>
+			<!--toolbar-->
+			<div class="w-34 h-6 bg-teal-600"></div>
+		</div>
+		<div class="flex-1 flex bg-indigo-500">
+			<div class="flex-1 bg-purple-900"></div>
+			<div class="hidden w-90 h-full bg-gray-700 lg:flex"></div>
+		</div>
+	</div>
+
 
 </div>
 </template>
@@ -159,7 +173,7 @@ export default {
 			this.searchFocused = true;
 		},
 		Log(){
-			let link = 'https://github.com/SOKHUONG/discord-clone';
+			const link = 'https://github.com/SOKHUONG/discord-clone';
         	console.log("%c💝 I am really appreciate that you interested in my code 😊", "background: transparent; color: #ed0e90; font-size: 30px; font-weight: 600; font-family: Lobster, serif; height: 200px");
 			console.log(`%c Source code of this project on github: %c${link}`,"font-family: Lobster, serif;color: #0eed98; font-size: 25px","font-size: 15px;");
 		}
