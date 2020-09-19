@@ -103,6 +103,7 @@
 
 <script>
 import axios from 'axios';
+import _ from 'lodash';
 import chats from "~/static/data/chats.json";
 import users from "~/static/data/users.json";
 import servers from "~/static/data/servers.json";
@@ -151,17 +152,28 @@ export default {
 	// },
 
 	methods: {
-		deleteQuery: function(){
+		deleteQuery(){
 			this.query = '';
 		},
-		searchFocuse: function(){
+		searchFocuse(){
 			this.searchFocused = true;
 		},
+		Log(){
+			let link = 'https://github.com/SOKHUONG/discord-clone';
+        	console.log("%c💝 I am really appreciate that you interested in my code 😊", "background: transparent; color: #ed0e90; font-size: 30px; font-weight: 600; font-family: Lobster, serif; height: 200px");
+			console.log(`%c Source code of this project on github: %c${link}`,"font-family: Lobster, serif;color: #0eed98; font-size: 25px","font-size: 15px;");
+		}
 	},
     mounted() {
-		let link = 'https://github.com/SOKHUONG/discord-clone';
-        console.log("%c💝 I am really appreciate that you interested in my code 😊", "background: transparent; color: #ed0e90; font-size: 30px; font-weight: 600; font-family: Lobster, serif; height: 200px");
-		console.log(`%c Source code of this project on github: %c${link}`,"font-family: Lobster, serif;color: #0eed98; font-size: 25px","font-size: 15px;");
+		if(!sessionStorage.getItem('already_log')){
+			// _.once(this.Log) willre turn a funtion, so just call it directly.
+			_.once(this.Log)();
+			sessionStorage.setItem('already_log', true);
+		}
+
+		window.onunload = function () {
+			sessionStorage.removeItem('already_log');
+    	}
     }
 };
 </script>
