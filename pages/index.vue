@@ -1,10 +1,10 @@
 <template>
-<div class="relative w-auto h-auto bg-black flex overflow-hidden">
-    <div class="relative flex">
-        <!--Server icons-->
-        <div class=" w-18 h-scree  bg-mostnightgray">
-            <div class="hidescrollbar w-18 pt-3 h-screen flex flex-col overflow-auto">
-                <!--Direct message dm home-->
+<div class="relative w-auto h-screen bg-black flex overflow-hidden">
+    <div class="flex">
+        <!--Server sidebar-->
+        <div class="w-18 bg-mostnightgray overflow-hidden">
+            <div class="hidescrollbar w-18 pt-3 h-full flex flex-col overflow-auto">
+                <!--Direct message dm-->
                 <div class="w-full h-12 mb-2">
                     <DiscordButton :button="buttons[0]" />
                 </div>
@@ -36,7 +36,7 @@
             </div>
         </div>
 
-        <!--Server channels-->
+        <!--Friends list-->
         <div class="w-60 h-screen bg-nightgray flex flex-col">
             <div class="relative h-screen flex flex-col">
                 <div class="w-full h-12 px-3 border-b border-gray-900 flex-shrink-0 flex items-center justify-center">

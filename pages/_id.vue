@@ -1,5 +1,5 @@
 <template>
-<div class="relative w-auto h-screen bg-black flex overflow-hidden">
+<div class="w-screen h-screen bg-black flex overflow-hidden">
     <div class="flex">
         <!--Server sidebar-->
         <div class="w-18 bg-mostnightgray overflow-hidden">
@@ -40,19 +40,19 @@
         <!--Server channels-->
         <div class="w-60 flex-1 bg-nightgray flex flex-col">
 			<div class="w-full h-12">
-				<ServerHeader :server="servers[$route.params.id]" />
+				<ServerHeader :server="servers[parseInt($route.params.id)]" />
 			</div>
 
 			<div class="smallScroleBar w-60 h-auto bg-nightgray pb-6 flex-1 flex flex-col overflow-y-auto">
 				<div class="pr-1">
 					<div class="h-4"></div>
 					<div class="flex flex-col w-full">
-						<div v-for="(channel,i) in servers[$route.params.id].channels" :key="i">
+						<div v-for="(channel,i) in servers[parseInt($route.params.id)].channels" :key="i">
 							<ChannelCard :channel="channel" />
 						</div>
 					</div>
 
-					<div draggable="true" v-for="(category, i) in servers[$route.params.id].categories" :key="i" class="flex flex-col w-full">
+					<div draggable="true" v-for="(category, i) in servers[parseInt($route.params.id)].categories" :key="i" class="flex flex-col w-full">
 						<div class="w-full pt-4">
 							<button @mouseover="gategoryBtnHover=true" @mouseleave="gategoryBtnHover= false" class="btn w-58 h-6 rounded-lg text-gray-600 flex items-center">
 								<div class="w-4 h-4 flex justify-center items-center">
@@ -84,7 +84,7 @@
     </div>
 
     <!--Main section-->
-    <div class="mainsection min-w-0 w-full h-screen bg-nightgraylighter flex flex-col">
+    <div class="mainsection min-w-0 flex-1 bg-green-400 flex flex-col overflow-hidden">
         <!--Main section nav, sidebar-->
 
 		<div class="relative w-auto h-12 border-b px-2 flex-shrink-0 flex items-center border-gray-900  bg-nightgraylighter">
@@ -149,75 +149,25 @@
 
 
 
-		<div class="relative w-full h-186 flex flex-shrink min-h-0">
+		<div class="flex-1 flex min-h-0">
 			<!--chat section-->
-			<div class="flex flex-col">
-				<div class="w-full h-1 -mt-1 pr-12 pl-18"></div>
-				<div  class="relative w-full min-h-0 h-186 min-w-0 break-normal bg-nightgraylighter font-sans text-lg">
+			<div class="flex-1 flex flex-col">
+				<div class="w-full h-1 -mt-1"></div>
 
-					<div id="chatspace" class="w-full h-full overflow-auto flex-shrink">
-						<div v-for="(chat, i) in chats[$route.params.id]" :key="i">
-							<Chat :chat="chat"/>
-						</div>
-						<div class="mb-32"></div>
-					</div>
+				<div  class="flex-1 flex flex-col min-h-0 min-w-0 break-normal bg-nightgraylighter font-sans text-lg overflow-hidden">
 
-					<div class=" absolute bottom-0 flex blur-shadow w-full h-auto px-8 bg-nightgraylighter">
-						<div class="relative flex items-start blur-shadow w-full h-full rounded-lg overflow-hidden bg-grayinput">
-
-							<div class="relative h-12 flex flex-col items-start justify-start">
-								<div class="h-full flex items-center justify-center">
-									<button class="btn w-14 h-12 flex items-center justify-center text-gray-300">
-										<input class="btn absolute h-12 w-14 opacity-0" type="file" name="" id="" value="">
-										<svg width="24" height="24"><path class="" fill="currentColor" d="M12 2a10.01 10.01 0 000 20 10.01 10.01 0 000-20zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
-									</button>
-								</div>
-							</div>
-
-							<form ref="form" class="w-full h-auto rounded-lg px30 overflow-hidden" action="" method="post">
-								<div class="relative flex items-center w-full h-auto rounded-lg bg-grayinput">
-
-									<div class="w-full relative flex items-center my-1">
-										<div class="w-full flex items-center">
-											<div
-												id="msginput"
-												@keydown.enter="onEnter"
-												class="messageinput py-2 flex-grow break-all sm:break-words w-12/12 overflow-y-auto overflow-x-hidden text-gray-400 rounded-lg bg-transparent outline-none"
-												contenteditable="true"
-												>
-
-											</div>
-
-										</div>
-
-									</div>
-								</div>
-							</form>
-
-							<div class="w-30 h-12 text-gray-400 flex items-center justify-around">
-								<div class="w-8 h-8 flex items-center justify-center">
-									<button class="btn flex items-center justify-center">
-										<svg width="24" height="24" class="" aria-hidden="false"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M16.886 7.999H20c1.104 0 2 .897 2 2v2H2v-2c0-1.103.897-2 2-2h3.114a5.028 5.028 0 01-1.235-.878 3.002 3.002 0 010-4.242c1.133-1.133 3.107-1.133 4.242-.002 1.637 1.637 1.858 4.718 1.877 5.064a.094.094 0 01-.004.032.107.107 0 00-.004.026h.02a.108.108 0 00-.004-.026c-.003-.01-.005-.02-.004-.031.02-.346.24-3.427 1.877-5.064 1.135-1.133 3.107-1.132 4.242-.001a3.006 3.006 0 010 4.244 5.028 5.028 0 01-1.235.878zM7.293 5.707A1.002 1.002 0 018 4c.268 0 .519.103.707.292.59.59.934 1.648 1.118 2.53-.88-.183-1.946-.529-2.532-1.115zm6.881 1.117c.185-.883.528-1.941 1.119-2.531A.986.986 0 0116 4c.268 0 .519.103.706.291.39.391.391 1.025.001 1.416-.591.591-1.65.935-2.533 1.117zM3 13.999v6c0 1.103.897 2 2 2h6v-8H3zm10 0v8h6c1.104 0 2-.897 2-2v-6h-8z"/></svg>
-									</button>
-								</div>
-								<div class="w-8 h-8 flex items-center justify-center">
-									<button class="btn flex items-center justify-center">
-										<svg width="24" height="24" class="icon-3D60ES" aria-hidden="false"><path fill="currentColor" d="M2 2a2 2 0 00-2 2v16a2 2 0 002 2h20a2 2 0 002-2V4a2 2 0 00-2-2H2zm7.764 9.448v4.032c-.864.564-1.884.876-3.024.876-2.628 0-4.08-1.728-4.08-4.284 0-2.568 1.572-4.308 4.128-4.308 1.02 0 1.872.24 2.532.612l-.276 1.788c-.624-.396-1.356-.708-2.208-.708-1.428 0-2.124 1.056-2.124 2.604 0 1.56.72 2.652 2.148 2.652.456 0 .78-.096 1.116-.264v-1.476H6.428v-1.524h3.336zm1.784-3.528H13.6v8.28h-2.052V7.92zm8.924 0v1.716h-2.916v1.692h2.304v1.716h-2.304V16.2h-2.04V7.92h4.956z"/></svg>
-									</button>
-								</div>
-								<div class="w-8 h-8 flex items-center justify-center">
-									<button class="btn flex items-center justify-center">
-										<div>
-											<!--<svg width="24" height="24" class="icon-3D60ES" aria-hidden="false"><path fill="currentColor" d="M2 2a2 2 0 00-2 2v16a2 2 0 002 2h20a2 2 0 002-2V4a2 2 0 00-2-2H2zm7.764 9.448v4.032c-.864.564-1.884.876-3.024.876-2.628 0-4.08-1.728-4.08-4.284 0-2.568 1.572-4.308 4.128-4.308 1.02 0 1.872.24 2.532.612l-.276 1.788c-.624-.396-1.356-.708-2.208-.708-1.428 0-2.124 1.056-2.124 2.604 0 1.56.72 2.652 2.148 2.652.456 0 .78-.096 1.116-.264v-1.476H6.428v-1.524h3.336zm1.784-3.528H13.6v8.28h-2.052V7.92zm8.924 0v1.716h-2.916v1.692h2.304v1.716h-2.304V16.2h-2.04V7.92h4.956z"/></svg>-->
-											<div @mouseover="emojiHover" @click="selectEmoji" class="transform scale-125 hover:scale-150">{{emoji}}</div>
-										</div>
-									</button>
-								</div>
-							</div>
+					<div class="flex-1 overflow-auto">
+						<div id="chatspace" class="felx-1 flex flex-col">
+							<Chat
+								v-for="(chat, i) in chats[parseInt($route.params.id)]" :key="i"
+								:chat="chat" :id="i"
+							/>
 						</div>
 					</div>
+
+					<!--Input form-->
+					<InputForm :users="users" :chats="chats" :serverId="parseInt($route.params.id)"/>
 				</div>
-
 			</div>
 
 			<!--show members section-->
@@ -232,16 +182,13 @@
 
 <script>
 import axios from 'axios';
-import _ from 'lodash';
 import chats from "~/static/data/chats.json";
 import users from "~/static/data/users.json";
 import servers from "~/static/data/servers.json";
-import emoji from "~/static/data/emoji.json";
 export default {
 
     data() {
         return {
-			emoji: '😊',
 			showMembers: true,
 			searchFocused: false,
 			content: [
@@ -298,57 +245,10 @@ export default {
 		searchFocuse: function(){
 			this.searchFocused = true;
 		},
-		onEnter: function(event){
-			event.preventDefault();
-			// this.$refs.form.submit();
-			// console.log(this.message);
-
-            let currentDateWithFormat = new Date().toJSON().slice(0,10).replace(/-/g,'/');
-			let author = _.sample(users);
-			// console.log(author);
-			let message = document.getElementById('msginput');
-
-			this.chats[this.$route.params.id].push({
-				"author":{
-					"userName": author.userName,
-					"avatarUrl":author.avatarUrlImg
-				},
-				"date": currentDateWithFormat,
-				"value": message.innerText
-			});
-			let chatSection = document.getElementById('chatspace');
-			chatSection.scrollTop = chatSection.scrollHeight;
-
-			message.innerText = '';
-		},
-		onInput(event, index) {
-			const value = event.target.innerText;
-			this.content[index].value = value;
-		},
-		onRemove(index) {
-			if (this.content.length > 1 && this.content[index].value.length === 0) {
-				this.$delete(this.content, index);
-				this.updateAllContent();
-			}
-		},
-		updateAllContent() {
-			this.content.forEach((c, index) => {
-				const el = document.getElementById(`content-${index}`);
-				el.innerText = c.value;
-			});
-		},
-		emojiHover(){
-			let currentEmoji = _.sample(emoji);
-			this.emoji = currentEmoji.face;
-		},
-		selectEmoji(){
-			let message = document.getElementById('msginput');
-			message.innerText += this.emoji;
-		}
 	},
     mounted() {
 		// this.updateAllContent();
-		// console.table(this.$route.params.id);
+		console.log(typeof parseInt(this.$route.params.id));
     }
 };
 </script>
