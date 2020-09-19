@@ -1,5 +1,5 @@
 <template>
-<div class="relative w-auto h-auto bg-black flex overflow-hidden">
+<div class="relative w-auto h-screen bg-black flex overflow-hidden">
     <div class="flex">
         <!--Server icons-->
         <div class="w-18 h-scree bg-mostnightgray">
@@ -39,49 +39,47 @@
 
         <!--Server channels-->
         <div class="w-60 h-screen bg-nightgray flex flex-col">
-            <div class="relative h-screen flex flex-col">
-                <div class="w-full h-12">
-                    <ServerHeader :server="servers[$route.params.id]" />
-                </div>
+			<div class="w-full h-12">
+				<ServerHeader :server="servers[$route.params.id]" />
+			</div>
 
-                <div class="smallScroleBar w-60 h-auto pb-18 flex flex-col overflow-auto bg-nightgray">
-                    <div class="pr-1">
-                        <div class="h-4"></div>
-                        <div class="flex flex-col w-full">
-                            <div v-for="(channel,i) in servers[$route.params.id].channels" :key="i">
-                                <ChannelCard :channel="channel" />
-                            </div>
-                        </div>
+			<div class="smallScroleBar w-60 h-auto bg-nightgray pb-6 flex-1 flex flex-col overflow-y-auto">
+				<div class="pr-1">
+					<div class="h-4"></div>
+					<div class="flex flex-col w-full">
+						<div v-for="(channel,i) in servers[$route.params.id].channels" :key="i">
+							<ChannelCard :channel="channel" />
+						</div>
+					</div>
 
-                        <div draggable="true" v-for="(category, i) in servers[$route.params.id].categories" :key="i" class="flex flex-col w-full">
-                            <div class="w-full pt-4">
-                                <button @mouseover="gategoryBtnHover=true" @mouseleave="gategoryBtnHover= false" class="btn w-58 h-6 rounded-lg text-gray-600 flex items-center">
-                                    <div class="w-4 h-4 flex justify-center items-center">
-                                        <svg :class="{'-rotate-90':gategoryBtnHover}" class="w-2 h-2 transform duration-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/> </svg>
-                                    </div>
-                                    <div class="uppercase text-xs">{{category.name}}</div>
-									<div class="w-6 h-6 ml-auto">
-										<svg
-											class="" aria-hidden="false" width="18" height="18">
-											<path fill="#a0aec0" d="M15 10h-5v5H8v-5H3V8h5V3h2v5h5z"/>
-										</svg>
-									</div>
-                                </button>
-                                <div class="flex flex-col w-full">
-                                    <div v-for="(channel,j) in category.channels" :key="j">
-                                        <ChannelCard :channel="channel" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+					<div draggable="true" v-for="(category, i) in servers[$route.params.id].categories" :key="i" class="flex flex-col w-full">
+						<div class="w-full pt-4">
+							<button @mouseover="gategoryBtnHover=true" @mouseleave="gategoryBtnHover= false" class="btn w-58 h-6 rounded-lg text-gray-600 flex items-center">
+								<div class="w-4 h-4 flex justify-center items-center">
+									<svg :class="{'-rotate-90':gategoryBtnHover}" class="w-2 h-2 transform duration-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+								</div>
+								<div class="uppercase text-xs">{{category.name}}</div>
+								<div class="w-6 h-6 ml-auto">
+									<svg
+										class="" aria-hidden="false" width="18" height="18">
+										<path fill="#a0aec0" d="M15 10h-5v5H8v-5H3V8h5V3h2v5h5z"/>
+									</svg>
+								</div>
+							</button>
+							<div class="flex flex-col w-full">
+								<div v-for="(channel,j) in category.channels" :key="j">
+									<ChannelCard :channel="channel" />
+								</div>
+							</div>
+						</div>
+					</div>
 
-                    </div>
-                </div>
+				</div>
+			</div>
 
-                <div class="absolute w-full h-13 bottom-0">
-                    <ServerFooter :profile="users[0]" />
-                </div>
-            </div>
+			<div class="w-full h-13 bottom-0">
+				<ServerFooter :profile="users[0]" />
+			</div>
         </div>
     </div>
 
