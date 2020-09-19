@@ -1,6 +1,6 @@
 <template>
-<div class="smallScroleBar w-full h-full pb-18 bg-nightgray overflow-auto">
-	<div class="w-full h-16 text-gray-500 text-sm font-semibold flex justify-center items-end">
+<div class="smallScroleBar w-full h-full pb-6 bg-nightgray overflow-auto flex flex-col">
+	<div class="w-full h-14 flex-shrink-0 text-gray-500 text-xs font-semibold flex justify-center items-end">
 		<h1 class="w-full h-6 pl-4">ONLINE-{{users.length}}</h1>
 	</div>
 	<div class="w-full h-10 pl-2" v-for="(user, i) in users" :key="i">

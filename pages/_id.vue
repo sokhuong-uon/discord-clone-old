@@ -171,7 +171,7 @@
 			</div>
 
 			<!--show members section-->
-			<div :class="{'w-60':showMembers, 'w-0': !showMembers}" class="h-full">
+			<div :class="{'w-60':showMembers, 'w-0': !showMembers}" class="h-auto">
 				<MembersBar :users="users"/>
 			</div>
 		</div>
