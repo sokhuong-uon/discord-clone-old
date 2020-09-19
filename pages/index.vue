@@ -159,11 +159,8 @@ export default {
 		},
 	},
     mounted() {
-		// console.table(this.servers);
 		let link = 'https://github.com/SOKHUONG/discord-clone';
-        console.log("%c⚠ Do not pasth any code that you don't understand !", "background: yellow; color: red; font-size: 30px; font-weight: 600; font-family: Lobster, serif; height: 200px");
-        console.log("%c If you are a developer and know exactly what you're doing,", "background: transparent; color: #ed0e90; font-size: 30px; font-weight: 600; font-family: Lobster, serif; height: 200px");
-        console.log("%cEnjoy Your Time, Dev! 😉", "background: transparent; color: #ed0e90; font-size: 50px; font-weight: 700; font-family: Arial, Helvetica, sans-serif; height: 200px");
+        console.log("%c💝 I am really appreciate that you interested in my code 😊", "background: transparent; color: #ed0e90; font-size: 30px; font-weight: 600; font-family: Lobster, serif; height: 200px");
 		console.log(`%c Source code of this project on github: %c${link}`,"font-family: Lobster, serif;color: #0eed98; font-size: 25px","font-size: 15px;");
     }
 };
