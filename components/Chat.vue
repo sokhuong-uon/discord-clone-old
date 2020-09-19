@@ -60,8 +60,7 @@ export default {
 		}
 	},
 	mounted(){
-		console.log(this.chat);
-		console.log(this.id);
+		
 	},
 	computed: {
 		textArea: function () {
