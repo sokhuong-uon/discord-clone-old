@@ -156,8 +156,8 @@
 
 				<div  class="flex-1 flex flex-col min-h-0 min-w-0 break-normal bg-nightgraylighter font-sans text-lg overflow-hidden">
 
-					<div class="flex-1 overflow-auto">
-						<div id="chatspace" class="felx-1 flex flex-col">
+					<div id="chatspace" class="flex-1 overflow-auto pb-5">
+						<div  class="felx-1 flex flex-col">
 							<Chat
 								v-for="(chat, i) in chats[parseInt($route.params.id)]" :key="i"
 								:chat="chat" :id="i"
@@ -247,8 +247,18 @@ export default {
 		},
 	},
     mounted() {
-		// this.updateAllContent();
-		console.log(typeof parseInt(this.$route.params.id));
-    }
+		// console.log(typeof parseInt(this.$route.params.id));
+    },
+	computed:{
+		specificChat: function () {
+			return this.chats[parseInt(this.$route.params.id)]
+        }
+	},
+	watch: {
+		specificChat: function () {
+			let chatSpace = document.getElementById('chatspace');
+			chatSpace.scrollTop = chatSpace.scrollHeight;
+        }
+	}
 };
 </script>
