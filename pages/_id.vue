@@ -1,8 +1,8 @@
 <template>
-<div class="w-screen h-screen select-none bg-black flex overflow-hidden">
+<div class="relative w-screen h-screen select-none bg-black flex overflow-hidden">
     <div class="flex">
         <!--Server sidebar-->
-        <ServerSideBar/>
+        <ServerSideBar :creatingServer="creatingServer" @createServer="creatingServer = $event"/>
 
 
         <!--Server channels-->
@@ -145,6 +145,11 @@
 		</div>
         <!--Message section communicate-->
     </div>
+
+	<!--popup components-->
+	<div v-if="creatingServer" class="absolute w-screen h-screen bg-black bg-opacity-90 flex justify-center items-center">
+		<CreateServer @externalClick="creatingServer = $event"/>
+	</div>
 </div>
 </template>
 
@@ -157,6 +162,7 @@ export default {
 
     data() {
         return {
+			creatingServer: false,
 			showMembers: true,
 			searchFocused: false,
 			content: [
