@@ -1,5 +1,5 @@
 <template>
-<div class="w-screen h-screen bg-black flex overflow-hidden">
+<div class="w-screen h-screen select-none bg-black flex overflow-hidden">
     <div class="flex">
         <!--Server sidebar-->
         <div class="w-18 bg-mostnightgray overflow-hidden">
@@ -151,7 +151,7 @@
 
 		<div class="flex-1 flex min-h-0">
 			<!--chat section-->
-			<div class="flex-1 flex flex-col">
+			<div class="flex-1 flex flex-col select-text">
 				<div class="w-full h-1 -mt-1"></div>
 
 				<div  class="flex-1 flex flex-col min-h-0 min-w-0 break-normal bg-nightgraylighter font-sans text-lg overflow-hidden">

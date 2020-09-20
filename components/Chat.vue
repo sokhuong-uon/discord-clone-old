@@ -1,6 +1,6 @@
 <template>
 <div @mouseover="hoverChat = true" @mouseleave="hoverChat = false" class="relative flex-1 mt-4 min-w-0 pr-12 flex hover:bg-nightgray">
-	<div class="w-12 h-12 mx-3 flex-shrink-0 flex items-center justify-center">
+	<div class="w-12 h-12 mx-3 flex-shrink-0 flex items-center justify-center select-none">
 		<div class="w-10 h-10 rounded-full overflow-hidden">
 			<img :src="chat.author.avatarUrl" alt="" srcset="">
 		</div>
@@ -60,7 +60,7 @@ export default {
 		}
 	},
 	mounted(){
-		
+
 	},
 	computed: {
 		textArea: function () {
