@@ -34,6 +34,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+	{ src: "@/plugins/vClickOutside", ssr: false }
   ],
   /*
   ** Auto import components
