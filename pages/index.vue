@@ -40,7 +40,7 @@
         <div class="w-60 h-screen bg-nightgray flex flex-col">
             <div class="relative h-screen flex flex-col">
                 <div class="w-full h-12 px-3 border-b border-gray-900 flex-shrink-0 flex items-center justify-center">
-                    <button @click="FindConversation = true" class="btn w-full h-auto rounded-md bg-mostnightgray flex items-center justify-start text-sm">
+                    <button @click="findConversationOpen = true" class="btn w-full h-auto rounded-md bg-mostnightgray flex items-center justify-start text-sm">
 						<span class="px-2 my-1 text-graydiscord font-medium">Find or start a conversation</span>
 					</button>
                 </div>
@@ -166,8 +166,8 @@
 	</div>
 
 	<!--popup components-->
-	<div v-if="FindConversation" @click="FindConversation=false" class="absolute w-screen h-screen bg-gray-900 bg-opacity-90 flex items-center justify-center">
-		<FindConversation/>
+	<div v-if="findConversationOpen" class="absolute w-screen h-screen bg-black bg-opacity-90 flex justify-center items-center">
+		<FindConversation :findConversationOpen="findConversationOpen" @externalClick="findConversationOpen = $event"/>
 	</div>
 </div>
 </template>
@@ -181,7 +181,7 @@ import servers from "~/static/data/servers.json";
 export default {
     data() {
         return {
-			FindConversation: false,
+			findConversationOpen: false,
 			showMembers: false,
 			searchFocused: false,
 			query:'',
@@ -237,14 +237,14 @@ export default {
 		}
 	},
     mounted() {
-		if(!sessionStorage.getItem('already_log')){
-			// _.once(this.Log) willre turn a funtion, so just call it directly.
+		if(!sessionStorage.getItem('logged')){
+			// _.once(this.Log) will return a funtion, so just call it directly.
 			_.once(this.Log)();
-			sessionStorage.setItem('already_log', true);
+			sessionStorage.setItem('logged', true);
 		}
 
 		window.onunload = function () {
-			sessionStorage.removeItem('already_log');
+			sessionStorage.removeItem('logged');
     	}
     }
 };
