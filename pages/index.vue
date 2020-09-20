@@ -40,7 +40,7 @@
         <div class="w-60 h-screen bg-nightgray flex flex-col">
             <div class="relative h-screen flex flex-col">
                 <div class="w-full h-12 px-3 border-b border-gray-900 flex-shrink-0 flex items-center justify-center">
-                    <button class="btn w-full h-auto rounded-md bg-mostnightgray flex items-center justify-start text-sm">
+                    <button @click="FindConversation = true" class="btn w-full h-auto rounded-md bg-mostnightgray flex items-center justify-start text-sm">
 						<span class="px-2 my-1 text-graydiscord font-medium">Find or start a conversation</span>
 					</button>
                 </div>
@@ -165,7 +165,10 @@
 		</div>
 	</div>
 
-
+	<!--popup components-->
+	<div v-if="FindConversation" @click="FindConversation=false" class="absolute w-screen h-screen bg-gray-900 bg-opacity-90 flex items-center justify-center">
+		<FindConversation/>
+	</div>
 </div>
 </template>
 
@@ -178,6 +181,7 @@ import servers from "~/static/data/servers.json";
 export default {
     data() {
         return {
+			FindConversation: false,
 			showMembers: false,
 			searchFocused: false,
 			query:'',
