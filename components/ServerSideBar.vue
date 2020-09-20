@@ -23,7 +23,7 @@
 
 		<!--download app-->
 		<div class="h-auto">
-			<RoundedIcon type="button" :button="buttons[1]" />
+			<AddServerIcon :creatingServer="creatingServer" @createServer="createServer" />
 			<RoundedIcon type="button" :button="buttons[2]" />
 			<div class="relative flex-shrink-0 flex justify-center h-2px w-full mb-2">
 				<div class="absolute h-2px w-8 bg-gray-800 rounded-full"></div>
@@ -37,6 +37,7 @@
 <script>
 import servers from "~/static/data/servers.json";
 export default {
+	props: ['creatingServer'],
 	data() {
 		return{
 			servers: servers,
@@ -60,6 +61,11 @@ export default {
             ],
 		}
 	},
+	methods: {
+		createServer(){
+			this.$emit('createServer', true);
+		}
+	}
 
 }
 </script>

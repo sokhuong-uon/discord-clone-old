@@ -2,7 +2,7 @@
 <div class="relative select-none w-auto h-screen bg-black flex overflow-hidden">
     <div class="flex">
         <!--Server sidebar-->
-        <ServerSideBar/>
+        <ServerSideBar :creatingServer="creatingServer" @createServer="creatingServer = $event"/>
 
         <!--Friends list-->
         <div class="w-60 h-screen bg-nightgray flex flex-col">
@@ -135,7 +135,10 @@
 
 	<!--popup components-->
 	<div v-if="findConversationOpen" class="absolute w-screen h-screen bg-black bg-opacity-90 flex justify-center items-center">
-		<FindConversation :findConversationOpen="findConversationOpen" @externalClick="findConversationOpen = $event"/>
+		<FindConversation @externalClick="findConversationOpen = $event"/>
+	</div>
+	<div v-if="creatingServer" class="absolute w-screen h-screen bg-black bg-opacity-90 flex justify-center items-center">
+		<CreateServer @externalClick="creatingServer = $event"/>
 	</div>
 </div>
 </template>
@@ -148,6 +151,7 @@ import users from "~/static/data/users.json";
 export default {
     data() {
         return {
+			creatingServer: false,
 			findConversationOpen: false,
 			showMembers: false,
 			searchFocused: false,

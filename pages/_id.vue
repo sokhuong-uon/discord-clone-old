@@ -188,10 +188,10 @@ export default {
 	// },
 
 	methods: {
-		deleteQuery: function(){
+		deleteQuery(){
 			this.query = '';
 		},
-		searchFocuse: function(){
+		searchFocuse(){
 			this.searchFocused = true;
 		},
 		Log(){
@@ -212,12 +212,12 @@ export default {
     	}
     },
 	computed:{
-		specificChat: function () {
+		specificChat () {
 			return this.chats[parseInt(this.$route.params.id)]
         }
 	},
 	watch: {
-		specificChat: function () {
+		specificChat() {
 			let chatSpace = document.getElementById('chatspace');
 			chatSpace.scrollTop = chatSpace.scrollHeight;
         }
