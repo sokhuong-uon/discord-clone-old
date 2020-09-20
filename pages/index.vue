@@ -1,5 +1,5 @@
 <template>
-<div class="relative w-auto h-screen bg-black flex overflow-hidden">
+<div class="relative select-none w-auto h-screen bg-black flex overflow-hidden">
     <div class="flex">
         <!--Server sidebar-->
         <div class="w-18 bg-mostnightgray overflow-hidden">
@@ -99,11 +99,55 @@
 
 	<!-- Main section-->
 	<div class="flex-1 flex-shrink min-w-0 bg-nightgraylighter flex flex-col">
-		<div class="w-full h-12 border-b border-black flex items-center">
+		<div class="relative w-full min-w-34 h-12 border-b border-black flex items-center px-2">
 			<!--sidebar-->
-			<div class=" flex-1 h-6 bg-yellow-700"></div>
+			<div class=" flex-1 flex-shrink min-w-0 h-8 flex items-center">
+				<div class="flex items-center">
+					<div class="w-8 h-6 flex items-center justify-center mx-2">
+						<svg class="text-gray-200" aria-hidden="false" width="24" height="24" viewBox="0 0 24 24">
+							<g fill="none" fill-rule="evenodd">
+								<path fill="currentColor" fill-rule="nonzero" d="M2.5 4v1.5A11.5 11.5 0 008 15.3V20h15v-2c0-2.66-5.33-4-8-4h-.25C10 14 6 10 6 5.5V4H2.5zM15 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M0 0h24v24H0V0zm0 0h24v24H0V0zm0 0h24v24H0V0z"/>
+							</g>
+						</svg>
+					</div>
+					<div class="flex items-center">
+						<div class="w-full mr-2 font-medium text-gray-200 flex items-center">
+							Friends
+						</div>
+					</div>
+				</div>
+				<div class="w-px flex-shrink-0 h-full mx-2 bg-gray-700"></div>
+				<div class="w-auto flex items-center text-gray-200 text-base">
+					<button class="btn h-full font-semibold rounded-md mx-2 px-2 py-px flex hover:bg-teal-900">Online</button>
+					<button class="btn h-full font-semibold rounded-md mx-2 px-2 py-px flex hover:bg-teal-900">All</button>
+					<button class="btn h-full font-semibold rounded-md mx-2 px-2 py-px flex hover:bg-teal-900">Pdnding</button>
+					<button class="btn h-full font-semibold rounded-md mx-2 px-2 py-px flex hover:bg-teal-900">Blocked</button>
+					<button class="btn w-24 h-full font-semibold rounded-md mx-2 py-px bg-green-600">Add Friend</button>
+
+				</div>
+			</div>
 			<!--toolbar-->
-			<div class="w-34 h-6 bg-teal-600"></div>
+			<div class=" absolute right-0 w-34 h-8 bg-nightgraylighter flex items-center text-gray-500">
+				<div class="w-12 h-6">
+					<div class="w-6 h-6 mx-2">
+						<button class="btn">
+							<svg class="hover:text-gray-400" aria-hidden="false" width="24" height="24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M21 0v3h3v2h-3v3h-2V5h-3V3h3V0h2zM3 20v4l5.33-4H15a2 2 0 002-2V9a2 2 0 00-2-2H2a2 2 0 00-2 2v9c0 1.1.9 2 2 2h1z"/></svg>
+						</button>
+					</div>
+				</div>
+				<div class="w-px flex-shrink-0 h-6 mx-2 bg-gray-700"></div>
+
+				<div class="mx-2 flex items-center">
+					<button class="btn">
+						<svg class="w-6 h-6 hover:text-gray-400" aria-hidden="false" fill="none"><path d="M19 3H4.99c-1.11 0-1.98.89-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5a2 2 0 00-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10z" fill="currentColor"/></svg>
+					</button>
+				</div>
+				<div class=" mx-2 flex items-center">
+					<button class="btn">
+						<svg class="w-6 h-6 hover:text-gray-400" aria-hidden="false"><path fill="currentColor" d="M12 2C6.486 2 2 6.487 2 12c0 5.515 4.486 10 10 10s10-4.485 10-10c0-5.513-4.486-10-10-10zm0 16.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm1-4.375V15h-2v-3h1a2 2 0 10-2-2H8c0-2.205 1.795-4 4-4s4 1.795 4 4a4.01 4.01 0 01-3 3.875z"/></svg>
+					</button>
+				</div>
+			</div>
 		</div>
 		<div class="flex-1 flex-shrink min-w-0 flex justify-between">
 			<div class="flex-1 min-w-0 overflow-hidden h-full flex items-center justify-between">
@@ -111,7 +155,7 @@
 					<div class="w-120 h-80 flex-1 flex flex-col items-center justify-center">
 						<div class="bg-no-repeat bg-center w-full h-full flex-1" style="background-image: url('https://discordapp.com/assets/a12ff54c4c5c03b41006fd96a4709c29.svg')">
 						</div>
-						<div class="w-auto h-12 flex flex-row items-center justify-center text-center text-graydiscord">
+						<div class=" w-auto h-12 flex flex-row items-center justify-center text-center text-graydiscord">
 							No one's around to play with Wumpus
 						</div>
 					</div>
