@@ -98,16 +98,26 @@
     </div>
 
 	<!-- Main section-->
-	<div class="flex-1 bg-green-600 flex flex-col">
-		<div class="w-full h-12 bg-pink-600 border-b border-black flex items-center">
+	<div class="flex-1 flex-shrink min-w-0 bg-nightgraylighter flex flex-col">
+		<div class="w-full h-12 border-b border-black flex items-center">
 			<!--sidebar-->
 			<div class=" flex-1 h-6 bg-yellow-700"></div>
 			<!--toolbar-->
 			<div class="w-34 h-6 bg-teal-600"></div>
 		</div>
-		<div class="flex-1 flex bg-indigo-500">
-			<div class="flex-1 bg-purple-900"></div>
-			<div class="hidden w-90 h-full bg-gray-700 lg:flex"></div>
+		<div class="flex-1 flex-shrink min-w-0 flex justify-between">
+			<div class="flex-1 min-w-0 overflow-hidden h-full flex items-center justify-between">
+				<div class="flex-1  flex-shrink min-w-0 h-full flex items-center justify-center">
+					<div class="w-120 h-80 flex-1 flex flex-col items-center justify-center">
+						<div class="bg-no-repeat bg-center w-full h-full flex-1" style="background-image: url('https://discordapp.com/assets/a12ff54c4c5c03b41006fd96a4709c29.svg')">
+						</div>
+						<div class="w-auto h-12 flex flex-row items-center justify-center text-center text-graydiscord">
+							No one's around to play with Wumpus
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hidden w-90 h-full bg-nightgray xl:flex"></div>
 		</div>
 	</div>
 
