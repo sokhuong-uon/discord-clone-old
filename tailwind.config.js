@@ -37,6 +37,20 @@ module.exports = {
 			'90':'0.9',
 			'100':'1'
 		},
+		maxHeight: {
+	    	'0': '0',
+	    	'1/4': '25%',
+	    	'1/2': '50%',
+	    	'3/4': '75%',
+	    	'full': '100%',
+		},
+		minHeight: {
+	    	'0': '0',
+	    	'1/4': '25%',
+	    	'1/2': '50%',
+	    	'3/4': '75%',
+	    	'full': '100%',
+      	},
 
 		extend: {
 			spacing: {
@@ -61,6 +75,11 @@ module.exports = {
 				'90': '22.5rem',
 				'96': '24rem',
 				'120': '30rem',
+				'128': '32rem',
+				'130': '32.5rem',
+				'132': '33rem',
+				'140': '35rem',
+				'144': '36rem',
 				'160': '40rem',
 				'168': '42rem',
 				'170': '42.5rem',
@@ -114,7 +133,9 @@ module.exports = {
 		},
 
 	},
-	variants: {},
+	variants: {
+		maxHeight: ['responsive', 'hover', 'focus'],
+	},
 	plugins: [],
 	purge: {
 		// Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
