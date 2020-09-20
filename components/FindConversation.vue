@@ -2,15 +2,15 @@
 	<div v-click-outside="externalClick" class="w-144 max-h-1/2 min-h-0 rounded-larger px-5 pt-5 bg-nightgray flex flex-col items-center justify-between">
 		<div class="w-full flex-1 min-h-1/4 flex flex-col items-start justify-between">
 			<input id="searchConversation" class="w-132 h-18 px-1 flex-shrink-0 text-xl outline-none bg-grayinput rounded-lg" type="text" placeholder="Where would you like to go?">
-			<div v-if="hasResult" class="w-full flex-1 overflow-y-auto">
+			<div v-if="true" class="w-full flex-1 overflow-y-auto">
 				<div class="w-full h-2"></div>
-				<div class="h-10 hover:bg-gray-800 text-gray-500 flex items-center rounded">Any Doubt</div>
-				<div class="h-10 hover:bg-gray-800 text-gray-500 flex items-center rounded">Any Doubt</div>
-				<div class="h-10 hover:bg-gray-800 text-gray-500 flex items-center rounded">Any Doubt</div>
-				<div class="h-10 hover:bg-gray-800 text-gray-500 flex items-center rounded">Any Doubt</div>
-				<div class="h-10 hover:bg-gray-800 text-gray-500 flex items-center rounded">Any Doubt</div>
-				<div class="h-10 hover:bg-gray-800 text-gray-500 flex items-center rounded">Any Doubt</div>
-				<div class="h-10 hover:bg-gray-800 text-gray-500 flex items-center rounded">Any Doubt</div>
+				<SearchResultCard/>
+				<SearchResultCard/>
+				<SearchResultCard/>
+				<SearchResultCard/>
+				<SearchResultCard/>
+				<SearchResultCard/>
+				<SearchResultCard/>
 			</div>
 		</div>
 		<div class="w-full h-8 py-2 flex items-center text-xs flex-shrink-0 text-gray-200">
@@ -42,7 +42,6 @@ export default {
 	},
     methods: {
       	externalClick (event) {
-        	// console.log('External click. Event: ', event);
 			this.$emit('externalClick', false);
     	}
     }
