@@ -67,8 +67,12 @@
 
 			<div class="w-auto h-6 bg-nightgraylighter text-gray-500 flex-shrink-0 flex items-center justify-between overflow-hidden">
 				<div class="mx-2 flex items-center">
-					<button class="btn">
-						<svg class="w-6 h-6" aria-hidden="false" fill="none"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M18 9v5a3 3 0 003 3v1H3v-1a3 3 0 003-3V9a6 6 0 1112 0zm-6 12c-1.476 0-2.752-.81-3.445-2h6.89c-.693 1.19-1.97 2-3.445 2z"/></svg>
+					<button @click="muteServer = !muteServer" class="btn">
+						<svg v-if="muteServer" class="" aria-hidden="false" width="24" height="24">
+							<path class="text-red-500" fill="currentColor" d="M21.178 1.707l1.414 1.414L4.121 21.593l-1.414-1.415L21.178 1.707z"/>
+							<path fill="currentColor" d="M18 10.528L10.529 18H21v-1a3 3 0 01-3-3v-3.472zM8.957 19.572L9.529 19h5.916c-.693 1.19-1.97 2-3.445 2a3.96 3.96 0 01-3.043-1.428zM12 3c1.417 0 2.71.5 3.734 1.321l-9.736 9.737.001-.03L6 14V9a6 6 0 016-6z"/>
+						</svg>
+						<svg v-else class="" aria-hidden="false" fill="none" width="24" height="24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M18 9v5a3 3 0 003 3v1H3v-1a3 3 0 003-3V9a6 6 0 1112 0zm-6 12c-1.476 0-2.752-.81-3.445-2h6.89c-.693 1.19-1.97 2-3.445 2z"/></svg>
 					</button>
 				</div>
 				<div class="mx-2 flex items-center">
@@ -106,11 +110,14 @@
 						<svg class="w-6 h-6" aria-hidden="false" fill="none"><path d="M19 3H4.99c-1.11 0-1.98.89-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5a2 2 0 00-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10z" fill="currentColor"/></svg>
 					</button>
 				</div>
-				<div class="mx-2 flex items-center">
-					<button class="btn">
-						<svg class="w-6 h-6" aria-hidden="false"><path fill="currentColor" d="M12 2C6.486 2 2 6.487 2 12c0 5.515 4.486 10 10 10s10-4.485 10-10c0-5.513-4.486-10-10-10zm0 16.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm1-4.375V15h-2v-3h1a2 2 0 10-2-2H8c0-2.205 1.795-4 4-4s4 1.795 4 4a4.01 4.01 0 01-3 3.875z"/></svg>
-					</button>
-				</div>
+
+				<a class="mx-1 px-1 flex items-center" href="https://support.discord.com/hc/en-us" target="_blank">
+					<div class=" flex items-center">
+						<button class="btn">
+							<svg class="w-6 h-6" aria-hidden="false"><path fill="currentColor" d="M12 2C6.486 2 2 6.487 2 12c0 5.515 4.486 10 10 10s10-4.485 10-10c0-5.513-4.486-10-10-10zm0 16.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm1-4.375V15h-2v-3h1a2 2 0 10-2-2H8c0-2.205 1.795-4 4-4s4 1.795 4 4a4.01 4.01 0 01-3 3.875z"/></svg>
+						</button>
+					</div>
+				</a>
 
 			</div>
 		</div>
@@ -177,6 +184,7 @@ export default {
 			message:'',
 			users: users,
 			servers: servers,
+			muteServer: false
         };
     },
 
