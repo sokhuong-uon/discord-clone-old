@@ -1,5 +1,5 @@
 <template>
-<button class="w-100 h-18 flex items-center border rounded-lg border-gray-400 hover:shadow-md hover:bg-gray-200 focus:outline-none mb-2 flex-shrink-0">
+<button @click="customizeServer" class="w-100 h-18 flex items-center border rounded-lg border-gray-400 hover:shadow-md hover:bg-gray-200 focus:outline-none mb-2 flex-shrink-0">
 	<div class="w-12 h-12 ml-4 mr-2 my-2">
 		<img :src="imgUrl" alt="" srcset="">
 	</div>
@@ -12,6 +12,11 @@
 
 <script>
 export default {
-	props: ['imgUrl', 'name']
+	props: ['imgUrl', 'name'],
+	methods: {
+		customizeServer(){
+			this.$emit('customizeServer', true);
+		}
+	}
 }
 </script>
