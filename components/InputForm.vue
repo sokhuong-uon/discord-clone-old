@@ -3,8 +3,8 @@
 	<div class="flex items-start w-full h-full rounded-lg overflow-hidden bg-grayinput">
 		<div class="relative h-12 flex flex-col items-start justify-start">
 			<div class="h-full flex items-center justify-center">
-				<button class="btn w-14 h-12 flex items-center justify-center text-gray-300">
-					<input class="btn absolute h-12 w-14 opacity-0" type="file" name="" id="" value="">
+				<button class="relative btn w-14 h-12 flex items-center overflow-hidden justify-center text-gray-300">
+					<input class="absolute w-22 h-20 -top-8 -left-8 opacity-0 cursor-pointer" type="file" name="" id="" value="">
 					<svg width="24" height="24"><path class="" fill="currentColor" d="M12 2a10.01 10.01 0 000 20 10.01 10.01 0 000-20zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
 				</button>
 			</div>
