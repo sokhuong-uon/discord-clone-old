@@ -83,8 +83,9 @@ export default {
 			this.emoji = currentEmoji.face;
 		},
 		selectEmoji(){
-			let message = document.getElementById('msginput');
-			message.innerText += this.emoji;
+			// let message = document.getElementById('msginput');
+			// message.innerText += this.emoji;
+			this.$emit('gifEmoji', true);
 		}
 	},
 	mounted() {
