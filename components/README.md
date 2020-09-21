@@ -63,3 +63,7 @@ $~~~~~~~~~~$_Top Navigation Bar of the main section_
 - ## **UserInlineCard**
 
 $~~~~~~~~~~$_Card for User's icon, username, and activity_
+
+- ## **GifEmoji**
+
+$~~~~~~~~~~$_Choose Gif or Emoji_
