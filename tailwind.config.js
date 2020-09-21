@@ -50,7 +50,12 @@ module.exports = {
 	    	'1/2': '50%',
 	    	'3/4': '75%',
 	    	'full': '100%',
-      	},
+		},
+		inset: {
+			'0':'0',
+			auto: 'auto',
+			'16':'4rem'
+		},
 
 		extend: {
 			spacing: {
@@ -74,6 +79,9 @@ module.exports = {
 				'84': '21rem',
 				'90': '22.5rem',
 				'96': '24rem',
+				'100': '25rem',
+				'106': '26.5rem',
+				'108': '27rem',
 				'110': '27.5rem',
 				'120': '30rem',
 				'128': '32rem',
@@ -95,6 +103,7 @@ module.exports = {
 			borderRadius:{
 				'larger':'1rem'
 			},
+
 			backgroundColor:{
 				'nightgray':'#2f3136',
 				'nightgraylighter':'#36393f',
