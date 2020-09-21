@@ -54,7 +54,12 @@ module.exports = {
 		inset: {
 			'0':'0',
 			auto: 'auto',
-			'16':'4rem'
+			'4':'1rem',
+			'8':'2rem',
+			'16':'4rem',
+			'-4':'-1rem',
+			'-8':'-2rem',
+			'-16':'-4rem',
 		},
 
 		extend: {
