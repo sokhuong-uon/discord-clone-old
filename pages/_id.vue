@@ -122,7 +122,7 @@
 			<div class="flex-1 flex flex-col select-text">
 				<div class="w-full h-1 -mt-1"></div>
 
-				<div  class="flex-1 flex flex-col min-h-0 min-w-0 break-normal bg-nightgraylighter font-sans text-lg overflow-hidden">
+				<div  class="relative flex-1 flex flex-col min-h-0 min-w-0 break-normal bg-nightgraylighter font-sans text-lg overflow-hidden">
 
 					<div id="chatspace" class="flex-1 overflow-auto pb-5">
 						<div  class="felx-1 flex flex-col">
@@ -134,7 +134,12 @@
 					</div>
 
 					<!--Input form-->
-					<InputForm :users="users" :chats="chats" :serverId="parseInt($route.params.id)"/>
+					<InputForm :users="users" :chats="chats" :serverId="parseInt($route.params.id)" @gifEmoji="choosingEmojiOrGif = $event"/>
+
+					<!--Choose Emoji or Gif Card Popup-->
+					<div v-if="choosingEmojiOrGif" class="absolute right-0 bottom-16 w-106 h-108">
+						<GifEmoji @externalClick="choosingEmojiOrGif = $event"/>
+					</div>
 				</div>
 			</div>
 
@@ -162,6 +167,7 @@ export default {
 
     data() {
         return {
+			choosingEmojiOrGif: false,
 			creatingServer: false,
 			showMembers: true,
 			searchFocused: false,
