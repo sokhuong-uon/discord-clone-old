@@ -45,3 +45,8 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+.scroll-bar-gray::-webkit-scrollbar-thumb {
+    background: rgb(169, 159, 159);
+    border-radius: 10px;
+}
