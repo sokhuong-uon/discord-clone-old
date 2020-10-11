@@ -17,7 +17,7 @@
 					<div class="w-full flex items-center">
 						<div
 							id="msginput"
-							@keydown.enter="onEnter"
+							@keydown.enter.exact="onEnter"
 							class="messageinput py-2 flex-grow break-all sm:break-words w-12/12 overflow-y-auto overflow-x-hidden text-gray-400 rounded-lg bg-transparent outline-none"
 							contenteditable="true"	>
 
