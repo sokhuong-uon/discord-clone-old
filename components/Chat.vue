@@ -10,8 +10,8 @@
 			<span class="text-white">{{chat.author.userName}}</span>
 			<span class="text-gray-600 text-xs">{{chat.date}}</span>
 		</div>
-		<div :id="id" @keydown.enter="onSubmit" @keydown.esc="onCancelEditing" :contenteditable="editing" :class="{'bg-grayinput pr-4 pl-2 messageinput rounded-lg overflow-x-hidden overflow-y-auto':editing}" class="text-chattext break-all md:break-words  outline-none text-base ">
-			{{chat.value}}
+		<div v-html="compiledMarkdown" :id="id" @keydown.enter.exact="onSubmit" @keydown.esc="onCancelEditing" :contenteditable="editing" :class="{'bg-grayinput pr-4 pl-2 messageinput rounded-lg overflow-x-hidden overflow-y-auto':editing}" class="text-chattext break-all md:break-words  outline-none text-base ">
+			<!--message-->
 		</div>
 		<div v-if="editing" class="text-sm text-gray-600">
 			escape to
@@ -37,19 +37,27 @@
 </template>
 
 <script>
+
+import marked from 'marked';
+import _ from 'lodash';
+
 export default {
 	props: ['chat', 'id'],
 	data() {
 		return {
 			hoverChat: false,
 			editing: false,
-			oldMessage:''
+			oldMessage:'',
+			md: this.chat.value
 		}
 	},
 	methods: {
 		onSubmit(){
 			this.editing = false;
-			this.chat.value = this.textArea.innerText;
+			this.md = this.textArea.innerText;
+			this.chat.value = this.md;
+			console.log(this.md);
+			console.log(this.chat.value);
 		},
 		onCancelEditing(){
 			this.editing = false;
@@ -57,6 +65,7 @@ export default {
 		},
 		onEditing(){
 			this.editing = true;
+			this.textArea.innerText = this.md;
 		}
 	},
 	mounted(){
@@ -65,7 +74,11 @@ export default {
 	computed: {
 		textArea: function () {
 			return document.getElementById(`${this.id}`)
+		},
+
+		compiledMarkdown: function(){
+			return marked(this.md);
 		}
-	}
+	},
 }
 </script>
