@@ -1,4 +1,3 @@
-# I'm facing a lot of issues 😅. feel free to contribute
 # discord-clone
 [![Discord](https://i.redd.it/e7hb6p5nx3g11.png)](https://discord.com/)
 
