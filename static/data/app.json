@@ -1001,8 +1001,12 @@
 			{
 				"author": "USK#2168",
 				"date": "2020/09/13",
+<<<<<<< HEAD
 				"value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore",
 				"serverOwner":1
+=======
+				"value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore"
+>>>>>>> a2beba8ba6b2edebcacc3ed941a946f8b5c3386c
 			},
 			{
 				"author": "USK#2168",

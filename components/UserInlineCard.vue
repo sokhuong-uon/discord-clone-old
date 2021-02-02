@@ -7,7 +7,11 @@
 				<img class="w-full h-full rounded-full overflow-hidden" :src="profile.avatarUrlImg" :alt="profile.name" srcset="" />
 				<div class="absolute flex justify-center items-center w-3 h-3 bottom-0 right-0 bg-gray-700 rounded-full">
 					<div class="absolute w-3 h-3 rounded-full text-green-700 overflow-hidden">
+<<<<<<< HEAD
 					
+=======
+						
+>>>>>>> a2beba8ba6b2edebcacc3ed941a946f8b5c3386c
 					</div>
 				</div>
 			</div>

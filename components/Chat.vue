@@ -1,6 +1,10 @@
 <template>
+<<<<<<< HEAD
 
 <div v-if="currentChannelName=='13'" @mouseover="hoverChat = true" @mouseleave="hoverChat = false" class="relative flex-1 mt-4 min-w-0 pr-12 flex hover:bg-nightgray">
+=======
+<div @mouseover="hoverChat = true" @mouseleave="hoverChat = false" class="relative flex-1 mt-4 min-w-0 pr-12 flex hover:bg-nightgray">
+>>>>>>> a2beba8ba6b2edebcacc3ed941a946f8b5c3386c
 	<div class="w-12 h-12 mx-3 flex-shrink-0 flex items-center justify-center select-none">
 		<div class="w-10 h-10 rounded-full overflow-hidden">
 			<img :src="chat.author.avatarUrl" alt="" srcset="">
@@ -49,8 +53,12 @@ export default {
 			hoverChat: false,
 			editing: false,
 			oldMessage:'',
+<<<<<<< HEAD
 			md: this.chat.value,
 			currentChannelName: this.$store.state.currentChannel.channelName
+=======
+			md: this.chat.value
+>>>>>>> a2beba8ba6b2edebcacc3ed941a946f8b5c3386c
 		}
 	},
 	methods: {
@@ -75,14 +83,21 @@ export default {
 	},
 	computed: {
 		textArea: function () {
+<<<<<<< HEAD
 			
+=======
+>>>>>>> a2beba8ba6b2edebcacc3ed941a946f8b5c3386c
 			return document.getElementById(`${this.id}`)
 		},
 
 		compiledMarkdown: function(){
 			return marked(this.md);
+<<<<<<< HEAD
 		},
 	
+=======
+		}
+>>>>>>> a2beba8ba6b2edebcacc3ed941a946f8b5c3386c
 	},
 }
 </script>

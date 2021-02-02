@@ -6,9 +6,13 @@
 				"avatarUrl":"https://cdn.discordapp.com/avatars/696698615493820478/c04db0cc30e005f9b4cd4742b80b2b5a.png?size=256"
 			},
 			"date": "2020/09/13",
+<<<<<<< HEAD
 			"value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore",
 			"serverId": 0,
 			"channelName": "general"
+=======
+			"value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore"
+>>>>>>> a2beba8ba6b2edebcacc3ed941a946f8b5c3386c
 		},
 		{
 			"author":{

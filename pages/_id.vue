@@ -136,7 +136,10 @@
 							<Chat
 								v-for="(chat, i) in chats[parseInt($route.params.id)]" :key="i"
 								:chat="chat" :id="i"
+<<<<<<< HEAD
 								
+=======
+>>>>>>> a2beba8ba6b2edebcacc3ed941a946f8b5c3386c
 							/>
 						</div>
 					</div>
