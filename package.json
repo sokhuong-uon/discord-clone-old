@@ -12,11 +12,7 @@
     "test:e2e": "cross-env TEST=e2e ava ./test/e2e/**/*"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@nuxtjs/axios": "^5.13.0",
-=======
     "@nuxtjs/axios": "^5.12.0",
->>>>>>> a2beba8ba6b2edebcacc3ed941a946f8b5c3386c
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "marked": "^1.2.0",
     "nuxt": "^2.14.0",
