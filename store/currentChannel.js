@@ -3,7 +3,13 @@ export const state = () => ({
   })
   
   export const mutations = {
-    switchChannel(state, { name} ) {
-      state.state.channelName = name
+    SwitchChannel(state,  name) {
+      state.channelName = name
+    }
+  }
+
+  export const actions = {
+    SetChannelName({commit}){
+      commit.
     }
   }

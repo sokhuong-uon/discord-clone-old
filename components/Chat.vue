@@ -49,12 +49,7 @@ export default {
 			hoverChat: false,
 			editing: false,
 			oldMessage:'',
-<<<<<<< HEAD
-			md: this.chat.value,
-			currentChannelName: this.$store.state.currentChannel.channelName
-=======
 			md: this.chat.value
->>>>>>> a2beba8ba6b2edebcacc3ed941a946f8b5c3386c
 		}
 	},
 	methods: {
@@ -79,21 +74,14 @@ export default {
 	},
 	computed: {
 		textArea: function () {
-<<<<<<< HEAD
 			
-=======
->>>>>>> a2beba8ba6b2edebcacc3ed941a946f8b5c3386c
 			return document.getElementById(`${this.id}`)
 		},
 
 		compiledMarkdown: function(){
 			return marked(this.md);
-<<<<<<< HEAD
 		},
 	
-=======
-		}
->>>>>>> a2beba8ba6b2edebcacc3ed941a946f8b5c3386c
 	},
 }
 </script>
