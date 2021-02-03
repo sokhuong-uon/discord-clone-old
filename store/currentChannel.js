@@ -7,9 +7,3 @@ export const state = () => ({
       state.channelName = name
     }
   }
-
-  export const actions = {
-    SetChannelName({commit}){
-      commit.
-    }
-  }
