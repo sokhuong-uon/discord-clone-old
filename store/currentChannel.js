@@ -1,9 +1,12 @@
 export const state = () => ({
-    channelName: '123'
-  })
+  channelName: 'general'
+})
   
-  export const mutations = {
-    SwitchChannel(state,  name) {
-      state.channelName = name
+  export  const mutations = {
+    SwitchChannel(state, payload) {
+      console.log("the payload: " + payload.channelName)
+      state.channelName = payload.channelName
+      
+     
     }
   }

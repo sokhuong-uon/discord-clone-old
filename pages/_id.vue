@@ -1,5 +1,5 @@
 <template>
-<div class="relative w-screen h-screen select-none bg-black flex overflow-hidden">
+<div class="relative w-screen h-screen select-none bg-black flex overflow-hidden" >
     <div class="flex">
         <!--Server sidebar-->
         <ServerSideBar :creatingServer="creatingServer" @createServer="creatingServer = $event"/>
@@ -14,9 +14,9 @@
 			<div class="smallScroleBar w-60 h-auto bg-nightgray pb-6 flex-1 flex flex-col overflow-y-auto">
 				<div class="pr-1">
 					<div class="h-4"></div>
-					<div class="flex flex-col w-full">
-						<div v-for="(channel,i) in servers[parseInt($route.params.id)].channels" :key="i">
-							<ChannelCard :channel="channel" />
+					<div class="flex flex-col w-full" >
+						<div  v-for="(channel,i) in servers[parseInt($route.params.id)].channels" :key="i">
+							<ChannelCard :channel="channel"/>
 						</div>
 					</div>
 
@@ -35,7 +35,7 @@
 								</div>
 							</button>
 							<div class="flex flex-col w-full">
-								<div v-for="(channel,j) in category.channels" :key="j">
+								<div v-for="(channel,j) in category.channels" :key="j"  @click='changeChannel(channel.name)'>
 									<ChannelCard :channel="channel" />
 								</div>
 							</div>
@@ -136,10 +136,7 @@
 							<Chat
 								v-for="(chat, i) in chats[parseInt($route.params.id)]" :key="i"
 								:chat="chat" :id="i"
-<<<<<<< HEAD
 								
-=======
->>>>>>> a2beba8ba6b2edebcacc3ed941a946f8b5c3386c
 							/>
 						</div>
 					</div>
@@ -224,6 +221,18 @@ export default {
 			].join( '\n' ) );
         	console.log("%c💝 I am really appreciate that you interested in my code 😊", "background: transparent; color: #ed0e90; font-size: 30px; font-weight: 600; font-family: Lobster, serif; height: 200px");
 			console.log(`%c Source code of this project on github: %c${link}`,"font-family: Lobster, serif;color: #0eed98; font-size: 25px","font-size: 15px;");
+		},
+		changeChannel(channelName){
+			
+
+			// Let's switch channel with the name we gave before, in the payload if we want to be more precise. ~Hy4e 07.02.2020
+			this.$store.commit('currentChannel/SwitchChannel', {channelName})
+
+			// because channel section was not made as component we need to reload this whole page component.
+			// It's fine because app is not a large thing and will probably not be, it's excellent for our needs :) ~Hy4e 07.02.2020 
+			this.$forceUpdate()
+
+			
 		}
 	},
     mounted() {

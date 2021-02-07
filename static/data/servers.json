@@ -398,11 +398,7 @@
 				]
 			},
 			{
-<<<<<<< HEAD
 				"name": "help",
-=======
-				"name": "help🆘",
->>>>>>> a2beba8ba6b2edebcacc3ed941a946f8b5c3386c
 				"channels": [{
 						"name": "how-to-get-help",
 						"hasUnReadMessage": 15
@@ -956,14 +952,7 @@
 				"channels": [
 					{
 						"name": "general",
-<<<<<<< HEAD
-						"hasUnReadMessage": 1 ,
-						"messages":[
-							
-						]
-=======
 						"hasUnReadMessage": 1
->>>>>>> a2beba8ba6b2edebcacc3ed941a946f8b5c3386c
 					},
 					{
 						"name": "web-development",

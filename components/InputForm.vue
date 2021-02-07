@@ -68,13 +68,15 @@ export default {
 
 			let author = _.sample(this.users);
 			let message = document.getElementById('msginput');
+			let channel = this.$store.state.currentChannel.channelName
 			this.chats[parseInt(this.serverId)].push({
 				"author":{
 					"userName": author.userName,
 					"avatarUrl":author.avatarUrlImg
 				},
 				"date": currentDateWithFormat,
-				"value": message.innerText
+				"value": message.innerText,
+				"channelName": channel
 			});
 			message.innerText = '';
 		},
