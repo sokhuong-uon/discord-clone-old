@@ -24,22 +24,22 @@ export default {
 
 /* Track */
 .smallScroleBar::-webkit-scrollbar-track {
-    background: transparent;
+		background: transparent;
 }
 
 /* width */
 .smallScroleBar::-webkit-scrollbar {
-    width: 6px;
+		width: 6px;
 }
 
 /* Handle */
 .smallScroleBar::-webkit-scrollbar-thumb {
-    background: rgb(57, 36, 36);
-    border-radius: 10px;
+		background: rgb(57, 36, 36);
+		border-radius: 10px;
 }
 
 /* Handle on hover */
 .smallScroleBar::-webkit-scrollbar-thumb:hover {
-    background: #555;
+		background: #555;
 }
 </style>

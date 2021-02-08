@@ -1,12 +1,12 @@
 <template>
 <div class="relative w-screen h-screen select-none bg-black flex overflow-hidden">
-    <div class="flex">
-        <!--Server sidebar-->
-        <ServerSideBar :creatingServer="creatingServer" @createServer="creatingServer = $event"/>
+		<div class="flex">
+				<!--Server sidebar-->
+				<ServerSideBar :creatingServer="creatingServer" @createServer="creatingServer = $event"/>
 
 
-        <!--Server channels-->
-        <div class="w-60 flex-1 bg-nightgray flex flex-col">
+				<!--Server channels-->
+				<div class="w-60 flex-1 bg-nightgray flex flex-col">
 			<div class="w-full h-12">
 				<ServerHeader :server="servers[parseInt($route.params.id)]" />
 			</div>
@@ -48,12 +48,12 @@
 			<div class="w-full h-13 bottom-0">
 				<ServerFooter :profile="users[0]" />
 			</div>
-        </div>
-    </div>
+				</div>
+		</div>
 
-    <!--Main section-->
-    <div class="mainsection min-w-0 flex-1 bg-green-400 flex flex-col overflow-hidden">
-        <!--Main section nav, sidebar-->
+		<!--Main section-->
+		<div class="mainsection min-w-0 flex-1 bg-green-400 flex flex-col overflow-hidden">
+				<!--Main section nav, sidebar-->
 
 		<div class="relative w-auto h-12 border-b px-2 flex-shrink-0 flex items-center border-gray-900  bg-nightgraylighter">
 			<div class="w-full h-6 flex items-center overflow-hidden">
@@ -153,7 +153,7 @@
 				<MembersBar :users="users"/>
 			</div>
 		</div>
-    </div>
+		</div>
 
 	<!--popup components-->
 	<div v-if="creatingServer" class="absolute w-screen h-screen bg-black bg-opacity-90 flex justify-center items-center">
@@ -169,8 +169,8 @@ import users from "~/static/data/users.json";
 import servers from "~/static/data/servers.json";
 export default {
 
-    data() {
-        return {
+		data() {
+				return {
 			choosingEmojiOrGif: false,
 			choosingGif: false,
 			choosingEmoji: false,
@@ -185,8 +185,8 @@ export default {
 			users: users,
 			servers: servers,
 			muteServer: false
-        };
-    },
+				};
+		},
 
 	// asyncData({ params, error }) {
 	// 	return axios
@@ -218,11 +218,11 @@ export default {
 				'/ /  /_/  /  \\__  \\/ /  /  \\',
 				'\\/_______/\\/______/\\/__/\\___\\',
 			].join( '\n' ) );
-        	console.log("%c💝 I am really appreciate that you interested in my code 😊", "background: transparent; color: #ed0e90; font-size: 30px; font-weight: 600; font-family: Lobster, serif; height: 200px");
+					console.log("%c💝 I am really appreciate that you interested in my code 😊", "background: transparent; color: #ed0e90; font-size: 30px; font-weight: 600; font-family: Lobster, serif; height: 200px");
 			console.log(`%c Source code of this project on github: %c${link}`,"font-family: Lobster, serif;color: #0eed98; font-size: 25px","font-size: 15px;");
 		}
 	},
-    mounted() {
+		mounted() {
 		if(!sessionStorage.getItem('logged')){
 			// _.once(this.Log) will return a funtion, so just call it directly.
 			_.once(this.Log)();
@@ -231,18 +231,18 @@ export default {
 
 		window.onunload = function () {
 			sessionStorage.removeItem('logged');
-    	}
-    },
+			}
+		},
 	computed:{
 		specificChat () {
 			return this.chats[parseInt(this.$route.params.id)]
-        }
+				}
 	},
 	watch: {
 		specificChat() {
 			let chatSpace = document.getElementById('chatspace');
 			chatSpace.scrollTop = chatSpace.scrollHeight;
-        }
+				}
 	}
 };
 </script>

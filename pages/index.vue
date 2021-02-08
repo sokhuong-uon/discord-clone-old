@@ -1,21 +1,21 @@
 <template>
 <div class="relative select-none w-auto h-screen bg-black flex overflow-hidden">
-    <div class="flex">
-        <!--Server sidebar-->
-        <ServerSideBar :creatingServer="creatingServer" @createServer="creatingServer = $event"/>
+		<div class="flex">
+				<!--Server sidebar-->
+				<ServerSideBar :creatingServer="creatingServer" @createServer="creatingServer = $event"/>
 
-        <!--Friends list-->
-        <div class="w-60 h-screen bg-nightgray flex flex-col">
-            <div class="relative h-screen flex flex-col">
-                <div class="w-full h-12 px-3 border-b border-gray-900 flex-shrink-0 flex items-center justify-center">
-                    <button @click="findConversationOpen = true" class="btn w-full h-auto rounded-md bg-mostnightgray flex items-center justify-start text-sm">
+				<!--Friends list-->
+				<div class="w-60 h-screen bg-nightgray flex flex-col">
+						<div class="relative h-screen flex flex-col">
+								<div class="w-full h-12 px-3 border-b border-gray-900 flex-shrink-0 flex items-center justify-center">
+										<button @click="findConversationOpen = true" class="btn w-full h-auto rounded-md bg-mostnightgray flex items-center justify-start text-sm">
 						<span class="px-2 my-1 text-graydiscord font-medium">Find or start a conversation</span>
 					</button>
-                </div>
+								</div>
 
-                <div class="smallScroleBar w-60 h-174 flex justify-center overflow-auto bg-nightgray">
-                    <div class="px-1">
-                        <div class="h-2"></div>
+								<div class="smallScroleBar w-60 h-174 flex justify-center overflow-auto bg-nightgray">
+										<div class="px-1">
+												<div class="h-2"></div>
 						<div class="w-56 h-10 flex items-center px-2 rounded-md overflow-hidden hover:bg-nightgraylighter">
 							<div class="w-full flex items-center">
 								<div class="w-8 h-8 flex items-center justify-center mr-3">
@@ -55,15 +55,15 @@
 							<FriendCard :profile="friend"/>
 						</div>
 
-                    </div>
-                </div>
+										</div>
+								</div>
 
-                <div class="absolute w-full h-13 bottom-0">
-                    <ServerFooter :profile="users[0]" />
-                </div>
-            </div>
-        </div>
-    </div>
+								<div class="absolute w-full h-13 bottom-0">
+										<ServerFooter :profile="users[0]" />
+								</div>
+						</div>
+				</div>
+		</div>
 
 	<!-- Main section-->
 	<div class="flex-1 flex-shrink min-w-0 bg-nightgraylighter flex flex-col">
@@ -151,8 +151,8 @@ import _ from 'lodash';
 import chats from "~/static/data/chats.json";
 import users from "~/static/data/users.json";
 export default {
-    data() {
-        return {
+		data() {
+				return {
 			creatingServer: false,
 			findConversationOpen: false,
 			showMembers: false,
@@ -160,8 +160,8 @@ export default {
 			query:'',
 			gategoryBtnHover: false,
 			users: users,
-        };
-    },
+				};
+		},
 
 	// asyncData({ params, error }) {
 	// 	return axios
@@ -193,11 +193,11 @@ export default {
 				'/ /  /_/  /  \\__  \\/ /  /  \\',
 				'\\/_______/\\/______/\\/__/\\___\\',
 			].join( '\n' ) );
-        	console.log("%c💝 I am really appreciate that you interested in my code 😊", "background: transparent; color: #ed0e90; font-size: 30px; font-weight: 600; font-family: Lobster, serif; height: 200px");
+					console.log("%c💝 I am really appreciate that you interested in my code 😊", "background: transparent; color: #ed0e90; font-size: 30px; font-weight: 600; font-family: Lobster, serif; height: 200px");
 			console.log(`%c Source code of this project on github: %c${link}`,"font-family: Lobster, serif;color: #0eed98; font-size: 25px","font-size: 15px;");
 		}
 	},
-    mounted() {
+		mounted() {
 		if(!sessionStorage.getItem('logged')){
 			// _.once(this.Log) will return a funtion, so just call it directly.
 			_.once(this.Log)();
@@ -206,7 +206,7 @@ export default {
 
 		window.onunload = function () {
 			sessionStorage.removeItem('logged');
-    	}
-    }
+			}
+		}
 };
 </script>

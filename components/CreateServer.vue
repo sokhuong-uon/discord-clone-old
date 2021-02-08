@@ -66,8 +66,8 @@
 import vClickOutside from 'v-click-outside';
 export default {
 	directives: {
-    	clickOutside: vClickOutside.directive
-    },
+			clickOutside: vClickOutside.directive
+		},
 	data(){
 		return{
 			customizeServer: false,
@@ -100,10 +100,10 @@ export default {
 			]
 		}
 	},
-    methods: {
-      	externalClick (event) {
+		methods: {
+				externalClick (event) {
 			this.$emit('externalClick', false);
-    	}
-    }
+			}
+		}
 }
 </script>

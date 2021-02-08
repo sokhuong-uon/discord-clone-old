@@ -38,6 +38,6 @@ export default {
 
 <style>
 .text-xs {
-    font-size: 0.7rem;
+		font-size: 0.7rem;
 }
 </style>

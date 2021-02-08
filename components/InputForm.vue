@@ -64,7 +64,7 @@ export default {
 		onEnter: function(event){
 			event.preventDefault();
 
-            let currentDateWithFormat = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+						let currentDateWithFormat = new Date().toJSON().slice(0,10).replace(/-/g,'/');
 
 			let author = _.sample(this.users);
 			let message = document.getElementById('msginput');
