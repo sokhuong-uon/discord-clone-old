@@ -88,7 +88,7 @@
 				<div class="w-auto flex items-center text-gray-200 text-base">
 					<button class="btn h-full font-semibold rounded-md mx-2 px-2 py-px flex hover:bg-teal-900">Online</button>
 					<button class="btn h-full font-semibold rounded-md mx-2 px-2 py-px flex hover:bg-teal-900">All</button>
-					<button class="btn h-full font-semibold rounded-md mx-2 px-2 py-px flex hover:bg-teal-900">Pdnding</button>
+					<button class="btn h-full font-semibold rounded-md mx-2 px-2 py-px flex hover:bg-teal-900">Pending</button>
 					<button class="btn h-full font-semibold rounded-md mx-2 px-2 py-px flex hover:bg-teal-900">Blocked</button>
 					<button class="btn w-24 h-full font-semibold rounded-md mx-2 py-px bg-green-600">Add Friend</button>
 
