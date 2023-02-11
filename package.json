@@ -22,7 +22,7 @@
 		"@ava/babel": "^1.0.1",
 		"@nuxtjs/tailwindcss": "^2.1.0",
 		"@vue/test-utils": "^1.0.3",
-		"ava": "^3.11.0",
+		"ava": "^5.2.0",
 		"babel-plugin-module-resolver": "^4.0.0",
 		"cross-env": "^7.0.2",
 		"jsdom": "^16.3.0",
