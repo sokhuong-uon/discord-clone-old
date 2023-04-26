@@ -1,38 +1,49 @@
 <template>
-<button class="btn w-56 h-10">
-	<div class="w-56 h-10 rounded-md py-1 px-2 text-graydiscord hover:text-gray-200 flex items-center hover:bg-gray-800">
-		<!--icon avatar and status-->
-		<div class="w-8 h-8 mr-3">
-			<div class="relative w-8 h-8">
-				<img class="w-full h-full rounded-full overflow-hidden" :src="profile.avatarUrlImg" :alt="profile.name" srcset="" />
-				<div class="absolute flex justify-center items-center w-3 h-3 bottom-0 right-0 bg-gray-700 rounded-full">
-					<div class="absolute w-3 h-3 rounded-full text-green-700 overflow-hidden">
-						
+	<button class="w-56 h-10 btn">
+		<div
+			class="flex items-center w-56 h-10 px-2 py-1 rounded-md text-graydiscord hover:text-gray-200 hover:bg-gray-800"
+		>
+			<!--icon avatar and status-->
+			<div class="w-8 h-8 mr-3">
+				<div class="relative w-8 h-8">
+					<img
+						class="w-full h-full overflow-hidden rounded-full"
+						:src="profile.avatarUrlImg"
+						:alt="profile.name"
+						srcset=""
+					/>
+					<div
+						class="absolute bottom-0 right-0 flex items-center justify-center w-3 h-3 bg-gray-700 rounded-full"
+					>
+						<div
+							class="absolute w-3 h-3 overflow-hidden text-green-700 rounded-full"
+						></div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="w-41 h-auto flex flex-col items-center">
-			<div class="w-41 h-4 text-current leading-none flex items-center">
-				<span class="h-5">{{profile.userName}}</span>
+			<div class="flex flex-col items-center h-auto w-41">
+				<div class="flex items-center h-4 leading-none text-current w-41">
+					<span class="h-5">{{ profile.userName }}</span>
+				</div>
+				<div class="flex justify-start h-auto text-xs w-41 text-graydiscord">
+					<p class="overflow-hidden truncate">{{ profile.action.name }}</p>
+				</div>
 			</div>
-			<div class="w-41 h-auto flex justify-start text-xs text-graydiscord">
-				<p class="truncate overflow-hidden">{{profile.action.name}}</p>
-			</div>
 		</div>
-	</div>
-
-</button>
+	</button>
 </template>
 
-<script>
-export default {
-	props: ['profile']
+<script setup lang="ts">
+type Props = {
+	profile: {
+		avatarUrlImg: string
+		name: string
+		userName: string
+		action: {
+			name: string
+		}
+	}
 }
-</script>
 
-<style>
-.text-xs {
-	font-size: 0.7rem;
-}
-</style>
+defineProps<Props>()
+</script>
