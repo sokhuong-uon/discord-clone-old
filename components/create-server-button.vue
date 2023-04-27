@@ -11,34 +11,27 @@
 			@mouseleave="isHover = false"
 			class="flex justify-start w-12 h-12"
 		>
-			<nuxt-link class="w-12 h-12 btn" to="/">
+			<button @click="createServer" class="w-12 h-12 btn">
 				<div
-					:class="{ 'bg-blue-700 rounded-larger': isHover }"
+					:class="{ 'bg-green-600 rounded-larger': isHover }"
 					class="flex items-center justify-center w-12 h-12 overflow-hidden bg-gray-800 rounded-full"
 				>
-					<svg
-						class="w-12 h-6 mx-auto mt-1 mr-1 text-green-600 transform"
-						viewBox="0 0 24 24"
-					>
+					<svg class="w-6 h-6 text-green-600" viewBox="0 0 24 24">
 						<path
-							fill="#F7FAFC"
+							:fill="isHover ? '#F7FAFC' : 'currentColor'"
 							fill-rule="evenodd"
 							clip-rule="evenodd"
-							:d="button.svgPath"
+							d="M20 11.1111H12.8889V4H11.1111V11.1111H4V12.8889H11.1111V20H12.8889V12.8889H20V11.1111Z"
 						/>
 					</svg>
 				</div>
-			</nuxt-link>
+			</button>
 		</div>
 	</div>
 </template>
-
 <script setup lang="ts">
-type Props = {
-	button: {
-		svgPath: string
-	}
-}
 const isHover = ref(false)
-defineProps<Props>()
+
+const emit = defineEmits(['createServer'])
+const createServer = () => emit('createServer', true)
 </script>
