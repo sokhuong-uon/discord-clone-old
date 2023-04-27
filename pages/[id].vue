@@ -306,7 +306,7 @@
 			v-if="creatingServer"
 			class="absolute flex items-center justify-center w-screen h-screen bg-black bg-opacity-90"
 		>
-			<CreateServer @externalClick="creatingServer = $event" />
+			<CreateServer @click-outside="onClickOutsideServerComponent" />
 		</div>
 	</div>
 </template>
@@ -324,6 +324,10 @@ const searchFocused = ref(false)
 const query = ref('')
 const gategoryBtnHover = ref(false)
 const muteServer = ref(false)
+
+const onClickOutsideServerComponent = () => {
+	creatingServer.value = false
+}
 
 const deleteQuery = () => {
 	query.value = ''
