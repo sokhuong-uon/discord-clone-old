@@ -1,5 +1,6 @@
 <template>
 	<div
+		ref="container"
 		class="relative flex flex-col items-center h-auto overflow-hidden bg-white rounded-lg w-110 max-h-3/4"
 	>
 		<div class="flex h-auto max-h-full min-h-0 rounded-lg w-110">
@@ -131,6 +132,16 @@
 
 <script setup lang="ts">
 const customizeServer = ref(false)
+import { onClickOutside } from '@vueuse/core'
+const container = ref<HTMLElement | null>(null)
+
+const emit = defineEmits<{
+	(e: 'clickOutside', value: boolean): void
+}>()
+
+onClickOutside(container, () => {
+	emit('clickOutside', true)
+})
 
 const serverTemplates = ref([
 	{

@@ -275,15 +275,15 @@
 			v-if="creatingServer"
 			class="absolute flex items-center justify-center w-screen h-screen bg-black bg-opacity-90"
 		>
-			<CreateServer @externalClick="creatingServer = $event" />
+			<CreateServer @click-outside="onClickOutsideServer" />
 		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
-import users from '~/static/data/users.json'
 const creatingServer = ref(false)
+const onClickOutsideServer = (value: boolean) => {
+	creatingServer.value = false
+}
 const findConversationOpen = ref(false)
-const searchFocused = ref(false)
-const query = ref('')
 </script>
