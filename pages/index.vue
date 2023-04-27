@@ -282,7 +282,7 @@
 
 <script setup lang="ts">
 const creatingServer = ref(false)
-const onClickOutsideServer = (value: boolean) => {
+const onClickOutsideServer = () => {
 	creatingServer.value = false
 }
 const findConversationOpen = ref(false)
