@@ -133,7 +133,7 @@
 <script setup lang="ts">
 const customizeServer = ref(false)
 import { onClickOutside } from '@vueuse/core'
-const container = ref<HTMLElement | null>(null)
+const container = ref<HTMLElement>()
 
 const emit = defineEmits<{
 	(e: 'clickOutside', value: boolean): void

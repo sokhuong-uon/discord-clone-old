@@ -23,9 +23,8 @@
 
 			<!-- Bottom section -->
 			<div class="h-auto">
-				<CreateServerButton />
-
-				<ExploreButton />
+				<slot name="createServerButton"></slot>
+				<slot name="exploreButton"></slot>
 
 				<!-- Divide -->
 				<div
@@ -34,15 +33,10 @@
 					<div class="absolute w-8 bg-gray-800 rounded-full h-2px"></div>
 				</div>
 
-				<DownloadButton />
+				<slot name="downloadButton"></slot>
 			</div>
 		</div>
 	</div>
 </template>
 
-<script setup lang="ts">
-type Props = {
-	creatingServer: boolean
-}
-defineProps<Props>()
-</script>
+<script setup lang="ts"></script>

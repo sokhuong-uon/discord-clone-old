@@ -1,9 +1,5 @@
 <template>
-	<div
-		@mouseover="isHover = true"
-		@mouseleave="isHover = false"
-		class="flex justify-center h-8 my-px w-58"
-	>
+	<div class="flex justify-center h-8 my-px w-58 group">
 		<div class="relative flex items-center w-2 h-8">
 			<span
 				:class="{ 'h-2': channel.hasUnReadMessage > 0 }"
@@ -13,11 +9,10 @@
 
 		<div
 			:class="{
-				'bg-gray-800': isHover,
 				'text-gray-600': channel.hasUnReadMessage === 0,
-				'text-green-500': channel.hasUnReadMessage > 0
+				'text-green-500': channel.hasUnReadMessage > 0,
 			}"
-			class="flex items-center w-56 px-2 rounded-lg cursor-pointer"
+			class="flex items-center w-56 px-2 rounded-lg cursor-pointer group-hover:bg-gray-800"
 		>
 			<div class="w-6 h-6 mr-1 -ml-2px">
 				<svg width="24" height="24" class="text-gray-600 transform scale-80">
@@ -32,7 +27,8 @@
 			<div class="mb-px text-base font-semibold truncate">
 				<p class="truncate">{{ channel.name }}</p>
 			</div>
-			<div v-if="isHover" class="ml-auto">
+
+			<div class="invisible ml-auto group-hover:visible">
 				<div class="flex items-center ml-auto">
 					<svg
 						class="mx-1"
@@ -46,7 +42,8 @@
 							d="M8 9a3 3 0 100-6 3 3 0 000 6zm0 2a6 6 0 016 6H2a6 6 0 016-6zm8-4a1 1 0 00-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 002 0v-1h1a1 1 0 100-2h-1V7z"
 						/>
 					</svg>
-					<svg class="mt-1 " aria-hidden="false" width="18" height="18">
+
+					<svg class="mt-1" aria-hidden="false" width="18" height="18">
 						<path
 							fill="currentColor"
 							fill-rule="evenodd"
@@ -64,12 +61,10 @@
 <script setup lang="ts">
 type Props = {
 	channel: {
-		name: string;
-		hasUnReadMessage: number;
-	};
-};
+		name: string
+		hasUnReadMessage: number
+	}
+}
 
-defineProps<Props>();
-
-const isHover = ref(false);
+defineProps<Props>()
 </script>

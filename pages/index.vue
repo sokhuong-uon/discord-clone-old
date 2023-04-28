@@ -3,11 +3,19 @@
 		class="relative flex w-auto h-screen overflow-hidden bg-black select-none"
 	>
 		<div class="flex">
-			<!--Server sidebar-->
-			<ServerSideBar
-				:creatingServer="creatingServer"
-				@createServer="creatingServer = $event"
-			/>
+			<ServerSidebar>
+				<template v-slot:createServerButton>
+					<CreateServerButton @click="creatingServer = true" />
+				</template>
+
+				<template v-slot:exploreButton>
+					<ExploreButton />
+				</template>
+
+				<template v-slot:downloadButton>
+					<DownloadButton />
+				</template>
+			</ServerSidebar>
 
 			<!--Friends list-->
 			<div class="flex flex-col h-screen w-60 bg-nightgray">
@@ -269,8 +277,9 @@
 			v-if="findConversationOpen"
 			class="absolute flex items-center justify-center w-screen h-screen bg-black bg-opacity-90"
 		>
-			<FindConversation @externalClick="findConversationOpen = $event" />
+			<FindConversation @click-outside="onClickOutsideFindConversationModal" />
 		</div>
+
 		<div
 			v-if="creatingServer"
 			class="absolute flex items-center justify-center w-screen h-screen bg-black bg-opacity-90"
@@ -282,8 +291,14 @@
 
 <script setup lang="ts">
 const creatingServer = ref(false)
+
 const onClickOutsideServer = () => {
 	creatingServer.value = false
 }
+
+const onClickOutsideFindConversationModal = () => {
+	findConversationOpen.value = false
+}
+
 const findConversationOpen = ref(false)
 </script>

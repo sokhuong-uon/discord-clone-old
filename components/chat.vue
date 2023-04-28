@@ -1,9 +1,5 @@
 <template>
-	<div
-		@mouseover="hoverChat = true"
-		@mouseleave="hoverChat = false"
-		class="relative flex flex-1 min-w-0 pr-12 mt-4 hover:bg-nightgray"
-	>
+	<div class="relative flex flex-1 min-w-0 pr-12 mt-4 hover:bg-nightgray group">
 		<div
 			class="flex items-center justify-center flex-shrink-0 w-12 h-12 mx-3 select-none"
 		>
@@ -41,7 +37,7 @@
 			</div>
 		</div>
 
-		<div v-if="hoverChat" class="absolute top-0 right-0">
+		<div class="absolute top-0 right-0 invisible group-hover:visible">
 			<div class="flex items-center text-gray-400 rounded-md bg-nightgray">
 				<button
 					class="flex items-center justify-center w-8 h-8 btn hover:bg-nightgraylighter"
@@ -113,7 +109,6 @@ type Props = {
 
 const { chat, id } = defineProps<Props>()
 
-const hoverChat = ref(false)
 const editing = ref(false)
 
 const md = ref()

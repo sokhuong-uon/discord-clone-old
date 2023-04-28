@@ -3,11 +3,19 @@
 		class="relative flex w-screen h-screen overflow-hidden bg-black select-none"
 	>
 		<div class="flex">
-			<!--Server sidebar-->
-			<ServerSideBar
-				:creatingServer="creatingServer"
-				@createServer="creatingServer = $event"
-			/>
+			<ServerSidebar>
+				<template v-slot:createServerButton>
+					<CreateServerButton @click="creatingServer = true" />
+				</template>
+
+				<template v-slot:exploreButton>
+					<ExploreButton />
+				</template>
+
+				<template v-slot:downloadButton>
+					<DownloadButton />
+				</template>
+			</ServerSidebar>
 
 			<!--Server channels-->
 			<div class="flex flex-col flex-1 w-60 bg-nightgray">
