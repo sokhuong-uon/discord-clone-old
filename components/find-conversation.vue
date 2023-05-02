@@ -1,5 +1,6 @@
 <template>
 	<div
+		ref="modal"
 		class="flex flex-col items-center justify-between min-h-0 px-5 pt-5 w-144 max-h-1/2 rounded-larger bg-nightgray"
 	>
 		<div
@@ -59,5 +60,14 @@
 </template>
 
 <script setup lang="ts">
-const hasResult = ref(false)
+import { onClickOutside } from '@vueuse/core'
+const modal = ref<HTMLElement>()
+
+const emit = defineEmits<{
+	(e: 'clickOutside', value: boolean): void
+}>()
+
+onClickOutside(modal, () => {
+	emit('clickOutside', true)
+})
 </script>

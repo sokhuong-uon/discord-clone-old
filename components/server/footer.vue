@@ -1,9 +1,5 @@
 <template>
-	<div
-		@mouseover="isHover = true"
-		@mouseleave="isHover = false"
-		class="w-60 h-13 bg-nightergray"
-	>
+	<div class="w-60 h-13 bg-nightergray group">
 		<div class="flex items-center justify-start px-2 w-w-60 h-13 pb-2px">
 			<!--icon avatar and status-->
 			<div class="w-8 h-8 mr-2">
@@ -38,8 +34,7 @@
 					class="relative h-4 overflow-hidden text-teal-500 cursor-default w-22"
 				>
 					<div
-						:class="{ '-translate-y-5': isHover }"
-						class="absolute duration-200 ease-in transform"
+						class="absolute duration-200 ease-in transform group-hover:-translate-y-5"
 					>
 						<div class="flex items-center justify-start h-4 font-medium w-22">
 							<span class="w-4 text-sm -ml-2px">{{
@@ -192,5 +187,4 @@ defineProps<Props>()
 
 const deafen = ref(false)
 const muted = ref(false)
-const isHover = ref(false)
 </script>

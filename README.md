@@ -1,24 +1,22 @@
 # discord-clone
-[![Discord](https://i.redd.it/e7hb6p5nx3g11.png)](https://discord.com/)
 
-# Live Status
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8719281c-e117-415e-b0ee-52fde0e09f99/deploy-status)](https://app.netlify.com/sites/usk-discord-clone/deploys)
+[![Discord](https://i.redd.it/e7hb6p5nx3g11.png)](https://discord.com/)
 
 ## Build Setup
 
 ```bash
 # install dependencies
-$ npm install
+$ pnpm install
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+$ pnpm dev
 
 # build for production and launch server
-$ npm run build
-$ npm run start
+$ pnpm build
+$ pnpm start
 
 # generate static project
-$ npm run generate
+$ pnpm generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxt.com).

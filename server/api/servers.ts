@@ -1,8 +1,8 @@
 import { User } from './users'
 
-type ChannelType = 'text' | 'voice'
+export type ChannelType = 'text' | 'voice'
 
-type Message = {
+export type Message = {
 	id: string
 	content: string
 	author: User['id']
@@ -11,7 +11,7 @@ type Message = {
 	updated: string
 }
 
-type Category = {
+export type Category = {
 	id: string
 	name: string
 	order: number
@@ -19,7 +19,7 @@ type Category = {
 	channels: Channel['id'][]
 }
 
-type Channel = {
+export type Channel = {
 	id: string
 	name: string
 	type: ChannelType
@@ -29,7 +29,7 @@ type Channel = {
 	messages: Message[]
 }
 
-type Server = {
+export type Server = {
 	id: string
 	name: string
 	profileImage: string
