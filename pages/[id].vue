@@ -323,7 +323,7 @@
 import chats from '~/static/data/chats.json'
 import servers from '~/static/data/servers.json'
 import users from '~/static/data/users.json'
-import Chat from '../components/Chat.vue'
+import Chat from '../components/chat.vue'
 
 const choosingEmojiOrGif = ref(false)
 const creatingServer = ref(false)
