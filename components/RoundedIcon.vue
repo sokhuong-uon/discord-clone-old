@@ -14,6 +14,7 @@
 				class="absolute w-4/12 bg-green-700 rounded-r-lg"
 			></span>
 		</div>
+
 		<div
 			v-if="type === 'button'"
 			class="absolute left-0 flex items-center w-3 h-12"
@@ -23,6 +24,7 @@
 				class="absolute w-4/12 h-0 bg-green-700 rounded-r-lg"
 			></span>
 		</div>
+
 		<div
 			@mouseover="isHover = true"
 			@mouseleave="isHover = false"

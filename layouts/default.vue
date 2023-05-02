@@ -174,11 +174,20 @@
 			</main>
 		</div>
 
-		<!--popup components-->
-		<slot name="popup"></slot>
+		<!--popup -->
+		<div
+			v-if="creatingServer"
+			class="absolute flex items-center justify-center w-screen h-screen bg-black bg-opacity-90"
+		>
+			<CreateServer @click-outside="onClickOutsideServer" />
+		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
 const creatingServer = ref(false)
+
+const onClickOutsideServer = () => {
+	creatingServer.value = false
+}
 </script>

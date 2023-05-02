@@ -14,9 +14,9 @@
 			<div class="flex justify-center w-full h-auto">
 				<div class="w-full">
 					<div class="w-full">
-						<!-- <div v-for="(server, i) in servers" :key="i">
-							<RoundedIcon type="server" :param="i" :server="server" />
-						</div> -->
+						<div v-for="server in servers" :key="server.id">
+							<ServerButton :server="server" />
+						</div>
 					</div>
 				</div>
 			</div>
@@ -39,4 +39,7 @@
 	</div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const servers = await $fetch('/api/servers')
+console.log(servers)
+</script>
