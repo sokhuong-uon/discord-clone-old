@@ -17,7 +17,7 @@
 		"marked": "^4.3.0",
 		"nuxt": "^3.4.3",
 		"pinia": "^2.0.35",
-		"postcss": "^8.4.23",
+		"postcss": "^8.4.31",
 		"tailwindcss": "^3.3.2"
 	}
 }
